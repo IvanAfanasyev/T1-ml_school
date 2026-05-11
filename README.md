@@ -1,67 +1,223 @@
 # CloudMatch
 
-CloudMatch - MVP-сервис для подбора российских облачных сервисов по обычному пользовательскому запросу. Пользователь описывает задачу, backend извлекает параметры, ищет по нормализованному каталогу и возвращает рекомендации: одиночный top-3 или связку сервисов под несколько ролей.
+CloudMatch - MVP-сервис для подбора российских облачных сервисов по пользовательскому запросу. Пользователь пишет задачу обычным языком, система уточняет недостающие параметры, ищет подходящие сервисы в нормализованном каталоге и возвращает либо top-3 отдельных сервиса, либо несколько инфраструктурных связок.
 
-## Структура
+Пример обычного запроса:
 
 ```text
-backend/                 FastAPI-приложение и Dockerfile backend
-frontend/                Статический интерфейс сайта
-algorithm/cloudmatch/    Извлечение запроса, диалог, retrieval, ranking, форматирование ответа
-algorithm/scripts/       Служебные команды для индексов, импорта данных и демо
-data/normalized/         Нормализованные JSON-данные провайдеров, сервисов и тарифов
-data/evaluation/         Тестовый набор для проверки качества ранжирования
-docs/                    Короткая документация по запуску, данным, тестам и деплою
-tests/                   Юнит-тесты backend и алгоритма
+база данных MySQL, москва, любой бюджет
 ```
+
+Пример комплексного запроса:
+
+```text
+Нужен backend на Python с PostgreSQL, хранение изображений товаров,
+backup базы данных и балансировщик для масштабирования.
+```
+
+## Полная структура проекта
+
+```text
+.
+├── README.md
+├── .env.example
+├── .gitignore
+├── .dockerignore
+├── docker-compose.yml
+├── backend/
+│   ├── README.md
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── __init__.py
+│   └── app/
+│       ├── __init__.py
+│       ├── main.py
+│       └── api/
+│           ├── __init__.py
+│           ├── chat.py
+│           └── search.py
+├── frontend/
+│   ├── README.md
+│   ├── index.html
+│   ├── styles.css
+│   └── app.js
+├── algorithm/
+│   ├── README.md
+│   ├── __init__.py
+│   ├── cloudmatch/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── agent/
+│   │   │   ├── dialog.py
+│   │   │   ├── explainer.py
+│   │   │   ├── explanation_builder.py
+│   │   │   ├── pipeline.py
+│   │   │   ├── query_extractor.py
+│   │   │   ├── query_validator.py
+│   │   │   └── user_response_formatter.py
+│   │   ├── core/
+│   │   │   ├── config.py
+│   │   │   ├── constants.py
+│   │   │   ├── hf_quiet.py
+│   │   │   └── logging.py
+│   │   ├── data/
+│   │   │   ├── catalog.py
+│   │   │   ├── loaders.py
+│   │   │   ├── pricing_repository.py
+│   │   │   ├── repositories.py
+│   │   │   └── service_text.py
+│   │   ├── evaluation/
+│   │   │   ├── golden_dataset.py
+│   │   │   ├── llm_judge.py
+│   │   │   └── metrics.py
+│   │   ├── geo/
+│   │   │   └── region_resolver.py
+│   │   ├── llm/
+│   │   │   ├── client.py
+│   │   │   └── prompts/
+│   │   │       ├── explanation.py
+│   │   │       ├── judge.py
+│   │   │       └── query_extractor.py
+│   │   ├── ranking/
+│   │   │   ├── budget_matcher.py
+│   │   │   ├── compliance_filter.py
+│   │   │   ├── entity_matcher.py
+│   │   │   ├── pricing_matcher.py
+│   │   │   ├── scoring.py
+│   │   │   └── topk.py
+│   │   ├── retrieval/
+│   │   │   ├── bm25.py
+│   │   │   ├── embeddings.py
+│   │   │   ├── hybrid.py
+│   │   │   └── vector_store.py
+│   │   └── schemas/
+│   │       ├── evaluation.py
+│   │       ├── pricing.py
+│   │       ├── provider.py
+│   │       ├── query.py
+│   │       ├── ranking.py
+│   │       └── service.py
+│   └── scripts/
+│       ├── build_indexes.py
+│       ├── evaluate_ranking.py
+│       ├── evaluate_with_judge.py
+│       ├── generate_golden_dataset.py
+│       ├── import_parser_data.py
+│       ├── run_search_demo.py
+│       └── run_search_demo_user.py
+├── data/
+│   ├── normalized/
+│   │   ├── providers.json
+│   │   ├── services.json
+│   │   ├── service_pricing_items.json
+│   │   ├── parse_log.json
+│   │   └── errors.json
+│   └── evaluation/
+│       └── golden_dataset.json
+├── docs/
+│   ├── DATA.md
+│   ├── DEPLOYMENT.md
+│   └── TESTING.md
+└── tests/
+    ├── test_api_search.py
+    ├── test_dialog_manager.py
+    ├── test_metrics.py
+    ├── test_normalized_data_structure.py
+    ├── test_query_extractor.py
+    ├── test_query_validator.py
+    ├── test_region_resolver.py
+    ├── test_scoring.py
+    └── test_solution_bundle.py
+```
+
+## За что отвечает каждая часть
+
+`backend/` - серверная часть. Здесь находится FastAPI-приложение, API-маршруты, Pydantic-модели входящих и исходящих данных, Dockerfile и список Python-зависимостей. Backend принимает запросы от сайта, вызывает алгоритм и возвращает frontend готовый JSON.
+
+`frontend/` - интерфейс сайта. Здесь лежит статическая страница с витриной сервисов, диалоговым агентом и страницей о проекте. Frontend хранит историю чата в `localStorage` браузера и общается с backend через HTTP.
+
+`algorithm/` - основная логика подбора. Здесь находится извлечение структуры запроса через LLM, диалоговые уточнения, поиск по embeddings и BM25, ранжирование, фильтры, работа с регионами, бюджетом, тарифами и форматирование ответа.
+
+`data/normalized/` - нормализованные данные каталога. Это рабочий источник данных для MVP: провайдеры, сервисы, тарифные позиции и лог парсинга.
+
+`data/evaluation/` - данные для проверки качества ранжирования. Сейчас там хранится golden dataset.
+
+`docs/` - прикладная документация: данные, тестирование и деплой.
+
+`tests/` - автоматические тесты. Они проверяют API, диалог, извлечение запроса, структуру данных, ranking и комплексные связки сервисов.
+
+`docker-compose.yml` - запуск backend-контейнера.
+
+`.env.example` - пример переменных окружения для LLM.
+
+## Как устроен поток запроса
+
+```text
+Пользователь
+  -> frontend/app.js
+  -> POST /api/chat или POST /api/search
+  -> backend/app/api/
+  -> algorithm/cloudmatch/agent/
+  -> data/normalized/
+  -> ranking/retrieval
+  -> backend response
+  -> frontend rendering
+```
+
+В обычном запросе система возвращает top-3 отдельных сервиса. В комплексном запросе система сначала выделяет роли, например backend, database, storage, backup и balancer, затем подбирает связки сервисов. Каждая связка собирается от одного провайдера, чтобы компоненты было проще использовать вместе.
 
 ## Быстрый запуск локально
 
-1. Создать окружение и поставить зависимости:
+1. Создать виртуальное окружение:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
+2. Установить зависимости:
+
+```bash
 pip install -r backend/requirements.txt
 ```
 
-2. Настроить LLM:
+3. Создать `.env`:
 
 ```bash
 cp .env.example .env
 ```
 
-В `.env` нужно указать ключ, base URL и модель.
+В `.env` нужно указать ключ, base URL и модель LLM.
 
-3. Построить embedding-индекс:
+4. Построить embedding-индекс:
 
 ```bash
 python -m algorithm.scripts.build_indexes
 ```
 
-4. Запустить backend:
+5. Запустить backend:
 
 ```bash
 uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-5. Открыть API-документацию:
+6. Открыть API:
 
 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-6. Открыть frontend:
+7. Открыть frontend:
 
-Можно открыть файл `frontend/index.html` в браузере. Если frontend отдается через Nginx или другой сервер с того же домена, он сам будет обращаться к `/api/...`. При локальном открытии он обращается к `http://127.0.0.1:8000`.
+Можно открыть `frontend/index.html` в браузере. При локальном открытии сайт обращается к `http://127.0.0.1:8000`. На сервере frontend обращается к тому же домену через `/api/...`.
 
 ## API
 
 Основные endpoint:
 
-- `GET /health` - проверка, что backend жив.
-- `POST /api/chat` - диалоговый агент с памятью одного чата.
-- `POST /api/search` - прямой поиск без диалоговых уточнений.
-- `GET /api/catalog/search` - витрина сервисов.
-- `GET /api/catalog/services/{service_id}` - подробная карточка сервиса с тарифными позициями.
+- `GET /health` - проверка состояния backend.
+- `POST /api/chat` - диалоговый агент.
+- `POST /api/search` - прямой поиск по запросу.
+- `GET /api/catalog/search` - список сервисов для витрины.
+- `GET /api/catalog/services/{service_id}` - подробная карточка сервиса.
 
 Пример запроса в чат:
 
@@ -75,24 +231,15 @@ uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 }
 ```
 
-## Как работает подбор
-
-1. LLM извлекает структуру запроса: тип запроса, технологии, регион, бюджет, компоненты решения.
-2. Диалоговый слой уточняет недостающие параметры, если запрос слишком короткий.
-3. Retrieval находит кандидатов по embeddings и BM25.
-4. Ranking считает совпадение технологий, сценариев, компонентов, региона, бюджета и тарифов.
-5. Для обычного запроса возвращается top-3 сервисов.
-6. Для комплексного запроса возвращаются связки сервисов. Каждая связка собирается из сервисов одного провайдера, чтобы backend, база, storage, backup и balancer были согласованы между собой.
-
 ## Данные
 
-Основной каталог лежит в `data/normalized/`:
+Рабочие файлы лежат в `data/normalized/`:
 
-- `providers.json` - провайдеры.
-- `services.json` - облачные сервисы.
-- `service_pricing_items.json` - тарифные позиции.
-- `parse_log.json` - информация о сборе данных.
-- `errors.json` - ошибки нормализации, если были.
+- `providers.json` - провайдеры;
+- `services.json` - облачные сервисы;
+- `service_pricing_items.json` - тарифные позиции;
+- `parse_log.json` - источники и дата сбора;
+- `errors.json` - ошибки импорта или нормализации.
 
 После обновления JSON нужно перестроить индекс:
 
@@ -102,14 +249,16 @@ python -m algorithm.scripts.build_indexes
 
 ## Docker
 
-Backend собирается из `backend/Dockerfile`, а `docker-compose.yml` запускает контейнер на порту `8000`.
+Backend собирается из `backend/Dockerfile`. При сборке контейнера зависимости устанавливаются внутрь образа, затем копируются `backend/`, `algorithm/` и `data/normalized/`, после чего строится embedding-индекс.
+
+Запуск:
 
 ```bash
 docker compose up -d --build
 docker compose logs -f backend
 ```
 
-Frontend в production отдается Nginx как статические файлы из папки `frontend/`, а запросы `/api`, `/health`, `/docs`, `/openapi.json` проксируются на backend-контейнер.
+Frontend в production отдается Nginx как статические файлы. Запросы `/api`, `/health`, `/docs` и `/openapi.json` проксируются на backend-контейнер.
 
 ## Проверка
 
@@ -118,8 +267,11 @@ python -m unittest
 node --check frontend/app.js
 ```
 
-Подробности:
+Дополнительная документация:
 
-- [docs/TESTING.md](docs/TESTING.md)
-- [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
+- [backend/README.md](backend/README.md)
+- [frontend/README.md](frontend/README.md)
+- [algorithm/README.md](algorithm/README.md)
 - [docs/DATA.md](docs/DATA.md)
+- [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
+- [docs/TESTING.md](docs/TESTING.md)

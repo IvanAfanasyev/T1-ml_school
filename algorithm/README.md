@@ -1,52 +1,281 @@
 # Algorithm
 
-Папка `algorithm/` содержит бизнес-логику CloudMatch.
+`algorithm/` - основная логика CloudMatch. Здесь находится все, что связано с пониманием запроса, диалогом, поиском, ранжированием, объяснениями и оценкой качества.
+
+## Структура
 
 ```text
 algorithm/
-  cloudmatch/
-    agent/       диалог, извлечение запроса, pipeline, форматирование ответа
-    data/        загрузка нормализованных JSON
-    geo/         нормализация регионов и fallback
-    llm/         клиент LLM и prompt-шаблоны
-    ranking/     фильтры, бюджет, entity match, итоговое ранжирование
-    retrieval/   embeddings + BM25
-    schemas/     Pydantic-модели данных
-  scripts/       build_indexes, import_parser_data, демо и оценка качества
+├── README.md
+├── __init__.py
+├── cloudmatch/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── agent/
+│   ├── core/
+│   ├── data/
+│   ├── evaluation/
+│   ├── geo/
+│   ├── llm/
+│   ├── ranking/
+│   ├── retrieval/
+│   └── schemas/
+└── scripts/
+    ├── build_indexes.py
+    ├── evaluate_ranking.py
+    ├── evaluate_with_judge.py
+    ├── generate_golden_dataset.py
+    ├── import_parser_data.py
+    ├── run_search_demo.py
+    └── run_search_demo_user.py
 ```
 
-Обычный запрос:
+## Общий pipeline
 
 ```text
-текст пользователя
-  -> LLM extractor
-  -> query validator
-  -> retrieval
-  -> ranking
-  -> top-3 сервисов
+Пользовательский текст
+  -> QueryExtractor
+  -> QueryValidator
+  -> SearchPipeline
+  -> HybridRetriever
+  -> Ranking
+  -> UserResponseFormatter
 ```
 
-Комплексный запрос:
+Подробно:
+
+1. `QueryExtractor` отправляет текст пользователя в LLM и получает структурированный JSON.
+2. `QueryValidator` нормализует регион, бюджет, компоненты, 152-ФЗ и fallback-значения.
+3. `HybridRetriever` ищет кандидатов по embeddings и BM25.
+4. `ranking/` считает совпадение требований и итоговую релевантность.
+5. `SearchPipeline` выбирает top-3 или собирает связки сервисов.
+6. `UserResponseFormatter` превращает внутренний результат в понятный текст для пользователя.
+
+## `agent/`
+
+Папка отвечает за диалог и общий сценарий подбора.
+
+Главные файлы:
+
+- `dialog.py` - диалоговая логика, уточнения, память одного чата, обработка фраз вроде `мне все равно` и `любой бюджет`;
+- `query_extractor.py` - извлечение структуры запроса через LLM;
+- `query_validator.py` - нормализация и проверка структуры запроса;
+- `pipeline.py` - основной pipeline поиска;
+- `explainer.py` - генерация объяснений через LLM;
+- `explanation_builder.py` - подготовка данных для объяснения;
+- `user_response_formatter.py` - финальный человекочитаемый ответ.
+
+Диалоговый слой решает три типа действий:
+
+- `clarification` - нужно уточнить параметры;
+- `search` - данных достаточно, можно искать;
+- `off_topic` - запрос не относится к подбору облачных сервисов.
+
+## `llm/`
+
+Папка отвечает за работу с LLM.
+
+`client.py` создает OpenAI-compatible клиент. Он берет настройки из `.env`:
 
 ```text
-интернет-магазин: backend + PostgreSQL + S3 + backup + balancer
-  -> разбор на компоненты
-  -> отдельный поиск по каждому компоненту
-  -> сборка связок от одного провайдера
-  -> #1, #2, #3 связки сервисов
+LLM_API_KEY
+LLM_BASE_URL
+LLM_MODEL
+LLM_TIMEOUT_SECONDS
+LLM_MAX_RETRIES
 ```
 
-Почему связки собираются от одного провайдера:
+`prompts/query_extractor.py` содержит prompt для извлечения структуры запроса.
 
-- проще подключать компоненты внутри одного облака;
-- меньше сетевых и организационных рисков;
-- проще объяснить результат пользователю;
-- экспертная проверка ожидает цельную инфраструктурную связку, а не случайную смесь провайдеров.
+LLM должна определить:
 
-Важные команды:
+- `request_type`: `single_service` или `solution_bundle`;
+- категорию задачи;
+- технологии;
+- регион;
+- бюджет;
+- обязательные компоненты;
+- дополнительные требования.
+
+Примеры нормализации:
+
+- `посгрискл`, `постгрискл`, `postgres` -> `postgresql`;
+- `майскл`, `мускул` -> `mysql`;
+- `кубер`, `k8s` -> `kubernetes`;
+- `любой бюджет` -> бюджет не ограничивает поиск.
+
+## `retrieval/`
+
+Папка отвечает за первичный поиск кандидатов.
+
+Используются два подхода:
+
+- embeddings - смысловая близость запроса и текста сервиса;
+- BM25 - текстовое совпадение по словам и тегам.
+
+`hybrid.py` объединяет оба подхода. Индекс embeddings строится заранее командой:
 
 ```bash
 python -m algorithm.scripts.build_indexes
+```
+
+Индекс сохраняется в `data/indexes/`, но не хранится в Git.
+
+## `ranking/`
+
+Папка отвечает за оценку кандидатов.
+
+Основные части:
+
+- `compliance_filter.py` - фильтр по 152-ФЗ и региону;
+- `budget_matcher.py` - проверка бюджета и расчет price summary;
+- `pricing_matcher.py` - подбор тарифных позиций для отображения;
+- `entity_matcher.py` - совпадение технологий, сценариев, компонентов, требований;
+- `scoring.py` - итоговая оценка;
+- `topk.py` - выбор top-k.
+
+Ranking учитывает:
+
+- насколько сервис близок по тексту и смыслу;
+- совпадает ли технология;
+- совпадает ли сценарий;
+- закрывает ли сервис нужный компонент;
+- подходит ли регион;
+- укладывается ли цена в бюджет;
+- есть ли подтверждение дополнительных требований.
+
+## `data/`
+
+Папка отвечает за загрузку нормализованных JSON.
+
+Главные файлы:
+
+- `repositories.py` - загрузка провайдеров и сервисов;
+- `pricing_repository.py` - загрузка тарифных позиций;
+- `catalog.py` - сбор справочников для prompt и API;
+- `loaders.py` - безопасное чтение JSON;
+- `service_text.py` - сбор текста сервиса для retrieval.
+
+Алгоритм читает данные из `data/normalized/`.
+
+## `geo/`
+
+Папка отвечает за регионы.
+
+`region_resolver.py` умеет:
+
+- приводить русские названия к каноническим значениям;
+- находить регион в тексте;
+- делать fallback к ближайшему доступному региону;
+- не выбрасывать запрос, если пользователь указал город, которого нет в каталоге.
+
+Пример:
+
+```text
+в москве -> Moscow
+в россии -> Russia
+в питере -> Saint Petersburg
+```
+
+## `schemas/`
+
+Папка содержит Pydantic-модели:
+
+- `query.py` - структура пользовательского запроса;
+- `service.py` - сервис;
+- `provider.py` - провайдер;
+- `pricing.py` - тарифная позиция;
+- `ranking.py` - результат ранжирования;
+- `evaluation.py` - модели оценки качества.
+
+Схемы нужны, чтобы данные внутри проекта были предсказуемыми.
+
+## `evaluation/`
+
+Папка нужна для проверки качества.
+
+Она содержит:
+
+- загрузку golden dataset;
+- расчет метрик;
+- LLM judge для более мягкой оценки объяснений и полноты ответа.
+
+## Обычный запрос
+
+Пример:
+
+```text
+база данных MySQL, москва, любой бюджет
+```
+
+Ожидаемый сценарий:
+
+1. LLM определяет `single_service`.
+2. Извлекаются `mysql`, `database`, `Moscow`.
+3. Бюджет помечается как неважный.
+4. Pipeline ищет сервисы баз данных.
+5. Top-1 должен быть релевантен MySQL, а не PostgreSQL.
+
+## Комплексный запрос
+
+Пример:
+
+```text
+Нужен backend на Python с PostgreSQL, хранение изображений,
+backup базы данных и балансировщик.
+```
+
+Ожидаемый сценарий:
+
+1. LLM определяет `solution_bundle`.
+2. Запрос разбивается на компоненты:
+   - `compute`;
+   - `managed_database`;
+   - `object_storage`;
+   - `backup`;
+   - `load_balancer`.
+3. Для каждого компонента запускается отдельный поиск.
+4. Pipeline собирает связки сервисов от одного провайдера.
+5. Ответ показывает `#1`, `#2`, `#3` как цельные наборы сервисов.
+
+## Скрипты
+
+`algorithm/scripts/build_indexes.py` строит embedding-индекс.
+
+`algorithm/scripts/import_parser_data.py` импортирует данные парсера в нормализованную структуру.
+
+`algorithm/scripts/run_search_demo_user.py` запускает интерактивный поиск в терминале.
+
+`algorithm/scripts/run_search_demo.py` запускает заранее заданный demo-запрос.
+
+`algorithm/scripts/evaluate_ranking.py` проверяет ranking на golden dataset.
+
+`algorithm/scripts/evaluate_with_judge.py` запускает оценку с LLM judge.
+
+`algorithm/scripts/generate_golden_dataset.py` помогает сформировать тестовый набор.
+
+## Команды
+
+Построить индекс:
+
+```bash
+python -m algorithm.scripts.build_indexes
+```
+
+Запустить терминальный demo-режим:
+
+```bash
 python -m algorithm.scripts.run_search_demo_user
+```
+
+Импортировать данные парсера:
+
+```bash
 python -m algorithm.scripts.import_parser_data --source-dir "/path/to/parser/data"
+```
+
+Запустить тесты:
+
+```bash
+python -m unittest
 ```
