@@ -1,0 +1,42 @@
+[
+  {
+    "provider_id": "t1-cloud",
+    "url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.071534Z",
+    "status": "success",
+    "records_added": 1,
+    "error": null
+  },
+  {
+    "provider_id": "t1-cloud",
+    "url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114446Z",
+    "status": "success",
+    "records_added": 375,
+    "error": null
+  },
+  {
+    "provider_id": "t1-cloud",
+    "url": "llm://services-enrichment",
+    "parsed_at": "2026-05-10T15:56:32.721619Z",
+    "status": "success",
+    "records_added": 32,
+    "error": null
+  },
+  {
+    "provider_id": "t1-cloud",
+    "url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:32.738420Z",
+    "status": "success",
+    "records_added": 32,
+    "error": null
+  },
+  {
+    "provider_id": "t1-cloud",
+    "url": "synthetic://user_task_templates",
+    "parsed_at": "2026-05-10T15:56:32.739603Z",
+    "status": "success",
+    "records_added": 3,
+    "error": null
+  }
+]

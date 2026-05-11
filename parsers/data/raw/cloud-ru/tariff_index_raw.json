@@ -1,0 +1,345 @@
+[
+  {
+    "service_name": "Application Operations Management",
+    "title": "Тарифы «Application Operations Management». Приложение №7.ADV.2.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/app-operations?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.285752+00:00"
+  },
+  {
+    "service_name": "Application Performance Management",
+    "title": "Тарифы «Application Performance Management». Приложение №7.ADV.4.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/app-performance?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.285833+00:00"
+  },
+  {
+    "service_name": "Cloud Backup And Recovery",
+    "title": "Тарифы «Cloud Backup And Recovery». Приложение №7.ADV.5.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-backup-recovery?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.285888+00:00"
+  },
+  {
+    "service_name": "Cloud Container Engine",
+    "title": "Тарифы «Cloud Container Engine». Приложение №7.ADV.6.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-container-engine?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.285949+00:00"
+  },
+  {
+    "service_name": "Cloud Performance Test Service",
+    "title": "Тарифы «Cloud Performance Test Service». Приложение №7.ADV.8.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-performance-test?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286045+00:00"
+  },
+  {
+    "service_name": "Cloud Search Service",
+    "title": "Тарифы «Cloud Search Service». Приложение №7.ADV.9.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-search?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286128+00:00"
+  },
+  {
+    "service_name": "Direct Connect",
+    "title": "Тарифы «Direct Connect». Приложение №7.ADV.11.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/direct-connect?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286196+00:00"
+  },
+  {
+    "service_name": "Межплатформенная связность Cloud.ru Advanced",
+    "title": "Тарифы «Межплатформенная связность Cloud.ru Advanced». Приложение №7.ADV.11.2.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/platform-connect?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286275+00:00"
+  },
+  {
+    "service_name": "SFP Модуль",
+    "title": "Тарифы «SFP Модуль». Приложение №7.ADV.11.1.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/sfp-rent?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286347+00:00"
+  },
+  {
+    "service_name": "Distributed Cache Service For Redis",
+    "title": "Тарифы «Distributed Cache Service For Redis». Приложение №7.ADV.13.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/redis-cache?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286429+00:00"
+  },
+  {
+    "service_name": "Distributed Message Service For Kafka, RabbitMQ and RocketMQ",
+    "title": "Тарифы «Distributed Message Service For Kafka, RabbitMQ and RocketMQ». Приложение №7.ADV.14.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/kafka-rabbitmq?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286518+00:00"
+  },
+  {
+    "service_name": "Document Database Service",
+    "title": "Тарифы «Document Database Service». Приложение №7.ADV.15.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/document-db?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286590+00:00"
+  },
+  {
+    "service_name": "Elastic Cloud Server",
+    "title": "Тарифы «Elastic Cloud Server». Приложение №7.ADV.17.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-cloud?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286656+00:00"
+  },
+  {
+    "service_name": "Elastic Load Balance",
+    "title": "Тарифы «Elastic Load Balance». Приложение №7.ADV.18.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-load-balance?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286748+00:00"
+  },
+  {
+    "service_name": "Elastic Volume Service",
+    "title": "Тарифы «Elastic Volume Service». Приложение №7.ADV.19.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-volume?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286829+00:00"
+  },
+  {
+    "service_name": "FunctionGraph",
+    "title": "Тарифы «FunctionGraph». Приложение №7.ADV.20.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/functiongraph?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286902+00:00"
+  },
+  {
+    "service_name": "Image Management Service",
+    "title": "Тарифы «Image Management Service». Приложение №7.ADV.22.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/image-management?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286969+00:00"
+  },
+  {
+    "service_name": "Mapreduce Service",
+    "title": "Тарифы «Mapreduce Service». Приложение №7.ADV.23.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/mapreduce?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287030+00:00"
+  },
+  {
+    "service_name": "NAT Gateway",
+    "title": "Тарифы «NAT Gateway». Приложение №7.ADV.24.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/nat-gateway?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287104+00:00"
+  },
+  {
+    "service_name": "Object Storage Service",
+    "title": "Тарифы «Object Storage Service». Приложение №7.ADV.25",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/object-storage?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287180+00:00"
+  },
+  {
+    "service_name": "Relational Databases Service",
+    "title": "Тарифы «Relational Databases Service». Приложение №7.ADV.26.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/relational-db?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287250+00:00"
+  },
+  {
+    "service_name": "Scalable File Service",
+    "title": "Тарифы «Scalable File Service». Приложение №7.ADV.27.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/scalable-file?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287321+00:00"
+  },
+  {
+    "service_name": "ServiceStage",
+    "title": "Тарифы «ServiceStage». Приложение №7.ADV.29.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/servicestage?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287393+00:00"
+  },
+  {
+    "service_name": "Simple Message Notification",
+    "title": "Тарифы «Simple Message Notification». Приложение №7.ADV.30.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/message-notification?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287466+00:00"
+  },
+  {
+    "service_name": "Virtual Private Cloud & Elastic IP",
+    "title": "Тарифы «Virtual Private Cloud & Elastic IP». Приложение №7.ADV.32.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/vpc?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287521+00:00"
+  },
+  {
+    "service_name": "Virtual Private Network",
+    "title": "Тарифы «Virtual Private Network». Приложение №7.ADV.33.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/vpn?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287672+00:00"
+  },
+  {
+    "service_name": "API Gateway",
+    "title": "Тарифы «API Gateway». Приложение №7.ADV.34.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/api-gateway?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287757+00:00"
+  },
+  {
+    "service_name": "Data Lake Insight",
+    "title": "Тарифы «Data Lake Insight». Приложение №7.ADV.35.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-lake?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287853+00:00"
+  },
+  {
+    "service_name": "Graph Engine Service",
+    "title": "Тарифы «Graph Engine Service». Приложение №7.ADV.36.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/graph-engine?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287931+00:00"
+  },
+  {
+    "service_name": "Data Warehouse Service",
+    "title": "Тарифы «Data Warehouse Service». Приложение №7.ADV.37.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-warehouse?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288063+00:00"
+  },
+  {
+    "service_name": "Data Replication Service",
+    "title": "Тарифы «Data Replication Service». Приложение №7.ADV.38.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-replication?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288176+00:00"
+  },
+  {
+    "service_name": "GPU Accelerated Servers",
+    "title": "Тарифы «GPU Accelerated Servers». Приложение №7.ADV.40.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/gpu-accelerated?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288305+00:00"
+  },
+  {
+    "service_name": "Distributed Database Middleware",
+    "title": "Тарифы «Distributed Database Middleware». Приложение №7.ADV.42.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/db-middleware?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288390+00:00"
+  },
+  {
+    "service_name": "VPC Endpoint",
+    "title": "Тарифы «VPC Endpoint». Приложение №7.ADV.43.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/vpc-endpoint?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288462+00:00"
+  },
+  {
+    "service_name": "Web Application Firewall",
+    "title": "Тарифы «Web Application Firewall». Приложение №7.ADV.47.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/web-app-firewall?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288530+00:00"
+  },
+  {
+    "service_name": "Data Admin Service",
+    "title": "Тарифы «Data Admin Service». Приложение №7.ADV.50.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-admin?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288597+00:00"
+  },
+  {
+    "service_name": "Data Encryption Workshop",
+    "title": "Тарифы «Data Encryption Workshop». Приложение №7.ADV.51.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-encryption?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288670+00:00"
+  },
+  {
+    "service_name": "DataArts Studio",
+    "title": "Тарифы «DataArts Studio». Приложение №7.ADV.52.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/dayu?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288740+00:00"
+  },
+  {
+    "service_name": "Database Security Service",
+    "title": "Тарифы «Database Security Service». Приложение №7.ADV.53.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/db-security?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288812+00:00"
+  },
+  {
+    "service_name": "Host Security Service",
+    "title": "Тарифы «Host Security Service». Приложение №7.ADV.54.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/host-security?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288895+00:00"
+  },
+  {
+    "service_name": "Cloud Bastion Host",
+    "title": "Тарифы «Cloud Bastion Host». Приложение №7.ADV.56.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/bastion-host?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288966+00:00"
+  },
+  {
+    "service_name": "CodeArts",
+    "title": "Тарифы «CodeArts». Приложение №7.ADV.57.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/codearts?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289038+00:00"
+  },
+  {
+    "service_name": "Cloud Certificate Manager",
+    "title": "Тарифы «Cloud Certificate Manager». Приложение №7.ADV.58.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/certificate-manager?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289110+00:00"
+  },
+  {
+    "service_name": "DataArts Insight",
+    "title": "Тарифы «DataArts Insight». Приложение №7.ADV.59.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/dataarts-insight?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289178+00:00"
+  },
+  {
+    "service_name": "Cloud Service Engine",
+    "title": "Тарифы «Cloud Service Engine». Приложение №7.ADV.60.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-service-engine?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289258+00:00"
+  },
+  {
+    "service_name": "CloudTable",
+    "title": "Тарифы «CloudTable». Приложение №7.ADV.61.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloudtable?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289327+00:00"
+  },
+  {
+    "service_name": "Enterprise Router",
+    "title": "Тарифы «Enterprise Router». Приложение №7.ADV.62.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/enterprise-router?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289403+00:00"
+  },
+  {
+    "service_name": "Cloud Container Instance",
+    "title": "Тарифы «Cloud Container Instance». Приложение №7.ADV.63.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-container-instance?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289480+00:00"
+  },
+  {
+    "service_name": "Cloud Firewall",
+    "title": "Тарифы «Cloud Firewall». Приложение №7.ADV.64.",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-firewall?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289561+00:00"
+  }
+]

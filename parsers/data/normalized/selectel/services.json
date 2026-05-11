@@ -1,0 +1,554 @@
+[
+  {
+    "service_id": "selectel-vydelennye-servery",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Выделенные серверы",
+    "category": "Dedicated Servers",
+    "description": "Выделенные серверы Selectel предоставляют клиентам физические серверы с различными конфигурациями процессора, памяти и дискового пространства для размещения IT-инфраструктуры.",
+    "tech_stack_tags": [
+      "Intel-Celeron",
+      "Intel-Atom",
+      "Intel-Xeon",
+      "DDR4",
+      "DDR3",
+      "ECC",
+      "SSD",
+      "HDD",
+      "SATA"
+    ],
+    "use_case_tags": [
+      "web-hosting",
+      "database-hosting",
+      "application-hosting",
+      "development-environment",
+      "business-applications"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У Selectel есть А-ЦОД/аттестованные сегменты для 152-ФЗ, но для этого сервиса требуется отдельная проверка размещения именно в аттестованном сегменте.",
+    "regions": [
+      "Санкт-Петербург",
+      "Москва",
+      "Новосибирск"
+    ],
+    "pools": [
+      "SPB-2",
+      "SPB-3",
+      "SPB-4",
+      "SPB-5",
+      "MSK-1",
+      "MSK-2",
+      "MSK-3",
+      "NSK-1",
+      "TAS-1",
+      "TAS-2",
+      "ALM-1",
+      "NBO-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 864.0,
+    "price_from_value": 864.0,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 287,
+    "parsed_at": "2026-05-10T18:52:27.984940+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-oblachnye-servery",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Облачные серверы",
+    "category": "Cloud Compute",
+    "description": "Сервис предоставляет облачные серверы с различными типами дисков, балансировщиками нагрузки и опцией использования графических карт (GPU) для вычислительно интенсивных задач.",
+    "tech_stack_tags": [
+      "SSD",
+      "GPU",
+      "A100",
+      "H200",
+      "load-balancer"
+    ],
+    "use_case_tags": [
+      "computing",
+      "machine-learning",
+      "data-processing",
+      "high-performance-computing"
+    ],
+    "is_152fz_compliant": true,
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1"
+    ],
+    "compliance_note": "Для Selectel подтверждена возможность работы в аттестованном сегменте: А-ЦОД соответствует требованиям 152-ФЗ и УЗ-1. Доступность конкретного продукта берется из матрицы доступности.",
+    "regions": [
+      "Москва",
+      "Санкт-Петербург",
+      "Новосибирск"
+    ],
+    "pools": [
+      "ru-6a",
+      "ru-3",
+      "ru-3a",
+      "ru-3b",
+      "gis-2a",
+      "ru-1",
+      "ru-1a",
+      "ru-1b",
+      "ru-1c",
+      "ru-9",
+      "ru-9a",
+      "ru-2",
+      "ru-2a",
+      "ru-2b",
+      "ru-2c",
+      "ru-7",
+      "ru-7a",
+      "ru-7b",
+      "gis-1a",
+      "ru-6",
+      "ru-6b",
+      "ru-6c",
+      "ru-8",
+      "ru-8a",
+      "uz-1",
+      "uz-1a",
+      "uz-2",
+      "uz-2a",
+      "kz-1",
+      "kz-1a",
+      "ke-1",
+      "ke-1a"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.09,
+    "price_from_value": 0.09,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 85,
+    "parsed_at": "2026-05-10T18:52:28.894103+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-s3",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "S3",
+    "category": "Cloud Storage",
+    "description": "Сервис S3 предоставляет возможность хранения данных с различными опциями тарификации, включая оплату за запросы, трафик и объём хранимых данных.",
+    "tech_stack_tags": [
+      "S3"
+    ],
+    "use_case_tags": [
+      "data-storage",
+      "backup",
+      "file-hosting"
+    ],
+    "is_152fz_compliant": true,
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1"
+    ],
+    "compliance_note": "Для Selectel подтверждена возможность работы в аттестованном сегменте: А-ЦОД соответствует требованиям 152-ФЗ и УЗ-1. Доступность конкретного продукта берется из матрицы доступности.",
+    "regions": [
+      "Санкт-Петербург",
+      "Москва",
+      "Новосибирск"
+    ],
+    "pools": [
+      "ru-3",
+      "ru-1",
+      "ru-7",
+      "gis-1a",
+      "uz-2",
+      "kz-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.81,
+    "price_from_value": 0.81,
+    "price_unit": "руб/ГБ в мес.",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 6,
+    "parsed_at": "2026-05-10T18:52:29.790369+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-oblachnye-bazy-dannykh",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Облачные базы данных",
+    "category": "Database",
+    "description": "Сервис предоставляет управляемые облачные базы данных с возможностью выбора конфигурации по RAM, vCPU и размеру выделенного сервера.",
+    "tech_stack_tags": [
+      "DBaaS",
+      "RAM",
+      "vCPU",
+      "dedicated-server"
+    ],
+    "use_case_tags": [
+      "database-as-a-service",
+      "data-storage",
+      "application-development",
+      "business-analytics"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У Selectel есть А-ЦОД/аттестованные сегменты для 152-ФЗ, но для этого сервиса требуется отдельная проверка размещения именно в аттестованном сегменте.",
+    "regions": [
+      "Санкт-Петербург",
+      "Москва",
+      "Новосибирск"
+    ],
+    "pools": [
+      "ru-9",
+      "ru-3",
+      "ru-1",
+      "ru-2",
+      "ru-7",
+      "ru-8",
+      "uz-1",
+      "uz-2",
+      "kz-1",
+      "ke-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 22.11,
+    "price_from_value": 22.11,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 13,
+    "parsed_at": "2026-05-10T18:52:30.688278+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-managed-kubernetes",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Managed Kubernetes",
+    "category": "Containers and Serverless",
+    "description": "Сервис предоставляет управляемый кластер Kubernetes для развёртывания и управления контейнерными приложениями.",
+    "tech_stack_tags": [
+      "Kubernetes"
+    ],
+    "use_case_tags": [
+      "container-orchestration",
+      "application-deployment",
+      "microservices"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У Selectel есть А-ЦОД/аттестованные сегменты для 152-ФЗ, но для этого сервиса требуется отдельная проверка размещения именно в аттестованном сегменте.",
+    "regions": [
+      "Санкт-Петербург",
+      "Москва",
+      "Новосибирск"
+    ],
+    "pools": [
+      "ru-9",
+      "ru-3",
+      "ru-3b",
+      "ru-1",
+      "ru-1a",
+      "ru-1b",
+      "ru-1c",
+      "ru-9a",
+      "SPB-2",
+      "SPB-3",
+      "SPB-4",
+      "SPB-5",
+      "ru-2",
+      "ru-2a",
+      "ru-2b",
+      "ru-2c",
+      "ru-7",
+      "ru-7a",
+      "ru-7b",
+      "MSK-1",
+      "MSK-2",
+      "MSK-3",
+      "ru-8",
+      "ru-8a",
+      "NSK-1",
+      "uz-1",
+      "uz-1a",
+      "uz-2",
+      "uz-2a",
+      "kz-1",
+      "kz-1a",
+      "ke-1",
+      "ke-1a"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 5413.24,
+    "price_from_value": 5413.24,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 2,
+    "parsed_at": "2026-05-10T18:52:31.452395+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-container-registry",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Container Registry",
+    "category": "Containers and Serverless",
+    "description": "Сервис Container Registry предоставляет хранилище для Docker-образов, позволяя удобно управлять и распространять контейнеры.",
+    "tech_stack_tags": [
+      "docker",
+      "container-registry"
+    ],
+    "use_case_tags": [
+      "container-management",
+      "software-distribution",
+      "devops"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У Selectel есть А-ЦОД/аттестованные сегменты для 152-ФЗ, но для этого сервиса требуется отдельная проверка размещения именно в аттестованном сегменте.",
+    "regions": [],
+    "pools": [],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 1.63,
+    "price_from_value": 1.63,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 29,
+    "parsed_at": "2026-05-10T18:52:32.250056+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-razmeshchenie-oborudovaniya",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Размещение оборудования",
+    "category": "Colocation",
+    "description": "Сервис предоставляет возможность размещения серверного оборудования в дата-центре, а также аренду ячеек для временного хранения оборудования.",
+    "tech_stack_tags": [
+      "server-rack",
+      "data-center"
+    ],
+    "use_case_tags": [
+      "equipment-hosting",
+      "temporary-storage",
+      "physical-server-placement"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У Selectel есть А-ЦОД/аттестованные сегменты для 152-ФЗ, но для этого сервиса требуется отдельная проверка размещения именно в аттестованном сегменте.",
+    "regions": [
+      "Санкт-Петербург",
+      "Москва",
+      "Новосибирск"
+    ],
+    "pools": [
+      "SPB-2",
+      "SPB-3",
+      "SPB-5",
+      "MSK-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.0,
+    "price_from_value": 0.0,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 74,
+    "parsed_at": "2026-05-10T18:52:33.113897+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-zashchita-ot-ddos",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Защита от DDoS",
+    "category": "Security",
+    "description": "Сервис предоставляет защиту от DDoS-атак и включает в себя различные тарифные планы с разными уровнями защиты и объёмами легитимного трафика.",
+    "tech_stack_tags": [
+      "WAF",
+      "DDoS-protection"
+    ],
+    "use_case_tags": [
+      "ddos-protection",
+      "network-security",
+      "traffic-filtering"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У Selectel есть А-ЦОД/аттестованные сегменты для 152-ФЗ, но для этого сервиса требуется отдельная проверка размещения именно в аттестованном сегменте.",
+    "regions": [],
+    "pools": [],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2.0,
+    "price_from_value": 2.0,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 52,
+    "parsed_at": "2026-05-10T18:52:34.034044+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-sredstva-zashchity-informatsii",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Средства защиты информации",
+    "category": "Security",
+    "description": "Сертифицированные виртуальные решения UserGate для защиты информации с различными конфигурациями вычислительных ресурсов.",
+    "tech_stack_tags": [
+      "UserGate"
+    ],
+    "use_case_tags": [
+      "information-security",
+      "network-security",
+      "threat-protection"
+    ],
+    "is_152fz_compliant": true,
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1"
+    ],
+    "compliance_note": "Для Selectel подтверждена возможность работы в аттестованном сегменте: А-ЦОД соответствует требованиям 152-ФЗ и УЗ-1. Доступность конкретного продукта берется из матрицы доступности.",
+    "regions": [],
+    "pools": [],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 30000.0,
+    "price_from_value": 30000.0,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 7,
+    "parsed_at": "2026-05-10T18:52:34.601244+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-kiber-bekap-oblachnyy",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Кибер Бэкап Облачный",
+    "category": "Cloud Storage",
+    "description": "Сервис предоставляет возможности для резервного копирования данных с виртуальных машин, физических серверов, рабочих станций и СУБД на базе PostgreSQL.",
+    "tech_stack_tags": [
+      "PostgreSQL",
+      "virtual-machines",
+      "physical-servers",
+      "workstations"
+    ],
+    "use_case_tags": [
+      "backup",
+      "data-recovery",
+      "database-backup"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У Selectel есть А-ЦОД/аттестованные сегменты для 152-ФЗ, но для этого сервиса требуется отдельная проверка размещения именно в аттестованном сегменте.",
+    "regions": [],
+    "pools": [],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2.29,
+    "price_from_value": 2.29,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 9,
+    "parsed_at": "2026-05-10T18:52:35.242377+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "selectel-mezhsetevye-ekrany",
+    "provider_id": "selectel",
+    "provider_name": "Selectel",
+    "name": "Межсетевые экраны",
+    "category": "Security",
+    "description": "Предоставление услуг межсетевых экранов для защиты сети от несанкционированного доступа и угроз.",
+    "tech_stack_tags": [
+      "Cisco-ASA",
+      "Fortinet"
+    ],
+    "use_case_tags": [
+      "network-security",
+      "threat-protection",
+      "access-control"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У Selectel есть А-ЦОД/аттестованные сегменты для 152-ФЗ, но для этого сервиса требуется отдельная проверка размещения именно в аттестованном сегменте.",
+    "regions": [
+      "Санкт-Петербург",
+      "Москва",
+      "Новосибирск"
+    ],
+    "pools": [
+      "SPB-2",
+      "SPB-3",
+      "SPB-4",
+      "SPB-5",
+      "MSK-1",
+      "MSK-2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2.38,
+    "price_from_value": 2.38,
+    "price_unit": "руб/мес",
+    "support_level": null,
+    "service_url": "https://selectel.ru/prices/",
+    "source_url": "https://selectel.ru/prices/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "pricing_items_count": 44,
+    "parsed_at": "2026-05-10T18:52:35.995078+00:00",
+    "is_synthetic": false
+  }
+]

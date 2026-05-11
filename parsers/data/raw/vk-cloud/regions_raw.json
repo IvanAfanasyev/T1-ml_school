@@ -1,0 +1,40 @@
+{
+  "source_url": "https://cloud.vk.com/docs/start/concepts/architecture#az",
+  "regions": [
+    "Москва"
+  ],
+  "availability_zones": [
+    "GZ1",
+    "MS1",
+    "ME1",
+    "PA2"
+  ],
+  "region_details": [
+    {
+      "region": "Москва",
+      "availability_zone": "GZ1",
+      "datacenter": "Goznak"
+    },
+    {
+      "region": "Москва",
+      "availability_zone": "MS1",
+      "datacenter": "DataLine NORD4"
+    },
+    {
+      "region": "Москва",
+      "availability_zone": "ME1",
+      "datacenter": "«Медведково» Ростелеком-ЦОД"
+    },
+    {
+      "region": "Москва",
+      "availability_zone": "PA2",
+      "datacenter": "«Пахра»"
+    },
+    {
+      "region": "Казахстан",
+      "availability_zone": "QAZ",
+      "datacenter": "QazCloud"
+    }
+  ],
+  "parsed_at": "2026-05-10T17:31:40.945635+00:00"
+}

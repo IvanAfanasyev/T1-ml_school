@@ -1,0 +1,2096 @@
+[
+  {
+    "service_id": "cloud-ru-application-operations-management",
+    "provider_id": "cloud-ru",
+    "name": "Application Operations Management",
+    "category": "Monitoring and DevOps",
+    "description": "Сервис Application Operations Management от Cloud.ru Advanced предназначен для управления и мониторинга приложений, помогает оптимизировать их работу и обеспечивать стабильность функционирования.",
+    "tech_stack_tags": [
+      "IT-operations",
+      "application-management",
+      "automation",
+      "cloud-platform",
+      "devops",
+      "monitoring"
+    ],
+    "use_case_tags": [
+      "application-monitoring",
+      "devops-management",
+      "performance-optimization"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.00122,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/app-operations?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/app-operations?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.285752+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-application-performance-management",
+    "provider_id": "cloud-ru",
+    "name": "Application Performance Management",
+    "category": "Monitoring and DevOps",
+    "description": "Сервис Application Performance Management от Cloud.ru Advanced предназначен для мониторинга и управления производительностью приложений. Используется для выявления и устранения проблем, оптимизации работы приложений и повышения их производительности.",
+    "tech_stack_tags": [
+      "application-management",
+      "devops",
+      "monitoring",
+      "performance"
+    ],
+    "use_case_tags": [
+      "application-monitoring",
+      "devops-management",
+      "performance-optimization"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 4.9044,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/app-performance?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/app-performance?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.285833+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-backup-and-recovery",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Backup And Recovery",
+    "category": "Cloud Storage",
+    "description": "Сервис Cloud Backup And Recovery от Cloud.ru Advanced предоставляет возможность резервного копирования и восстановления данных в облаке. Используется для защиты данных и минимизации рисков потери информации.",
+    "tech_stack_tags": [
+      "backup",
+      "cloud-services",
+      "cloud-storage",
+      "data-recovery"
+    ],
+    "use_case_tags": [
+      "data-backup",
+      "data-protection",
+      "disaster-recovery"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.002196,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-backup-recovery?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-backup-recovery?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.285888+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-container-engine",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Container Engine",
+    "category": "Containers and Serverless",
+    "description": "Cloud Container Engine — сервис для управления контейнерными приложениями. Используется для развёртывания и масштабирования контейнерных приложений в облачной среде.",
+    "tech_stack_tags": [
+      "Cloud",
+      "Containers",
+      "Docker",
+      "Kubernetes",
+      "Orchestration"
+    ],
+    "use_case_tags": [
+      "application-deployment",
+      "container-management",
+      "scaling-applications"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 7.5152,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-container-engine?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-container-engine?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.285949+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-performance-test-service",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Performance Test Service",
+    "category": "Monitoring and DevOps",
+    "description": "Сервис для тестирования производительности облачных решений. Используется для оценки производительности приложений и инфраструктуры в облачной среде.",
+    "tech_stack_tags": [
+      "cloud-infrastructure",
+      "devops",
+      "load-testing",
+      "performance-monitoring"
+    ],
+    "use_case_tags": [
+      "application-optimization",
+      "infrastructure-monitoring",
+      "performance-testing"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.0732,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-performance-test?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-performance-test?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286045+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-search-service",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Search Service",
+    "category": "Data and Analytics",
+    "description": "Сервис Cloud Search Service предоставляет возможности для поиска и анализа данных. Используется для реализации функций поиска в приложениях и сайтах, а также для организации эффективного доступа к информации.",
+    "tech_stack_tags": [
+      "API",
+      "data-analysis",
+      "indexing",
+      "search"
+    ],
+    "use_case_tags": [
+      "application-search",
+      "content-discovery",
+      "data-search"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 13.9324,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-search?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-search?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286128+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-direct-connect",
+    "provider_id": "cloud-ru",
+    "name": "Direct Connect",
+    "category": "Network",
+    "description": "Direct Connect от Cloud.ru Advanced предоставляет выделенное сетевое соединение между инфраструктурой клиента и облачным сервисом, обеспечивая высокую скорость и надёжность передачи данных.",
+    "tech_stack_tags": [
+      "LAN",
+      "VPN",
+      "WAN",
+      "выделенный-канал",
+      "сетевое-соединение"
+    ],
+    "use_case_tags": [
+      "data-transfer",
+      "hybrid-cloud",
+      "secure-connection"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 488.0,
+    "price_unit": "руб/шт/мес",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/direct-connect?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/direct-connect?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286196+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-межплатформенная-связность-cloud-ru-advanced",
+    "provider_id": "cloud-ru",
+    "name": "Межплатформенная связность Cloud.ru Advanced",
+    "category": "Network",
+    "description": "Сервис обеспечивает межплатформенную связность, позволяя интегрировать и связывать различные платформы и сервисы. Используется для создания единой IT-инфраструктуры и обеспечения взаимодействия между различными системами и сервисами.",
+    "tech_stack_tags": [
+      "API",
+      "интеграция-систем",
+      "межплатформенное-взаимодействие",
+      "сетевая-инфраструктура"
+    ],
+    "use_case_tags": [
+      "интеграция-платформ",
+      "построение-IT-инфраструктуры",
+      "связанность-сервисов"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 5124.0,
+    "price_unit": "руб/шт/мес",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/platform-connect?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/platform-connect?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286275+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-sfp-модуль",
+    "provider_id": "cloud-ru",
+    "name": "SFP Модуль",
+    "category": "Network",
+    "description": "Сервис SFP Модуль предоставляет возможности для расширения сетевых подключений и увеличения пропускной способности сети. Используется для подключения оборудования и организации сетевых соединений.",
+    "tech_stack_tags": [
+      "SFP",
+      "подключение",
+      "пропускная способность",
+      "сетевое оборудование",
+      "сеть"
+    ],
+    "use_case_tags": [
+      "connection-optimization",
+      "network-expansion"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 488.0,
+    "price_unit": "руб/шт/мес",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/sfp-rent?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/sfp-rent?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286347+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-distributed-cache-service-for-redis",
+    "provider_id": "cloud-ru",
+    "name": "Distributed Cache Service For Redis",
+    "category": "Messaging and Cache",
+    "description": "Сервис распределённого кэширования на базе Redis, который помогает ускорить работу приложений за счёт временного хранения данных в оперативной памяти.",
+    "tech_stack_tags": [
+      "Cache",
+      "Distributed Systems",
+      "In-Memory Database",
+      "Redis"
+    ],
+    "use_case_tags": [
+      "application-performance-optimization",
+      "caching",
+      "data-storage"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 22.0454,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/redis-cache?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/redis-cache?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286429+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-distributed-message-service-for-kafka-rabbitmq-and-rocketmq",
+    "provider_id": "cloud-ru",
+    "name": "Distributed Message Service For Kafka, RabbitMQ and RocketMQ",
+    "category": "Messaging and Cache",
+    "description": "Сервис предоставляет возможности для работы с распределёнными сообщениями, поддерживая Kafka, RabbitMQ и RocketMQ. Используется для построения надёжных и масштабируемых систем обмена сообщениями между различными компонентами приложения.",
+    "tech_stack_tags": [
+      "Distributed Systems",
+      "Kafka",
+      "Messaging",
+      "Queue",
+      "RabbitMQ",
+      "RocketMQ"
+    ],
+    "use_case_tags": [
+      "event-driven-architecture",
+      "message-queueing",
+      "microservices-communication"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.086498,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/kafka-rabbitmq?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/kafka-rabbitmq?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286518+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-document-database-service",
+    "provider_id": "cloud-ru",
+    "name": "Document Database Service",
+    "category": "Database",
+    "description": "Сервис предоставляет возможность работы с документоориентированной базой данных. Используется для хранения и обработки документов в формате JSON, подходит для проектов, требующих гибкой схемы данных.",
+    "tech_stack_tags": [
+      "Cloud",
+      "Document Database",
+      "JSON",
+      "NoSQL"
+    ],
+    "use_case_tags": [
+      "data-processing",
+      "document-storage",
+      "web-applications"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.002806,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/document-db?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/document-db?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286590+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-elastic-cloud-server",
+    "provider_id": "cloud-ru",
+    "name": "Elastic Cloud Server",
+    "category": "Cloud Compute",
+    "description": "Elastic Cloud Server от Cloud.ru Advanced предоставляет масштабируемые вычислительные ресурсы, позволяя пользователям гибко управлять мощностью и объёмом ресурсов в зависимости от текущих потребностей бизнеса.",
+    "tech_stack_tags": [
+      "Cloud",
+      "Compute",
+      "IaaS",
+      "Scalability",
+      "VM"
+    ],
+    "use_case_tags": [
+      "business-applications",
+      "development-environment",
+      "web-applications"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 16.9702,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-cloud?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-cloud?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286656+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-elastic-load-balance",
+    "provider_id": "cloud-ru",
+    "name": "Elastic Load Balance",
+    "category": "Network",
+    "description": "Elastic Load Balance — сервис для распределения нагрузки между серверами. Используется для обеспечения высокой доступности и масштабируемости веб-приложений и сервисов.",
+    "tech_stack_tags": [
+      "HTTP",
+      "SSL/TLS",
+      "TCP",
+      "cloud-networking",
+      "load-balancing"
+    ],
+    "use_case_tags": [
+      "high-availability",
+      "scalability",
+      "traffic-distribution"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2.318,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-load-balance?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-load-balance?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286748+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-elastic-volume-service",
+    "provider_id": "cloud-ru",
+    "name": "Elastic Volume Service",
+    "category": "Cloud Storage",
+    "description": "Elastic Volume Service от Cloud.ru Advanced предоставляет эластичные объёмы хранения данных, которые можно масштабировать в зависимости от потребностей бизнеса. Сервис используется для хранения данных различных типов и обеспечения их доступности.",
+    "tech_stack_tags": [
+      "cloud",
+      "data-management",
+      "scalability",
+      "storage",
+      "volume"
+    ],
+    "use_case_tags": [
+      "application-storage",
+      "data-storage",
+      "scalable-storage"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.00671,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-volume?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-volume?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286829+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-functiongraph",
+    "provider_id": "cloud-ru",
+    "name": "FunctionGraph",
+    "category": "Containers and Serverless",
+    "description": "FunctionGraph — сервис для управления бессерверными вычислениями, который позволяет запускать код в ответ на определённые события без необходимости заботиться о серверах и инфраструктуре.",
+    "tech_stack_tags": [
+      "cloud computing",
+      "event-driven",
+      "functions",
+      "serverless"
+    ],
+    "use_case_tags": [
+      "backend-as-a-service",
+      "event-processing",
+      "microservices"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.00127422,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/functiongraph?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/functiongraph?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286902+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-image-management-service",
+    "provider_id": "cloud-ru",
+    "name": "Image Management Service",
+    "category": "Cloud Service",
+    "description": "Сервис управления изображениями, который позволяет хранить, обрабатывать и распространять цифровые изображения. Используется для оптимизации работы с медиаконтентом в различных приложениях и веб-сервисах.",
+    "tech_stack_tags": [
+      "API",
+      "CDN",
+      "cloud-storage",
+      "file-management",
+      "image-processing",
+      "storage"
+    ],
+    "use_case_tags": [
+      "content-delivery",
+      "e-commerce-images",
+      "image-storage",
+      "media-management"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.002928,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/image-management?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/image-management?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.286969+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-mapreduce-service",
+    "provider_id": "cloud-ru",
+    "name": "Mapreduce Service",
+    "category": "Data and Analytics",
+    "description": "Mapreduce Service предоставляет возможности для распределённой обработки больших объёмов данных. Сервис используется для задач, требующих параллельной обработки данных и масштабируемых вычислений.",
+    "tech_stack_tags": [
+      "Big Data",
+      "Distributed Computing",
+      "Hadoop",
+      "MapReduce"
+    ],
+    "use_case_tags": [
+      "big-data-processing",
+      "data-analysis"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 4.7214,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/mapreduce?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/mapreduce?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287030+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-nat-gateway",
+    "provider_id": "cloud-ru",
+    "name": "NAT Gateway",
+    "category": "Network",
+    "description": "NAT Gateway — сервис, который обеспечивает доступ к интернету для ресурсов в приватной сети. Используется для обеспечения безопасности и управления трафиком в облачной среде.",
+    "tech_stack_tags": [
+      "Cloud-Networking",
+      "Firewall",
+      "IP",
+      "NAT",
+      "Network-Traffic"
+    ],
+    "use_case_tags": [
+      "internet-access-for-private-resources",
+      "network-access",
+      "traffic-management"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 6.7832,
+    "price_unit": "руб/шт/день",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/nat-gateway?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/nat-gateway?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287104+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-object-storage-service",
+    "provider_id": "cloud-ru",
+    "name": "Object Storage Service",
+    "category": "Cloud Storage",
+    "description": "Сервис Object Storage Service от Cloud.ru Advanced предоставляет возможность хранения больших объёмов данных в облаке. Используется для долгосрочного хранения файлов, медиаконтента и резервных копий.",
+    "tech_stack_tags": [
+      "API",
+      "Cloud Storage",
+      "HTTP",
+      "Object Storage",
+      "S3"
+    ],
+    "use_case_tags": [
+      "backup",
+      "data-storage",
+      "media-storage"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.000854,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/object-storage?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/object-storage?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287180+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-relational-databases-service",
+    "provider_id": "cloud-ru",
+    "name": "Relational Databases Service",
+    "category": "Database",
+    "description": "Сервис предоставляет управляемые реляционные базы данных, которые позволяют хранить и обрабатывать структурированные данные. Используется для создания и управления базами данных в облачной среде.",
+    "tech_stack_tags": [
+      "Cloud",
+      "Database Management System",
+      "Relational Databases",
+      "SQL"
+    ],
+    "use_case_tags": [
+      "application-backend",
+      "business-analytics",
+      "data-storage"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 129.6372,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/relational-db?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/relational-db?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287250+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-scalable-file-service",
+    "provider_id": "cloud-ru",
+    "name": "Scalable File Service",
+    "category": "Cloud Storage",
+    "description": "Scalable File Service — сервис для хранения файлов, который позволяет масштабировать объём хранилища в зависимости от потребностей бизнеса. Используется для хранения данных, резервного копирования и организации файлового доступа.",
+    "tech_stack_tags": [
+      "cloud",
+      "file-storage",
+      "scalability"
+    ],
+    "use_case_tags": [
+      "backup",
+      "data-storage",
+      "file-access"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.00742858,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/scalable-file?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/scalable-file?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287321+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-servicestage",
+    "provider_id": "cloud-ru",
+    "name": "ServiceStage",
+    "category": "Monitoring and DevOps",
+    "description": "ServiceStage от Cloud.ru Advanced — это сервис для управления и развёртывания приложений, который помогает автоматизировать процессы разработки и эксплуатации программного обеспечения.",
+    "tech_stack_tags": [
+      "CI/CD",
+      "DevOps",
+      "автоматизация",
+      "контейнеры",
+      "микросервисы",
+      "оркестрация"
+    ],
+    "use_case_tags": [
+      "application-monitoring",
+      "deployment-management",
+      "devops-automation"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 31.4028,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/servicestage?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/servicestage?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287393+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-simple-message-notification",
+    "provider_id": "cloud-ru",
+    "name": "Simple Message Notification",
+    "category": "Messaging and Cache",
+    "description": "Сервис Simple Message Notification от Cloud.ru Advanced предназначен для отправки уведомлений. Используется для рассылки сообщений пользователям и интеграции уведомлений в приложения.",
+    "tech_stack_tags": [
+      "API",
+      "Cloud",
+      "Messaging",
+      "Notification"
+    ],
+    "use_case_tags": [
+      "message-sending",
+      "notification-system"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 9.7112,
+    "price_unit": "руб/шт/мес",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/message-notification?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/message-notification?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287466+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-virtual-private-cloud-and-elastic-ip",
+    "provider_id": "cloud-ru",
+    "name": "Virtual Private Cloud & Elastic IP",
+    "category": "Network",
+    "description": "Сервис предоставляет виртуальное частное облако и эластичные IP-адреса, которые позволяют организовать безопасную и гибкую сетевую инфраструктуру для размещения IT-ресурсов.",
+    "tech_stack_tags": [
+      "Cloud Infrastructure",
+      "Elastic IP",
+      "IP-адресация",
+      "Networking",
+      "VPC",
+      "VPN"
+    ],
+    "use_case_tags": [
+      "infrastructure-deployment",
+      "network-isolation",
+      "remote-access"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.02074,
+    "price_unit": "руб/мбит/с/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/vpc?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/vpc?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287521+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-virtual-private-network",
+    "provider_id": "cloud-ru",
+    "name": "Virtual Private Network",
+    "category": "Network",
+    "description": "Сервис Virtual Private Network (VPN) от Cloud.ru Advanced обеспечивает безопасное подключение и передачу данных через зашифрованный канал. Используется для защиты интернет-трафика и обеспечения безопасного доступа к корпоративным ресурсам.",
+    "tech_stack_tags": [
+      "VPN",
+      "сетевая безопасность",
+      "туннелирование",
+      "шифрование"
+    ],
+    "use_case_tags": [
+      "data-protection",
+      "remote-work",
+      "secure-access"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 1.9215,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/vpn?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/vpn?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287672+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-api-gateway",
+    "provider_id": "cloud-ru",
+    "name": "API Gateway",
+    "category": "Developer Tools",
+    "description": "API Gateway — это сервис, который обеспечивает управление и контроль доступа к API, упрощает работу с микросервисной архитектурой и обеспечивает безопасность взаимодействия между сервисами и клиентами.",
+    "tech_stack_tags": [
+      "API",
+      "Authentication",
+      "JSON",
+      "Load Balancing",
+      "Microservices",
+      "REST"
+    ],
+    "use_case_tags": [
+      "access-control",
+      "api-management",
+      "microservices-architecture"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.02074,
+    "price_unit": "руб/мбит/с/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/api-gateway?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/api-gateway?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287757+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-data-lake-insight",
+    "provider_id": "cloud-ru",
+    "name": "Data Lake Insight",
+    "category": "Data and Analytics",
+    "description": "Сервис Data Lake Insight предназначен для анализа больших объёмов данных и позволяет получать ценные инсайты для принятия бизнес-решений.",
+    "tech_stack_tags": [
+      "Big Data",
+      "Business Intelligence",
+      "Data Analytics",
+      "Data Lake",
+      "ETL",
+      "Machine Learning"
+    ],
+    "use_case_tags": [
+      "big-data-processing",
+      "business-intelligence",
+      "data-analysis"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.00305,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/data-lake?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/data-lake?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287853+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-graph-engine-service",
+    "provider_id": "cloud-ru",
+    "name": "Graph Engine Service",
+    "category": "Data and Analytics",
+    "description": "Graph Engine Service — сервис для работы с графовыми данными, который позволяет эффективно обрабатывать и анализировать сложные взаимосвязи между данными. Используется для задач, требующих анализа графовых структур, например, в социальных сетях, рекомендательных системах и логистических приложениях.",
+    "tech_stack_tags": [
+      "Big Data",
+      "Data Analytics",
+      "Graph Database",
+      "Graph Processing"
+    ],
+    "use_case_tags": [
+      "data-analysis",
+      "recommendation-systems",
+      "social-network-analysis"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 11.7974,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/graph-engine?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/graph-engine?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.287931+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-data-warehouse-service",
+    "provider_id": "cloud-ru",
+    "name": "Data Warehouse Service",
+    "category": "Data and Analytics",
+    "description": "Сервис Data Warehouse Service предназначен для хранения и анализа больших объёмов данных. Используется для построения аналитических систем и хранения данных в целях бизнес-аналитики.",
+    "tech_stack_tags": [
+      "Analytics",
+      "Big Data",
+      "Data Warehouse",
+      "ETL",
+      "SQL"
+    ],
+    "use_case_tags": [
+      "business-analytics",
+      "data-analysis",
+      "data-storage"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.002806,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/data-warehouse?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/data-warehouse?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288063+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-data-replication-service",
+    "provider_id": "cloud-ru",
+    "name": "Data Replication Service",
+    "category": "Data and Analytics",
+    "description": "Сервис Data Replication Service от Cloud.ru Advanced предназначен для репликации данных между различными системами и хранилищами, обеспечивая их синхронизацию и повышение доступности.",
+    "tech_stack_tags": [
+      "ETL",
+      "базы данных",
+      "облачные хранилища",
+      "репликация данных",
+      "синхронизация"
+    ],
+    "use_case_tags": [
+      "data-migration",
+      "data-synchronization",
+      "disaster-recovery"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2.5132,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/data-replication?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/data-replication?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288176+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-gpu-accelerated-servers",
+    "provider_id": "cloud-ru",
+    "name": "GPU Accelerated Servers",
+    "category": "Cloud Compute",
+    "description": "Сервис предоставляет виртуальные серверы с GPU-ускорителями, которые используются для вычислений, требующих высокой графической производительности, например, для машинного обучения, обработки видео и 3D-моделирования.",
+    "tech_stack_tags": [
+      "CUDA",
+      "Cloud Computing",
+      "GPU",
+      "Machine Learning",
+      "Virtualization"
+    ],
+    "use_case_tags": [
+      "3d-modeling",
+      "machine-learning",
+      "video-processing"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 243.3168,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/gpu-accelerated?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/gpu-accelerated?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288305+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-distributed-database-middleware",
+    "provider_id": "cloud-ru",
+    "name": "Distributed Database Middleware",
+    "category": "Database",
+    "description": "Сервис Distributed Database Middleware предоставляет промежуточное ПО для работы с распределёнными базами данных, облегчая управление и масштабирование данных в распределённой среде.",
+    "tech_stack_tags": [
+      "Data Management",
+      "Distributed Database",
+      "Middleware",
+      "NoSQL",
+      "SQL",
+      "Scalability"
+    ],
+    "use_case_tags": [
+      "data-scaling",
+      "distributed-data-management",
+      "high-availability-systems"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 12.0536,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/db-middleware?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/db-middleware?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288390+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-vpc-endpoint",
+    "provider_id": "cloud-ru",
+    "name": "VPC Endpoint",
+    "category": "Network",
+    "description": "VPC Endpoint от Cloud.ru Advanced предоставляет возможность безопасного подключения к сервисам облачной платформы без использования интернета. Используется для обеспечения защищённого доступа к ресурсам в виртуальной частной сети.",
+    "tech_stack_tags": [
+      "VPC",
+      "облачная платформа",
+      "сетевая изоляция",
+      "сетевой доступ",
+      "частная сеть"
+    ],
+    "use_case_tags": [
+      "private-network-connectivity",
+      "resource-access",
+      "secure-access"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.4758,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/vpc-endpoint?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/vpc-endpoint?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288462+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-web-application-firewall",
+    "provider_id": "cloud-ru",
+    "name": "Web Application Firewall",
+    "category": "Security",
+    "description": "Web Application Firewall (WAF) — это сервис для защиты веб-приложений от различных видов атак. Используется для фильтрации и мониторинга HTTP-трафика, предотвращения уязвимостей и атак на веб-приложения.",
+    "tech_stack_tags": [
+      "Firewall",
+      "HTTP",
+      "HTTPS",
+      "Security",
+      "Traffic-Filtering",
+      "Web-Application"
+    ],
+    "use_case_tags": [
+      "attack-prevention",
+      "traffic-monitoring",
+      "web-application-protection"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": null,
+    "price_unit": null,
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/web-app-firewall?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/web-app-firewall?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288530+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-data-admin-service",
+    "provider_id": "cloud-ru",
+    "name": "Data Admin Service",
+    "category": "Cloud Service",
+    "description": "Data Admin Service — сервис от Cloud.ru Advanced, который предоставляет инструменты для управления данными. Используется для администрирования и оптимизации работы с данными в облачной среде.",
+    "tech_stack_tags": [
+      "API",
+      "Administration",
+      "Cloud",
+      "Data Management",
+      "Database",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "data-management",
+      "data-optimization",
+      "database-administration"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": null,
+    "price_unit": null,
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/data-admin?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/data-admin?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288597+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-data-encryption-workshop",
+    "provider_id": "cloud-ru",
+    "name": "Data Encryption Workshop",
+    "category": "Security",
+    "description": "Сервис Data Encryption Workshop предоставляет инструменты для шифрования данных, обеспечивая защиту информации от несанкционированного доступа и соответствия требованиям безопасности.",
+    "tech_stack_tags": [
+      "cryptography",
+      "data-security",
+      "encryption",
+      "key-management"
+    ],
+    "use_case_tags": [
+      "compliance",
+      "data-protection",
+      "secure-data-storage"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.1708,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/data-encryption?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/data-encryption?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288670+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-dataarts-studio",
+    "provider_id": "cloud-ru",
+    "name": "DataArts Studio",
+    "category": "Cloud Service",
+    "description": "DataArts Studio — сервис от Cloud.ru Advanced, предназначенный для решения задач в области работы с данными и аналитики. Используется для анализа данных и построения аналитических решений.",
+    "tech_stack_tags": [
+      "Big Data",
+      "Cloud Computing",
+      "Data Analytics",
+      "Visualization"
+    ],
+    "use_case_tags": [
+      "analytics-platform",
+      "business-intelligence",
+      "data-analysis"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 1.1956,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/dayu?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/dayu?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288740+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-database-security-service",
+    "provider_id": "cloud-ru",
+    "name": "Database Security Service",
+    "category": "Security",
+    "description": "Сервис обеспечивает защиту баз данных от различных угроз и атак, помогает выявлять и предотвращать уязвимости и несанкционированный доступ к данным.",
+    "tech_stack_tags": [
+      "Audit",
+      "Database",
+      "Encryption",
+      "Monitoring",
+      "SQL",
+      "Security"
+    ],
+    "use_case_tags": [
+      "data-protection",
+      "threat-detection",
+      "vulnerability-management"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 142.4106,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/db-security?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/db-security?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288812+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-host-security-service",
+    "provider_id": "cloud-ru",
+    "name": "Host Security Service",
+    "category": "Security",
+    "description": "Сервис Host Security Service от Cloud.ru Advanced предоставляет решения для защиты хостинговых сред и инфраструктуры от различных угроз. Используется для обеспечения безопасности серверов и приложений.",
+    "tech_stack_tags": [
+      "encryption",
+      "firewall",
+      "intrusion-detection",
+      "security-monitoring"
+    ],
+    "use_case_tags": [
+      "infrastructure-security",
+      "server-security",
+      "threat-protection"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.3538,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/host-security?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/host-security?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288895+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-bastion-host",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Bastion Host",
+    "category": "Security",
+    "description": "Cloud Bastion Host — сервис, который обеспечивает безопасный удалённый доступ к ресурсам в облаке. Используется для защиты инфраструктуры и управления доступом к серверам.",
+    "tech_stack_tags": [
+      "Access Control",
+      "Firewall",
+      "Network Security",
+      "SSH",
+      "VPN"
+    ],
+    "use_case_tags": [
+      "infrastructure-protection",
+      "remote-access",
+      "server-management"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 91.5,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/bastion-host?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/bastion-host?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.288966+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-codearts",
+    "provider_id": "cloud-ru",
+    "name": "CodeArts",
+    "category": "Developer Tools",
+    "description": "CodeArts — сервис от Cloud.ru Advanced, предоставляющий инструменты для разработки и развёртывания приложений. Используется для упрощения процесса разработки программного обеспечения.",
+    "tech_stack_tags": [
+      "Cloud",
+      "Deployment",
+      "Development",
+      "Programming"
+    ],
+    "use_case_tags": [
+      "application-deployment",
+      "software-development"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.004514,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/codearts?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/codearts?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289038+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-certificate-manager",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Certificate Manager",
+    "category": "Security",
+    "description": "Сервис Cloud Certificate Manager от Cloud.ru Advanced предназначен для управления цифровыми сертификатами, обеспечивает безопасность соединений и аутентификацию в веб-приложениях и сервисах.",
+    "tech_stack_tags": [
+      "SSL/TLS",
+      "безопасность соединений",
+      "цифровые сертификаты",
+      "шифрование"
+    ],
+    "use_case_tags": [
+      "authentication",
+      "certificate-management",
+      "secure-web-connections"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 45.39681,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/certificate-manager?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/certificate-manager?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289110+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-dataarts-insight",
+    "provider_id": "cloud-ru",
+    "name": "DataArts Insight",
+    "category": "Data and Analytics",
+    "description": "DataArts Insight — сервис для анализа данных, который помогает выявлять закономерности, строить прогнозы и принимать обоснованные бизнес-решения.",
+    "tech_stack_tags": [
+      "Big Data",
+      "Business Intelligence",
+      "Data Analytics",
+      "Visualization"
+    ],
+    "use_case_tags": [
+      "business-intelligence",
+      "data-analysis",
+      "predictive-analytics"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.11102,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/dataarts-insight?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/dataarts-insight?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289178+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-service-engine",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Service Engine",
+    "category": "Cloud Service",
+    "description": "Cloud Service Engine от Cloud.ru Advanced — это облачный сервис, который предоставляет комплексные возможности для построения и управления ИТ-инфраструктурой. Сервис используется для развёртывания и масштабирования приложений и сервисов.",
+    "tech_stack_tags": [
+      "IaaS",
+      "PaaS",
+      "виртуализация",
+      "масштабирование",
+      "облачные вычисления"
+    ],
+    "use_case_tags": [
+      "deployment-of-applications",
+      "infrastructure-management",
+      "scaling-services"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.7088,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-service-engine?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-service-engine?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289258+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloudtable",
+    "provider_id": "cloud-ru",
+    "name": "CloudTable",
+    "category": "Database",
+    "description": "CloudTable — сервис, предоставляющий возможности работы с табличными данными. Используется для хранения и обработки структурированных данных в различных приложениях.",
+    "tech_stack_tags": [
+      "Cloud",
+      "Data Processing",
+      "Database",
+      "NoSQL",
+      "SQL",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "application-data",
+      "data-processing",
+      "data-storage"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.007381,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/cloudtable?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/cloudtable?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289327+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-enterprise-router",
+    "provider_id": "cloud-ru",
+    "name": "Enterprise Router",
+    "category": "Network",
+    "description": "Сервис Enterprise Router от Cloud.ru Advanced предоставляет возможности для управления сетевым трафиком и обеспечения надёжного подключения в корпоративной среде.",
+    "tech_stack_tags": [
+      "VPN",
+      "firewall",
+      "networking",
+      "routing",
+      "traffic-management"
+    ],
+    "use_case_tags": [
+      "corporate-connectivity",
+      "network-management",
+      "traffic-routing"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 1.83,
+    "price_unit": "руб/ГБ/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/enterprise-router?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/enterprise-router?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289403+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-container-instance",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Container Instance",
+    "category": "Containers and Serverless",
+    "description": "Сервис Cloud Container Instance от Cloud.ru Advanced позволяет запускать и управлять контейнерными приложениями. Используется для развёртывания и масштабирования контейнерных приложений без необходимости управления виртуальными машинами.",
+    "tech_stack_tags": [
+      "Cloud Computing",
+      "Containers",
+      "Docker",
+      "Kubernetes"
+    ],
+    "use_case_tags": [
+      "application-scaling",
+      "container-deployment",
+      "microservices-architecture"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.25374,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-container-instance?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-container-instance?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289480+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "cloud-ru-cloud-firewall",
+    "provider_id": "cloud-ru",
+    "name": "Cloud Firewall",
+    "category": "Security",
+    "description": "Cloud Firewall — сервис для защиты облачных ресурсов и приложений от сетевых угроз и несанкционированного доступа. Используется для фильтрации трафика и обеспечения безопасности сетевой инфраструктуры.",
+    "tech_stack_tags": [
+      "Firewall",
+      "IDS",
+      "IPS",
+      "Network Security",
+      "Traffic Filtering"
+    ],
+    "use_case_tags": [
+      "network-security",
+      "threat-protection",
+      "traffic-filtering"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 33.51096,
+    "price_unit": "руб/шт/час",
+    "support_level": null,
+    "service_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-firewall?source-platform=Advanced",
+    "source_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-firewall?source-platform=Advanced",
+    "tariff_index_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "parsed_at": "2026-05-10T16:49:59.289561+00:00",
+    "is_synthetic": false
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "step": "parse_provider",
+    "status": "success",
+    "started_at": "2026-05-10T17:31:37.662276+00:00",
+    "finished_at": "2026-05-10T17:31:41.039175+00:00",
+    "error": null
+  },
+  {
+    "step": "parse_pricelist",
+    "status": "success",
+    "started_at": "2026-05-10T17:31:41.039207+00:00",
+    "finished_at": "2026-05-10T17:31:43.023259+00:00",
+    "error": null
+  },
+  {
+    "step": "normalize_pricing_items",
+    "status": "success",
+    "started_at": "2026-05-10T17:31:43.023283+00:00",
+    "finished_at": "2026-05-10T17:31:47.221514+00:00",
+    "error": null
+  },
+  {
+    "step": "normalize_services",
+    "status": "success",
+    "started_at": "2026-05-10T17:31:47.221545+00:00",
+    "finished_at": "2026-05-10T17:32:16.291148+00:00",
+    "error": null
+  },
+  {
+    "step": "summary",
+    "status": "success",
+    "services_count": 27,
+    "pricing_items_count": 261,
+    "skipped_pricing_rows_count": 37,
+    "price_on_request_count": 0,
+    "llm_errors_count": 0,
+    "finished_at": "2026-05-10T17:32:16.329883+00:00"
+  }
+]

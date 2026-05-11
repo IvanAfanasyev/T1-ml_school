@@ -1,0 +1,94 @@
+{
+  "provider_id": "t1-cloud",
+  "name": "Т1 Облако",
+  "base_platform": "OpenStack",
+  "pricing_url": "https://t1-cloud.ru/documents/rates",
+  "api_docs_url": "https://t1-cloud.ru/docs",
+  "current_tariff_document": {
+    "title": "Тарифное приложение от 31.03.2026 г., вступает в силу с 06.04.2026 г.",
+    "url": "https://t1-cloud.ru/media-files/T1Cloud/sitepages/Prilozhenie_1_Tarifnoe_prilozhenie_13_04_2026.pdf",
+    "score": 226,
+    "source_page_url": "https://t1-cloud.ru/documents/rates",
+    "found_candidates": [
+      {
+        "title": "Тарифное приложение от 31.03.2026 г., вступает в силу с 06.04.2026 г.",
+        "url": "https://t1-cloud.ru/media-files/T1Cloud/sitepages/Prilozhenie_1_Tarifnoe_prilozhenie_13_04_2026.pdf",
+        "score": 226
+      }
+    ]
+  },
+  "current_tariff_download": {
+    "url": "https://t1-cloud.ru/media-files/T1Cloud/sitepages/Prilozhenie_1_Tarifnoe_prilozhenie_13_04_2026.pdf",
+    "local_path": "data\\raw\\t1_cloud\\t1_current_tariff.pdf",
+    "content_type": "application/pdf",
+    "content_length_bytes": 654518,
+    "downloaded_at": "2026-05-10T14:43:56.231100+00:00"
+  },
+  "collected_at": "2026-05-10T14:43:56.232825+00:00",
+  "source_urls": [
+    "https://t1-cloud.ru/documents/rates",
+    "https://t1-cloud.ru/about-company/licenses-and-sertificates",
+    "https://t1-cloud.ru/docs/article/cloud-engine-openstack/zoni-dostupnosti-i-data-tsentri",
+    "https://t1-cloud.ru/docs"
+  ],
+  "is_152fz_compliant": true,
+  "compliance_tags": [
+    "152-FZ"
+  ],
+  "compliance_scope": "provider_level",
+  "compliance_source_url": "https://t1-cloud.ru/about-company/licenses-and-sertificates",
+  "compliance_matched_terms": [
+    "152-фз",
+    "испдн",
+    "аттестат соответствия"
+  ],
+  "compliance_evidence_excerpt": "лучить консультацию Получить консультацию О компании / Сертификаты, аттестаты и лицензии Сертификаты и аттестаты Аттестат соответствия ГИС (149-ФЗ) КЗ-1, КИИ (187-ФЗ) КЗ-1, ИСПДн (152-ФЗ) УЗ-1 и АС (РД АС) Г1 Сертификат TIER III OPERATIONS Сертификат TIER III FACILITY Сертификат TIER III DESIGN Сертификат соответствия PCI DSS 4.0.1 Заключение о соответствии ГОСТ Р 57580-1.2017 – Усиленный уровень Accellion Сертификат соответствия ГОСТ Р",
+  "compliance_docs": [
+    {
+      "title": "Аттестат соответствия ГИС (149-ФЗ) КЗ-1, КИИ (187-ФЗ) КЗ-1, ИСПДн (152-ФЗ) УЗ-1 и АС (РД АС) Г1",
+      "url": "https://t1-cloud.ru/media-files/T1Cloud/sitepages/Attestat_sootvetstviya_noyabr_2025.pdf",
+      "is_pdf": true,
+      "score": 310
+    },
+    {
+      "title": "Аттестат соответствия КИИ (187-ФЗ) КЗ-1, ИСПДн (152-ФЗ) УЗ-1 и АС (РД АС) 1Г",
+      "url": "https://t1-cloud.ru/media-files/T1Cloud/sitepages/documents/sertifikat.pdf",
+      "is_pdf": true,
+      "score": 310
+    }
+  ],
+  "regions": [
+    "Москва"
+  ],
+  "region_tags": [
+    "RU",
+    "Москва"
+  ],
+  "availability_zones": [
+    {
+      "zone_id": "ru-central1",
+      "datacenter": "ru-central1-a",
+      "city": "Москва",
+      "country": "RU",
+      "address": "г. Москва, проезд Остаповский, д. 22/4",
+      "platform": "OpenStack"
+    },
+    {
+      "zone_id": "ru-central2",
+      "datacenter": "ru-central2-a",
+      "city": "Москва",
+      "country": "RU",
+      "address": "г. Москва, ул. Чермянская, д. 4/1",
+      "platform": "OpenStack"
+    },
+    {
+      "zone_id": "ru-central3",
+      "datacenter": "ru-central3-a",
+      "city": "Москва",
+      "country": "RU",
+      "address": "г. Москва, ул. Подольских Курсантов, д. 15Б",
+      "platform": "OpenStack"
+    }
+  ],
+  "regions_source_url": "https://t1-cloud.ru/docs/article/cloud-engine-openstack/zoni-dostupnosti-i-data-tsentri"
+}

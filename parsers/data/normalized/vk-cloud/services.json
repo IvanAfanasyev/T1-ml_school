@@ -1,0 +1,1151 @@
+[
+  {
+    "service_id": "vk-cloud-виртуальные-серверы",
+    "provider_id": "vk-cloud",
+    "name": "Виртуальные серверы",
+    "category": "Cloud Compute",
+    "description": "Сервис предоставляет виртуальные серверы, которые позволяют запускать операционные системы и приложения в облачной среде. Используется для размещения веб-приложений, баз данных, корпоративных сервисов и других вычислительных задач.",
+    "tech_stack_tags": [
+      "CPU",
+      "Linux",
+      "Networking",
+      "RAM",
+      "SSD",
+      "Windows"
+    ],
+    "use_case_tags": [
+      "computing-tasks",
+      "corporate-services",
+      "database-hosting",
+      "web-applications"
+    ],
+    "is_152fz_compliant": true,
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1",
+      "ISPDN"
+    ],
+    "compliance_note": "VK Cloud предоставляет услугу «Облако ФЗ-152» для создания виртуальных серверов и виртуальных дисков в аттестованном периметре ИСПДН. ИСПДН Cloud Servers обеспечивает 1 уровень защищенности персональных данных, что подтверждается аттестатом соответствия.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2.64,
+    "price_from_value": 2.64,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:31:53.262329+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-виртуальные-серверы-gpu",
+    "provider_id": "vk-cloud",
+    "name": "Виртуальные серверы (GPU)*",
+    "category": "Cloud Compute",
+    "description": "Сервис предоставляет виртуальные серверы с GPU для выполнения вычислительно интенсивных задач, таких как машинное обучение, обработка видео и графических данных.",
+    "tech_stack_tags": [
+      "Cloud Computing",
+      "Data Processing",
+      "GPU",
+      "Machine Learning",
+      "Virtualization"
+    ],
+    "use_case_tags": [
+      "graphics-rendering",
+      "machine-learning",
+      "video-processing"
+    ],
+    "is_152fz_compliant": true,
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1",
+      "ISPDN"
+    ],
+    "compliance_note": "VK Cloud предоставляет услугу «Облако ФЗ-152» для создания виртуальных серверов и виртуальных дисков в аттестованном периметре ИСПДН. ИСПДН Cloud Servers обеспечивает 1 уровень защищенности персональных данных, что подтверждается аттестатом соответствия.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 71456.0,
+    "price_from_value": 71456.0,
+    "price_unit": "руб/1 шт/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:31:53.964397+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-виртуальные-серверы-vgpu",
+    "provider_id": "vk-cloud",
+    "name": "Виртуальные серверы (vGPU*)*",
+    "category": "Cloud Compute",
+    "description": "Сервис предоставляет виртуальные серверы с поддержкой vGPU, что позволяет использовать графические процессоры для вычислительно интенсивных задач, например, для работы с машинным обучением, графическим дизайном и другими приложениями, требующими высокой графической производительности.",
+    "tech_stack_tags": [
+      "vGPU",
+      "виртуальные серверы",
+      "графические процессоры",
+      "облачные вычисления"
+    ],
+    "use_case_tags": [
+      "graphic-design",
+      "high-performance-computing",
+      "machine-learning"
+    ],
+    "is_152fz_compliant": true,
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1",
+      "ISPDN"
+    ],
+    "compliance_note": "VK Cloud предоставляет услугу «Облако ФЗ-152» для создания виртуальных серверов и виртуальных дисков в аттестованном периметре ИСПДН. ИСПДН Cloud Servers обеспечивает 1 уровень защищенности персональных данных, что подтверждается аттестатом соответствия.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 10097.89,
+    "price_from_value": 10097.89,
+    "price_unit": "руб/1 шт/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:31:54.846875+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-российские-операционные-системы",
+    "provider_id": "vk-cloud",
+    "name": "Российские операционные системы*",
+    "category": "Cloud Service",
+    "description": "Сервис предоставляет доступ к российским операционным системам в облачной среде. Используется для развёртывания инфраструктурных и прикладных решений с применением отечественных ОС.",
+    "tech_stack_tags": [
+      "IT-инфраструктура",
+      "виртуализация",
+      "облачные вычисления",
+      "российские ОС"
+    ],
+    "use_case_tags": [
+      "обеспечение-информационной-безопасности",
+      "развёртывание-ос",
+      "создание-виртуальных-машин"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 539.0,
+    "price_from_value": 539.0,
+    "price_unit": "руб/1 шт./мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:31:55.683172+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-vk-object-storage-объектное-хранилище-s3-hotbox",
+    "provider_id": "vk-cloud",
+    "name": "VK Object Storage (объектное хранилище S3) - Hotbox",
+    "category": "Cloud Storage",
+    "description": "VK Object Storage (Hotbox) — это объектное хранилище данных, совместимое с S3, которое позволяет хранить большие объёмы данных и обеспечивает удобный доступ к ним. Используется для хранения статических файлов, резервных копий, медиаконтента и других данных.",
+    "tech_stack_tags": [
+      "S3",
+      "VK Cloud",
+      "облачное хранилище",
+      "объектное хранилище"
+    ],
+    "use_case_tags": [
+      "backup",
+      "data-storage",
+      "media-storage"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 1.31,
+    "price_from_value": 1.31,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:31:56.456568+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-vk-object-storage-объектное-хранилище-s3-icebox",
+    "provider_id": "vk-cloud",
+    "name": "VK Object Storage (объектное хранилище S3) - Icebox",
+    "category": "Cloud Storage",
+    "description": "VK Object Storage (Icebox) — объектное хранилище данных, совместимое с S3. Используется для хранения больших объёмов данных, резервного копирования и распределения статического контента.",
+    "tech_stack_tags": [
+      "Cloud Storage",
+      "Object Storage",
+      "S3"
+    ],
+    "use_case_tags": [
+      "backup",
+      "data-storage",
+      "static-content-distribution"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 1.09,
+    "price_from_value": 1.09,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:31:57.144736+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-cloud-containers-новое-поколение",
+    "provider_id": "vk-cloud",
+    "name": "Cloud Containers (новое поколение)",
+    "category": "Containers and Serverless",
+    "description": "Сервис Cloud Containers (новое поколение) от VK Cloud предоставляет среду для развёртывания и управления контейнерными приложениями. Используется для разработки, тестирования и эксплуатации контейнерных приложений в облачной среде.",
+    "tech_stack_tags": [
+      "API",
+      "Containerization",
+      "Docker",
+      "Kubernetes",
+      "Orchestration",
+      "VM"
+    ],
+    "use_case_tags": [
+      "application-deployment",
+      "devops-pipeline",
+      "microservices-architecture"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 5.27,
+    "price_from_value": 5.27,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:31:58.712283+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-cloud-containers-предыдущее-поколение",
+    "provider_id": "vk-cloud",
+    "name": "Cloud Containers (предыдущее поколение)",
+    "category": "Containers and Serverless",
+    "description": "Сервис предоставляет возможности для развёртывания и управления контейнеризированными приложениями. Используется для разработки, тестирования и эксплуатации контейнерных приложений в облачной среде.",
+    "tech_stack_tags": [
+      "Containers",
+      "Docker",
+      "Kubernetes",
+      "Orchestration",
+      "VM"
+    ],
+    "use_case_tags": [
+      "application-deployment",
+      "devops",
+      "microservices-architecture"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 5.27,
+    "price_from_value": 5.27,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:31:59.547682+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-базы-данных",
+    "provider_id": "vk-cloud",
+    "name": "Базы данных",
+    "category": "Database",
+    "description": "Сервис предоставляет управляемые базы данных для хранения и обработки информации. Используется для создания и масштабирования приложений, требующих надёжного и эффективного хранения данных.",
+    "tech_stack_tags": [
+      "MongoDB",
+      "MySQL",
+      "NoSQL",
+      "PostgreSQL",
+      "Redis",
+      "SQL"
+    ],
+    "use_case_tags": [
+      "analytics-systems",
+      "application-development",
+      "data-storage",
+      "e-commerce-platforms"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 5.49,
+    "price_from_value": 5.49,
+    "price_unit": "руб/1 ГБ/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:00.280142+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-аналитические-бд-arenadata-db",
+    "provider_id": "vk-cloud",
+    "name": "Аналитические БД (Arenadata DB)",
+    "category": "Database",
+    "description": "Arenadata DB — это аналитическая база данных, которая используется для обработки и анализа больших объёмов данных, поддержки сложных аналитических запросов и построения отчётности.",
+    "tech_stack_tags": [
+      "Analytics",
+      "Big Data",
+      "Data Processing",
+      "Database",
+      "Reporting",
+      "SQL"
+    ],
+    "use_case_tags": [
+      "business-intelligence",
+      "data-analysis",
+      "reporting-systems"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 5.27,
+    "price_from_value": 5.27,
+    "price_unit": "руб/1 ГБ/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:01.260632+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-data-platform",
+    "provider_id": "vk-cloud",
+    "name": "Data Platform",
+    "category": "Data and Analytics",
+    "description": "Data Platform от VK Cloud предоставляет инструменты для работы с данными, включая их хранение, обработку и анализ. Сервис используется для построения аналитических систем, управления большими объёмами данных и создания данных-ориентированных приложений.",
+    "tech_stack_tags": [
+      "Analytics",
+      "Big Data",
+      "Data Processing",
+      "Database",
+      "ETL",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "big-data-processing",
+      "business-intelligence",
+      "data-analysis",
+      "data-management"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 6.37,
+    "price_from_value": 6.37,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:02.263243+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-data-platform-service-resources",
+    "provider_id": "vk-cloud",
+    "name": "Data Platform Service Resources",
+    "category": "Data and Analytics",
+    "description": "Сервис предоставляет инструменты и ресурсы для работы с данными, их обработки и анализа. Используется для построения аналитических систем, хранения и обработки больших объёмов данных.",
+    "tech_stack_tags": [
+      "Analytics",
+      "Big Data",
+      "Data Lake",
+      "Data Processing",
+      "ETL",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "big-data-processing",
+      "business-intelligence",
+      "data-analysis"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 6.37,
+    "price_from_value": 6.37,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:03.099765+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-cloud-clickhouse",
+    "provider_id": "vk-cloud",
+    "name": "Cloud ClickHouse",
+    "category": "Database",
+    "description": "Cloud ClickHouse — это облачный сервис, предоставляющий управляемый кластер базы данных ClickHouse для высокопроизводительной обработки аналитических запросов и работы с большими объёмами данных.",
+    "tech_stack_tags": [
+      "ClickHouse",
+      "SQL",
+      "аналитика",
+      "база данных",
+      "большие данные",
+      "кластер"
+    ],
+    "use_case_tags": [
+      "big-data-processing",
+      "data-analytics",
+      "log-analysis"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 6.37,
+    "price_from_value": 6.37,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:03.957521+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-cloud-spark",
+    "provider_id": "vk-cloud",
+    "name": "Cloud Spark",
+    "category": "Cloud Service",
+    "description": "Cloud Spark от VK Cloud — это комплексный облачный сервис, который предоставляет различные ресурсы для развёртывания и масштабирования приложений и сервисов.",
+    "tech_stack_tags": [
+      "API",
+      "Cloud Infrastructure",
+      "Networking",
+      "Scalability",
+      "Storage",
+      "VM"
+    ],
+    "use_case_tags": [
+      "application-deployment",
+      "data-processing",
+      "scalable-services"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 6.37,
+    "price_from_value": 6.37,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:04.669192+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-cloud-trino",
+    "provider_id": "vk-cloud",
+    "name": "Cloud Trino",
+    "category": "Data and Analytics",
+    "description": "Cloud Trino — это сервис для распределённых аналитических запросов, который позволяет обрабатывать большие объёмы данных и получать результаты в режиме реального времени. Используется для аналитики данных, построения отчётов и анализа бизнес-метрик.",
+    "tech_stack_tags": [
+      "Analytics",
+      "Big Data",
+      "Distributed Computing",
+      "Query Processing",
+      "SQL"
+    ],
+    "use_case_tags": [
+      "big-data-processing",
+      "business-reporting",
+      "data-analytics"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 6.37,
+    "price_from_value": 6.37,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:05.501798+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-cloud-iceberg-metastore",
+    "provider_id": "vk-cloud",
+    "name": "Cloud Iceberg Metastore",
+    "category": "Data and Analytics",
+    "description": "Cloud Iceberg Metastore — сервис для управления метаданными в системах обработки больших данных. Используется для упрощения работы с данными в аналитических и хранилищных системах.",
+    "tech_stack_tags": [
+      "Big Data",
+      "Data Lake",
+      "Hadoop",
+      "Iceberg",
+      "Metadata Management",
+      "SQL"
+    ],
+    "use_case_tags": [
+      "big-data-processing",
+      "data-analytics",
+      "data-lake-management"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 6.37,
+    "price_from_value": 6.37,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:06.285554+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-автоматизация-безопасной-разработки-security-gate",
+    "provider_id": "vk-cloud",
+    "name": "Автоматизация безопасной разработки (Security Gate)",
+    "category": "Security",
+    "description": "Сервис автоматизирует процессы безопасной разработки, помогая выявлять и устранять уязвимости в коде и конфигурациях. Используется для повышения уровня безопасности разрабатываемых приложений и сервисов.",
+    "tech_stack_tags": [
+      "DevSecOps",
+      "Security Testing",
+      "Static Code Analysis",
+      "Vulnerability Scanning"
+    ],
+    "use_case_tags": [
+      "code-review",
+      "secure-coding",
+      "vulnerability-management"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": null,
+    "price_from_value": null,
+    "price_unit": null,
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:07.198943+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-бэкапы-как-сервис",
+    "provider_id": "vk-cloud",
+    "name": "Бэкапы как сервис",
+    "category": "Cloud Service",
+    "description": "Сервис предоставляет возможность создания и хранения резервных копий данных в облаке. Используется для защиты данных и минимизации рисков потери информации.",
+    "tech_stack_tags": [
+      "восстановление данных",
+      "данные",
+      "облачное хранилище",
+      "облачные сервисы",
+      "резервное копирование"
+    ],
+    "use_case_tags": [
+      "backup",
+      "data-protection",
+      "data-recovery"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 4.98,
+    "price_from_value": 4.98,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:07.914893+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-виртуальные-рабочие-места-серверы",
+    "provider_id": "vk-cloud",
+    "name": "Виртуальные рабочие места (Серверы)",
+    "category": "Cloud Compute",
+    "description": "Сервис предоставляет виртуальные рабочие места (серверы), которые позволяют запускать операционные системы и приложения в облачной среде. Используется для развёртывания IT-инфраструктуры, тестирования ПО, организации удалённых рабочих мест и других задач.",
+    "tech_stack_tags": [
+      "CPU",
+      "Linux",
+      "RAM",
+      "Storage",
+      "VM",
+      "Windows"
+    ],
+    "use_case_tags": [
+      "infrastructure-deployment",
+      "remote-work",
+      "software-testing"
+    ],
+    "is_152fz_compliant": true,
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1",
+      "ISPDN"
+    ],
+    "compliance_note": "VK Cloud предоставляет услугу «Облако ФЗ-152» для создания виртуальных серверов и виртуальных дисков в аттестованном периметре ИСПДН. ИСПДН Cloud Servers обеспечивает 1 уровень защищенности персональных данных, что подтверждается аттестатом соответствия.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 5.27,
+    "price_from_value": 5.27,
+    "price_unit": "руб/1 ГБ/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:08.843244+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-виртуальные-рабочие-места-рабочие-столы",
+    "provider_id": "vk-cloud",
+    "name": "Виртуальные рабочие места (Рабочие столы)",
+    "category": "Cloud Compute",
+    "description": "Сервис предоставляет виртуальные рабочие места, позволяющие пользователям работать с операционной системой и приложениями через интернет. Используется для удалённой работы, организации распределённых команд и доступа к корпоративным ресурсам.",
+    "tech_stack_tags": [
+      "Cloud Computing",
+      "Desktop-as-a-Service",
+      "Remote Access",
+      "Virtualization"
+    ],
+    "use_case_tags": [
+      "access-to-corporate-resources",
+      "distributed-teams",
+      "remote-work"
+    ],
+    "is_152fz_compliant": true,
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1",
+      "ISPDN"
+    ],
+    "compliance_note": "VK Cloud предоставляет услугу «Облако ФЗ-152» для создания виртуальных серверов и виртуальных дисков в аттестованном периметре ИСПДН. ИСПДН Cloud Servers обеспечивает 1 уровень защищенности персональных данных, что подтверждается аттестатом соответствия.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 5.27,
+    "price_from_value": 5.27,
+    "price_unit": "руб/1 ГБ/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:09.680380+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-cdn",
+    "provider_id": "vk-cloud",
+    "name": "CDN*",
+    "category": "Network",
+    "description": "Сервис CDN (Content Delivery Network) от VK Cloud обеспечивает ускоренную доставку статического контента пользователям за счёт распределения нагрузки по сети серверов. Используется для повышения скорости загрузки сайтов и приложений, уменьшения нагрузки на основной сервер.",
+    "tech_stack_tags": [
+      " caching",
+      "CDN",
+      "DNS",
+      "HTTP",
+      "edge-servers",
+      "load-balancing"
+    ],
+    "use_case_tags": [
+      "reduce-server-load",
+      "static-content-delivery",
+      "website-acceleration"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.66,
+    "price_from_value": 0.66,
+    "price_unit": "руб/1 ГБ/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:10.620300+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-1с-готовое-рабочее-место",
+    "provider_id": "vk-cloud",
+    "name": "«1С:Готовое рабочее место»*",
+    "category": "Cloud Service",
+    "description": "Сервис «1С:Готовое рабочее место» от VK Cloud предоставляет готовую инфраструктуру для работы с продуктами 1С в облаке, упрощая развёртывание и управление бизнес-приложениями.",
+    "tech_stack_tags": [
+      "1С",
+      "виртуализация",
+      "облачные технологии",
+      "российское ПО"
+    ],
+    "use_case_tags": [
+      "бизнес-приложения",
+      "управление-предприятием",
+      "учёт-и-отчётность"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 64.0,
+    "price_from_value": 64.0,
+    "price_unit": "руб/1 пользователь/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:11.455601+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-доступ-к-лицензированным-продуктам-microsoft",
+    "provider_id": "vk-cloud",
+    "name": "Доступ к лицензированным продуктам Microsoft*",
+    "category": "Cloud Service",
+    "description": "Сервис предоставляет доступ к лицензированным продуктам Microsoft, позволяя пользователям использовать программное обеспечение в облачной среде для решения бизнес-задач и повышения продуктивности работы.",
+    "tech_stack_tags": [
+      "Microsoft",
+      "ПО",
+      "лицензирование",
+      "облачные сервисы"
+    ],
+    "use_case_tags": [
+      "бизнес-приложения",
+      "корпоративные-решения",
+      "продуктивность-работы"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 481.0,
+    "price_from_value": 481.0,
+    "price_unit": "руб/1 шт./мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:12.267508+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-стандартный-балансировщик-нагрузки",
+    "provider_id": "vk-cloud",
+    "name": "Стандартный балансировщик нагрузки",
+    "category": "Network",
+    "description": "Стандартный балансировщик нагрузки от VK Cloud распределяет входящий трафик между серверами, обеспечивая стабильную работу сервисов и высокую доступность приложений.",
+    "tech_stack_tags": [
+      "high-availability",
+      "load-balancing",
+      "networking",
+      "traffic-distribution"
+    ],
+    "use_case_tags": [
+      "application-scaling",
+      "high-availability",
+      "load-distribution"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2086.0,
+    "price_from_value": 2086.0,
+    "price_unit": "руб/1 шт./мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:13.022965+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-публичные-ip-адреса",
+    "provider_id": "vk-cloud",
+    "name": "Публичные IP-адреса",
+    "category": "Network",
+    "description": "Сервис предоставляет публичные IP-адреса, которые используются для обеспечения доступа к ресурсам в интернете. Применяется для настройки веб-сервисов, VPN, удалённого доступа и других сетевых задач.",
+    "tech_stack_tags": [
+      "IP-адрес",
+      "VPN",
+      "интернет",
+      "маршрутизация",
+      "сеть",
+      "хостинг"
+    ],
+    "use_case_tags": [
+      "networking",
+      "remote-access",
+      "vpn-setup",
+      "web-hosting"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 188.0,
+    "price_from_value": 188.0,
+    "price_unit": "руб/1 шт./мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:13.858091+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-файловое-хранилище",
+    "provider_id": "vk-cloud",
+    "name": "Файловое хранилище",
+    "category": "Cloud Storage",
+    "description": "Файловое хранилище от VK Cloud предоставляет возможность хранить и управлять файлами в облаке. Сервис используется для хранения данных, резервного копирования и организации общего доступа к файлам.",
+    "tech_stack_tags": [
+      "API",
+      "cloud-storage",
+      "data-storage",
+      "file-system"
+    ],
+    "use_case_tags": [
+      "backup",
+      "data-storage",
+      "file-sharing"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 7.0,
+    "price_from_value": 7.0,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:14.902447+00:00",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "vk-cloud-инфраструктура-маркетплейса",
+    "provider_id": "vk-cloud",
+    "name": "Инфраструктура маркетплейса",
+    "category": "Cloud Service",
+    "description": "Сервис предоставляет инфраструктуру для запуска и работы маркетплейса, включая вычислительные ресурсы, хранение данных и сетевые возможности. Используется для развёртывания и масштабирования торговой платформы.",
+    "tech_stack_tags": [
+      "CDN",
+      "Load Balancing",
+      "Networking",
+      "Storage",
+      "VM"
+    ],
+    "use_case_tags": [
+      "e-commerce",
+      "marketplace-platform",
+      "online-store"
+    ],
+    "is_152fz_compliant": false,
+    "compliance_tags": [
+      "152-FZ-available"
+    ],
+    "compliance_note": "У VK Cloud есть услуга «Облако ФЗ-152», но для этого сервиса требуется отдельная проверка принадлежности к аттестованному периметру.",
+    "regions": [
+      "Москва"
+    ],
+    "availability_zones": [
+      "GZ1",
+      "MS1",
+      "ME1",
+      "PA2"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 4.0,
+    "price_from_value": 4.0,
+    "price_unit": "руб/1 Гб/мес",
+    "support_level": null,
+    "service_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/pricelist/",
+    "parsed_at": "2026-05-10T17:32:15.842246+00:00",
+    "is_synthetic": false
+  }
+]

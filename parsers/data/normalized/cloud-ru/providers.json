@@ -1,0 +1,34 @@
+[
+  {
+    "provider_id": "cloud-ru",
+    "name": "Cloud.ru",
+    "base_platform": "Advanced",
+    "is_152fz_compliant": true,
+    "regions": [
+      "Russia",
+      "RU-Moscow",
+      "ru-moscow-1"
+    ],
+    "availability_zones": [
+      "ru-moscow-1a",
+      "ru-moscow-1b",
+      "ru-moscow-1c",
+      "ru-moscow-1e"
+    ],
+    "compliance_tags": [
+      "152-FZ",
+      "187-FZ",
+      "FSTEC",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "ISO/IEC 27018",
+      "PCI DSS",
+      "UZ-1"
+    ],
+    "api_docs_url": "https://cloud.ru/docs",
+    "pricing_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "source_url": "https://cloud.ru/docs/overview/security-introduction/topics/compliance",
+    "region_source_url": "https://cloud.ru/docs/advanced/overview/az-and-endpoints",
+    "parsed_at": "2026-05-10T16:49:58.440459+00:00"
+  }
+]

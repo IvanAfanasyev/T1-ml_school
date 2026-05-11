@@ -1,0 +1,247 @@
+{
+  "provider_id": "selectel",
+  "source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+  "is_152fz_compliant": true,
+  "compliance_tags": [
+    "152-FZ",
+    "UZ-1",
+    "A-COD"
+  ],
+  "compliance_note": "Selectel предоставляет А-ЦОД — аттестованный сегмент ЦОД. Страница документов указывает, что А-ЦОД соответствует требованиям 152-ФЗ и позволяет хранить и обрабатывать персональные данные до УЗ-1.",
+  "document_links": [
+    {
+      "label": "Перейти к основному содержимому",
+      "url": "#__docusaurus_skipToContent_fallback"
+    },
+    {
+      "label": "Документация",
+      "url": "https://docs.selectel.ru/"
+    },
+    {
+      "label": "API",
+      "url": "https://docs.selectel.ru/api/"
+    },
+    {
+      "label": "Terraform",
+      "url": "https://docs.selectel.ru/terraform/"
+    },
+    {
+      "label": "Русский",
+      "url": "#"
+    },
+    {
+      "label": "Русский",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/"
+    },
+    {
+      "label": "English",
+      "url": "https://docs.selectel.ru/en/certified-data-center-segment/about/documents/"
+    },
+    {
+      "label": "Инфраструктура",
+      "url": "https://docs.selectel.ru/infrastructure/locations/"
+    },
+    {
+      "label": "Аккаунт",
+      "url": "https://docs.selectel.ru/account/"
+    },
+    {
+      "label": "Биллинг",
+      "url": "https://docs.selectel.ru/balance-and-payments/balance/"
+    },
+    {
+      "label": "Управление доступом (IAM)",
+      "url": "https://docs.selectel.ru/access-control/access-management/"
+    },
+    {
+      "label": "Вычисления",
+      "url": "https://docs.selectel.ru/dedicated/"
+    },
+    {
+      "label": "Хранение и обработка данных",
+      "url": "https://docs.selectel.ru/managed-databases/"
+    },
+    {
+      "label": "Услуги дата-центров",
+      "url": "https://docs.selectel.ru/server-colocation/"
+    },
+    {
+      "label": "Внешние сетевые сервисы",
+      "url": "https://docs.selectel.ru/domains/"
+    },
+    {
+      "label": "Глобальная сетевая связность",
+      "url": "https://docs.selectel.ru/global-router/"
+    },
+    {
+      "label": "Резервное копирование и восстановление",
+      "url": "https://docs.selectel.ru/veeam-cloud-connect/"
+    },
+    {
+      "label": "AI-платформа",
+      "url": "https://docs.selectel.ru/ai-marketplace/"
+    },
+    {
+      "label": "Мониторинг и логи",
+      "url": "https://docs.selectel.ru/metrics/"
+    },
+    {
+      "label": "Безопасность",
+      "url": "https://docs.selectel.ru/information-security/"
+    },
+    {
+      "label": "Аттестация и сертификация",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/"
+    },
+    {
+      "label": "Аттестованный сегмент ЦОД",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/"
+    },
+    {
+      "label": "Общая информация",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/"
+    },
+    {
+      "label": "Описание",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/about-certified-data-center-segment/"
+    },
+    {
+      "label": "Документы",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/"
+    },
+    {
+      "label": "Реализация мер физической безопасности",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/implemented-security-measures/"
+    },
+    {
+      "label": "Отказаться от А-ЦОД",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/disable-certified-data-center-segment/"
+    },
+    {
+      "label": "Заказать А-ЦОД",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/hosting-resources/"
+    },
+    {
+      "label": "Аттестованный сегмент ЦОД",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/"
+    },
+    {
+      "label": "Работа с сетью",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/networks/"
+    },
+    {
+      "label": "Аттестованное облако",
+      "url": "https://docs.selectel.ru/certified-cloud/"
+    },
+    {
+      "label": "Сертифицированные средства защиты",
+      "url": "https://docs.selectel.ru/certified-security-features/"
+    },
+    {
+      "label": "ГОСТ VPN",
+      "url": "https://docs.selectel.ru/gost-vpn/"
+    },
+    {
+      "label": "Дополнительные услуги",
+      "url": "https://docs.selectel.ru/mobile-farm/"
+    },
+    {
+      "label": "Документация",
+      "url": "https://docs.selectel.ru/"
+    },
+    {
+      "label": "Аттестованный сегмент ЦОД",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/"
+    },
+    {
+      "label": "Общая информация",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/"
+    },
+    {
+      "label": "Документация",
+      "url": "https://docs.selectel.ru/"
+    },
+    {
+      "label": "Аттестованный сегмент ЦОД",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/"
+    },
+    {
+      "label": "Общая информация",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/"
+    },
+    {
+      "label": "А-ЦОД",
+      "url": "https://selectel.ru/services/is/dswes/"
+    },
+    {
+      "label": "Пользовательское соглашение",
+      "url": "https://files.selectel.ru/docs/ru/user-agreement.pdf"
+    },
+    {
+      "label": "Правила пользования сервисами и услугами",
+      "url": "https://files.selectel.ru/docs/ru/terms-of-use-for-services.pdf"
+    },
+    {
+      "label": "Условия использования отдельных сервисов: Предоставление выделенного сервера и выделенного сервера произвольной конфигурации",
+      "url": "https://files.selectel.ru/docs/ru/conditions-dedicated.pdf"
+    },
+    {
+      "label": "Условия использования отдельных сервисов: Аттестованный сегмент ЦОД",
+      "url": "https://files.selectel.ru/docs/ru/conditions-certified-dc-segment.pdf"
+    },
+    {
+      "label": "Условия использования отдельных сервисов: Доступ к средствам защиты информации",
+      "url": "https://files.selectel.ru/docs/ru/conditions-access-to-information-protection-tools.pdf"
+    },
+    {
+      "label": "шаблон",
+      "url": "https://files.selectel.ru/docs/ru/extract-threat%20model-A-Data-Center-Infrastructure-template.pdf"
+    },
+    {
+      "label": "шаблон",
+      "url": "https://files.selectel.ru/docs/ru/akt_ustanovki_sredstv_zaschity_informacii.pdf"
+    },
+    {
+      "label": "шаблон",
+      "url": "https://files.selectel.ru/docs/ru/shema_razmeshcheniya_tekhnicheskih_sredstv_v_stoike.pdf"
+    },
+    {
+      "label": "создайте тикет",
+      "url": "https://slc.tl/affzu"
+    },
+    {
+      "label": "Создайте тикет",
+      "url": "https://slc.tl/b441s"
+    },
+    {
+      "label": "через ЭДО",
+      "url": "https://docs.selectel.ru/account/electronic-document-management/"
+    },
+    {
+      "label": "Предыдущая страница Описание",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/about-certified-data-center-segment/"
+    },
+    {
+      "label": "Следующая страница Реализация мер физической безопасности",
+      "url": "https://docs.selectel.ru/certified-data-center-segment/about/implemented-security-measures/"
+    },
+    {
+      "label": "Юридические документы",
+      "url": "#legal-documents"
+    },
+    {
+      "label": "Документы для аттестации информационной системы",
+      "url": "#documents-for-attestation"
+    },
+    {
+      "label": "Поручение на обработку персональных данных",
+      "url": "#instruction-for-personal-data-processing"
+    },
+    {
+      "label": "Заключить поручение на обработку персональных данных",
+      "url": "#to-enter-into-personal-data-processing-agreement"
+    }
+  ],
+  "raw_text_preview": "Документы для А-ЦОД | Документация Selectel Перейти к основному содержимому Документация API Terraform Русский Русский English Поиск... Инфраструктура Аккаунт Биллинг Управление доступом (IAM) Вычисления Хранение и обработка данных Услуги дата-центров Внешние сетевые сервисы Глобальная сетевая связность Резервное копирование и восстановление AI-платформа Мониторинг и логи Безопасность Аттестация и сертификация Аттестованный сегмент ЦОД Общая информация Описание Документы Реализация мер физической безопасности Отказаться от А-ЦОД Заказать А-ЦОД Аттестованный сегмент ЦОД Работа с сетью Аттестованное облако Сертифицированные средства защиты ГОСТ VPN Дополнительные услуги Документация Аттестация и сертификация Аттестованный сегмент ЦОД Общая информация Документы Документация Аттестация и сертификация Аттестованный сегмент ЦОД Общая информация Документы Документы для А-ЦОД Последнее изменение: 06 июня 2025 Юридические документы Selectel предоставляет услугу А-ЦОД на основании документов: Пользовательское соглашение ; Правила пользования сервисами и услугами ; Условия использования отдельных сервисов: Предоставление выделенного сервера и выделенного сервера произвольной конфигурации ; Условия использования отдельных сервисов: Аттестованный сегмент ЦОД ; Условия использования отдельных сервисов: Доступ к средствам защиты информации . Документы для аттестации информационной системы Для аттестации информационных систем, размещенных на выделенных серверах в А-ЦОД, Selectel предоставляет: выписку из документа «Модель угроз и нарушителя безопасности информации инженерной инфраструктуры центров обработки данных, предоставляемой в рамках услуги „Аттестованный сегмент ЦОД“ Акционерного общества „Селектел“» ( шаблон ); акт установки средств защиты информации ( шаблон ); cхему размещения оборудования в стойке ( шаблон ). Чтобы получить документы, создайте тикет . Поручение на обработку персональных данных А-ЦОД соответствует требованиям Федерального закона № 152-ФЗ «О персональных данных» — вы можете хранить и обрабатывать персональные данные пользователей до первого уровня защищенности (УЗ-1). Заключить поручение на обработку персональных данных Создайте тикет с запросом на оформление поручения на обработку персональных данных. Дождитесь ответа сотрудника Selectel о том, что поручение подготовлено. Мы отправим поручение вам на подпись в бумажном виде или через ЭДО . Предыдущая страница Описание Следующая страница Реализация мер физической безопасности Юридические документы Документы для аттестации информационной системы Поручение на обработку персональных данных Заключить поручение на обработку персональных данных",
+  "parsed_at": "2026-05-10T18:52:24.197956+00:00"
+}

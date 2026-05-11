@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "task_category": "web-hosting",
+    "tech_stack": [
+      "Python",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "use_case_tags": [
+      "web-hosting",
+      "backend",
+      "database"
+    ],
+    "budget_range_rub": "10000-50000",
+    "compliance_required": true,
+    "region": "Russia",
+    "created_for_testing": true
+  },
+  {
+    "id": 2,
+    "task_category": "object-storage",
+    "tech_stack": [
+      "S3",
+      "API"
+    ],
+    "use_case_tags": [
+      "backup",
+      "media-storage",
+      "data-storage"
+    ],
+    "budget_range_rub": "1000-20000",
+    "compliance_required": true,
+    "region": "Russia",
+    "created_for_testing": true
+  },
+  {
+    "id": 3,
+    "task_category": "machine-learning",
+    "tech_stack": [
+      "GPU",
+      "Python",
+      "ML"
+    ],
+    "use_case_tags": [
+      "machine-learning",
+      "ai"
+    ],
+    "budget_range_rub": "50000-500000",
+    "compliance_required": false,
+    "region": "Russia",
+    "created_for_testing": true
+  }
+]

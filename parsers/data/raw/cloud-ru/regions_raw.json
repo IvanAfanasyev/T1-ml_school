@@ -1,0 +1,16 @@
+{
+  "source_url": "https://cloud.ru/docs/advanced/overview/az-and-endpoints",
+  "regions": [
+    "Russia",
+    "RU-Moscow",
+    "ru-moscow-1"
+  ],
+  "availability_zones": [
+    "ru-moscow-1a",
+    "ru-moscow-1b",
+    "ru-moscow-1c",
+    "ru-moscow-1e"
+  ],
+  "raw_text_excerpt": "Зоны доступности и эндпоинты — документация руководство пользователя облако Cloud.ru / DOCS Облачная платформа Advanced Поиск Зоны доступности и эндпоинты Эта статья полезна? Информация на этой странице будет полезна при работе с облаком Advanced через API, Cloud CLI и Terraform . Регион и зоны доступности Ресурсы облака Advanced расположены в одном регионе — RU-Moscow . Его идентификатор — ru-moscow-1 . В этот регион объединены четыре зоны доступности: Зона доступности Идентификатор ЦОД AZ1 ru-moscow-1a IXcellerate Moscow North, г. Москва, Алтуфьевское шоссе, 33Г AZ2 ru-moscow-1b DataPro I, г. Москва, ул. Авиамоторная, 69 AZ3 ru-moscow-1c DataPro II, г. Москва, 74 км МКАД, вл. 3 AZ5 ru-moscow-1e IXcellerate Moscow South, г. Москва, ул. Подольских Курсантов, 15Б Эндпоинты Эндпоинты сервисов для отправки запросов: Сервис Эндпоинт Протокол Application Operations Management aom.ru-moscow-1.hc.sbercloud.ru HTTPS Application Orchestration Service aos.ru-moscow-1.hc.sbercloud.ru HTTPS API Gateway apig.ru-moscow-1.hc.sbercloud.ru HTTPS Application Performance Management apm.ru-moscow-1.hc.sbercloud.ru HTTPS Auto Scaling as.ru-moscow-1.hc.sbercloud.ru HTTPS Cloud Bastion Host cbh.ru-moscow-1.hc.sbercloud.ru HTTPS Cloud Backup and Recovery cbr.ru-moscow-1.hc.sbercloud.ru HTTPS Cloud Container Engine cce.ru-moscow-1.hc.sbercloud.ru HTTPS Cloud Certificate Manager scm.ru-moscow-1.hc.sbercloud.ru ccm.ru-moscow-1.hc.sbercloud.ru HTTPS Cloud Eye ces.ru-moscow-1.hc.sbercloud.ru HTTPS Cloud Firewall cfw.ru-moscow-1.hc.cloud.ru HTTPS Cloud Search Service css.ru-moscow-1.hc.sbercloud.ru HTTPS Cloud Service Engine cse.ru-moscow-1.hc.sbercloud.ru HTTPS Cloud Trace Service cts.ru-moscow-1.hc.sbercloud.ru HTTPS CodeArts Build codeartsbuild.ru-moscow-1.hc.sbercloud.ru HTTPS CodeArts Check codeartscheck.ru-moscow-1.hc.sbercloud.ru HTTPS CodeArts Deploy codeartsdeploy.ru-moscow-1.hc.sbercloud.ru HTTPS CodeArts Pipeline pipeline.ru-moscow-1.hc.sbercloud.ru HTTPS CodeArts Repo codeartsrepo.ru-moscow-1.hc.sbercloud.ru HTTPS CodeArts TestPlan testplan.ru-moscow-1.hc.sbercloud.ru HTTPS DataArts Insight vpcep.ru-moscow-1.hc.sbercloud.ru HTTPS DataArts Studio dayu-dlf.ru-moscow-1.hc.sbercloud.ru cdm.ru-moscow-1.hc.sbercloud.ru HTTPS Data Encryption Workshop kms.ru-moscow-1.hc.sbercloud.ru HTTPS Data Lake Insight dli.ru-moscow-1.hc.sbercloud.ru HTTPS Data Replication Service drs.ru-moscow-1.hc.sbercloud.ru HTTPS Data Warehouse Service dws.ru-moscow-1.hc.sbercloud.ru HTTPS Direct Connect dcaas.ru-moscow-1.hc.sbercloud.ru HTTPS Distributed Cache Service dcs.ru-moscow-1.hc.sbercloud.ru HTTPS Distributed Message Service dms.ru-moscow-1.hc.sbercloud.ru HTTPS Document Database Service dds.ru-moscow-1.hc.sbercloud.ru HTTPS Domain Name Service dns.ru-moscow-1.hc.sbercloud.ru HTTPS Elastic Cloud Server ecs.ru-moscow-1.hc.sbercloud.ru HTTPS Elastic Load Balance elb.ru-moscow-1.hc.sbercloud.ru HTTPS Elastic Volume Service evs.ru-moscow-1.hc.sbercloud.ru HTTPS Enterprise Project Management ",
+  "parsed_at": "2026-05-10T16:49:58.440330+00:00"
+}

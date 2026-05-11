@@ -1,0 +1,3478 @@
+[
+  {
+    "service_name": "Application Operations Management",
+    "input_service_name": "Application Operations Management",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/app-operations?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/app-operations.pdf",
+    "title": "Тарифы «Application Operations Management». Приложение №7.ADV.2.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис мониторинга (AOM) Custom metrics professional (aom.metirc.custom.pro)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,015",
+        "vat_raw": "0,0033",
+        "price_with_vat_raw": "0,0183"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис мониторинга (AOM) Events and alarms professional (aom.event.pro)",
+        "tariff_unit": "10 тыс. шт",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,001",
+        "vat_raw": "0,00022",
+        "price_with_vat_raw": "0,00122"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис мониторинга (AOM) Host monitoring professional (aom.metric.host.pro)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,013",
+        "vat_raw": "0,00286",
+        "price_with_vat_raw": "0,01586"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис мониторинга (AOM) LTS Хранение логов (lts.log.storage)",
+        "tariff_unit": "Гб",
+        "tariff_period": "день",
+        "price_without_vat_raw": "0,14",
+        "vat_raw": "0,0308",
+        "price_with_vat_raw": "0,1708"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис мониторинга (AOM) Second-level monitoring metrics professional (aom.metric.realtime.pro)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,013",
+        "vat_raw": "0,00286",
+        "price_with_vat_raw": "0,01586"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис мониторинга (AOM) Вызовы API professional (aom.metric.query.pro)",
+        "tariff_unit": "10 тыс. шт",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,002",
+        "vat_raw": "0,00044",
+        "price_with_vat_raw": "0,00244"
+      }
+    ],
+    "rows_count": 6,
+    "parsed_at": "2026-05-10T16:50:00.093923+00:00"
+  },
+  {
+    "service_name": "Application Performance Management",
+    "input_service_name": "Application Performance Management",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/app-performance?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/app-performance.pdf",
+    "title": "Тарифы «Application Performance Management». Приложение №7.ADV.4.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Управление производительностью (APM) 2.0 Стандартная конфигурация количество инсталляций (apm2.instance.normal)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "9,89",
+        "vat_raw": "2,1758",
+        "price_with_vat_raw": "12,0658"
+      },
+      {
+        "number": "2",
+        "item_name": "Управление производительностью (APM) Стандартная конфигурация количество инсталляций (apm.instance.normal)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,02",
+        "vat_raw": "0,8844",
+        "price_with_vat_raw": "4,9044"
+      }
+    ],
+    "rows_count": 2,
+    "parsed_at": "2026-05-10T16:50:00.895661+00:00"
+  },
+  {
+    "service_name": "Cloud Backup And Recovery",
+    "input_service_name": "Cloud Backup And Recovery",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-backup-recovery?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/cloud-backup-recovery.pdf",
+    "title": "Тарифы «Cloud Backup And Recovery». Приложение №7.ADV.5.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Резервное копирование (CBR) Database объем (vault.backup.database.normal)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0059",
+        "vat_raw": "0,001298",
+        "price_with_vat_raw": "0,007198"
+      },
+      {
+        "number": "2",
+        "item_name": "Резервное копирование (CBR) SFS Turbo Multi-AZ объем (vault.backup.turbo.multiaz)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0056",
+        "vat_raw": "0,001232",
+        "price_with_vat_raw": "0,006832"
+      },
+      {
+        "number": "3",
+        "item_name": "Резервное копирование (CBR) SFS Turbo объем (vault.backup.turbo.normal)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0035",
+        "vat_raw": "0,00077",
+        "price_with_vat_raw": "0,00427"
+      },
+      {
+        "number": "4",
+        "item_name": "Резервное копирование (CBR) Virtual server Multi-AZ объем (vault.backup.server.multiaz)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0056",
+        "vat_raw": "0,001232",
+        "price_with_vat_raw": "0,006832"
+      },
+      {
+        "number": "5",
+        "item_name": "Резервное копирование (CBR) Virtual server объем (vault.backup.server.normal)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0035",
+        "vat_raw": "0,00077",
+        "price_with_vat_raw": "0,00427"
+      },
+      {
+        "number": "6",
+        "item_name": "Резервное копирование (CBR) Volume объем (vault.backup.volume.normal)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0018",
+        "vat_raw": "0,000396",
+        "price_with_vat_raw": "0,002196"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Application Performance Management». Приложение №7.ADV.4.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Cloud Container Engine». Приложение №7.ADV.6."
+      }
+    ],
+    "rows_count": 7,
+    "parsed_at": "2026-05-10T16:50:01.816662+00:00"
+  },
+  {
+    "service_name": "Cloud Container Engine",
+    "input_service_name": "Cloud Container Engine",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-container-engine?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/cloud-container-engine.pdf",
+    "title": "Тарифы «Cloud Container Engine». Приложение №7.ADV.6.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Контейнеры (CCE) 1 master node - 1-50 nodes количество инсталляций (cce.s1.small)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "6,16",
+        "vat_raw": "1,3552",
+        "price_with_vat_raw": "7,5152"
+      },
+      {
+        "number": "2",
+        "item_name": "Контейнеры (CCE) 1 master node - 201-1000 nodes количество инсталляций (cce.s1.large)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "24,64",
+        "vat_raw": "5,4208",
+        "price_with_vat_raw": "30,0608"
+      },
+      {
+        "number": "3",
+        "item_name": "Контейнеры (CCE) 1 master node - 51-200 nodes количество инсталляций (cce.s1.medium)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "12,32",
+        "vat_raw": "2,7104",
+        "price_with_vat_raw": "15,0304"
+      },
+      {
+        "number": "4",
+        "item_name": "Контейнеры (CCE) 3 master node - 1-50 nodes количество инсталляций (cce.s2.small)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "18,48",
+        "vat_raw": "4,0656",
+        "price_with_vat_raw": "22,5456"
+      },
+      {
+        "number": "5",
+        "item_name": "Контейнеры (CCE) 3 master node - 1001-2000 nodes количество инсталляций (cce.s2.xlarge)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "147,84",
+        "vat_raw": "32,5248",
+        "price_with_vat_raw": "180,3648"
+      },
+      {
+        "number": "6",
+        "item_name": "Контейнеры (CCE) 3 master node - 201-1000 nodes количество инсталляций (cce.s2.large)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "73,92",
+        "vat_raw": "16,2624",
+        "price_with_vat_raw": "90,1824"
+      },
+      {
+        "number": "7",
+        "item_name": "Контейнеры (CCE) 3 master node - 51-200 nodes количество инсталляций (cce.s2.medium)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "36,96",
+        "vat_raw": "8,1312",
+        "price_with_vat_raw": "45,0912"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Cloud Backup And Recovery». Приложение №7.ADV.5.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Cloud Performance Test Service». Приложение №7.ADV.8."
+      }
+    ],
+    "rows_count": 8,
+    "parsed_at": "2026-05-10T16:50:02.648583+00:00"
+  },
+  {
+    "service_name": "Cloud Performance Test Service",
+    "input_service_name": "Cloud Performance Test Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-performance-test?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/cloud-performance-test.pdf",
+    "title": "Тарифы «Cloud Performance Test Service». Приложение №7.ADV.8.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис тестирования приложений (CPTS) Пакет количество (cpts.package)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,06",
+        "vat_raw": "0,0132",
+        "price_with_vat_raw": "0,0732"
+      }
+    ],
+    "rows_count": 1,
+    "parsed_at": "2026-05-10T16:50:03.585817+00:00"
+  },
+  {
+    "service_name": "Cloud Search Service",
+    "input_service_name": "Cloud Search Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-search?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/cloud-search.pdf",
+    "title": "Тарифы «Cloud Search Service». Приложение №7.ADV.9.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды для интенсивных вычислений 16 vCPU 32ГБ RAM serv (ess.spec-16u32g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "48,16",
+        "vat_raw": "10,5952",
+        "price_with_vat_raw": "58,7552"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды для интенсивных вычислений 32 vCPU 64ГБ RAM css (ess.spec-32u64g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "96,32",
+        "vat_raw": "21,1904",
+        "price_with_vat_raw": "117,5104"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды для интенсивных вычислений 4 vCPU 8ГБ RAM serv (ess.spec-4u8g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "12,04",
+        "vat_raw": "2,6488",
+        "price_with_vat_raw": "14,6888"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды для интенсивных вычислений 8 vCPU 16ГБ RAM serv (ess.spec-8u16g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "24,08",
+        "vat_raw": "5,2976",
+        "price_with_vat_raw": "29,3776"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды для общих вычислений 16 vCPU 64ГБ RAM css (ess.spec-16u64g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "62,56",
+        "vat_raw": "13,7632",
+        "price_with_vat_raw": "76,3232"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды для общих вычислений 32 vCPU 128ГБ RAM css (ess.spec-32u128g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "125,12",
+        "vat_raw": "27,5264",
+        "price_with_vat_raw": "152,6464"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды для общих вычислений 4 vCPU 16ГБ RAM css (ess.spec-4u16g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "15,64",
+        "vat_raw": "3,4408",
+        "price_with_vat_raw": "19,0808"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды для общих вычислений 8 vCPU 32ГБ RAM css (ess.spec-8u32g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "31,28",
+        "vat_raw": "6,8816",
+        "price_with_vat_raw": "38,1616"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды с увеличенной памятью 16 vCPU 128ГБ RAM css (ess.spec-16u128g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "91,36",
+        "vat_raw": "20,0992",
+        "price_with_vat_raw": "111,4592"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис поиска в приложениях (CSS) Ноды с увеличенной памятью 2 vCPU 16ГБ RAM css (ess.spec-2u16g)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "11,42",
+        "vat_raw": "2,5124",
+        "price_with_vat_raw": "13,9324"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "Rows volume:",
+        "tariff_period": "10",
+        "price_without_vat_raw": "10",
+        "vat_raw": "Примечание",
+        "price_with_vat_raw": "«*» — если применимо."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:04.532733+00:00"
+  },
+  {
+    "service_name": "Direct Connect",
+    "input_service_name": "Direct Connect",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/direct-connect?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/direct-connect.pdf",
+    "title": "Тарифы «Direct Connect». Приложение №7.ADV.11.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Аренда SFP модуля 10G - Cisco SFP-10G-ER (одномод, 2 ОВ, 40км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "9000",
+        "vat_raw": "1980",
+        "price_with_vat_raw": "10980"
+      },
+      {
+        "number": "2",
+        "item_name": "Аренда SFP модуля 10G - Cisco SFP-10G-LR (одномод, 2 ОВ, 10км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3600",
+        "vat_raw": "792",
+        "price_with_vat_raw": "4392"
+      },
+      {
+        "number": "3",
+        "item_name": "Аренда SFP модуля 10G - Cisco SFP-10G-SR (многомод, 2 ОВ, 300-400м) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "900",
+        "vat_raw": "198",
+        "price_with_vat_raw": "1098"
+      },
+      {
+        "number": "4",
+        "item_name": "Аренда SFP модуля 10G - SNR-SFP+W37-40 (одномод, 1 ОВ, 40км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "600",
+        "vat_raw": "132",
+        "price_with_vat_raw": "732"
+      },
+      {
+        "number": "5",
+        "item_name": "Аренда SFP модуля 10G - SNR-SFP+W37-60 (одномод, 1 ОВ, 60км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "800",
+        "vat_raw": "176",
+        "price_with_vat_raw": "976"
+      },
+      {
+        "number": "6",
+        "item_name": "Аренда SFP модуля 10G - SNR-SFP+W73-40 (одномод, 1 ОВ, 40км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "600",
+        "vat_raw": "132",
+        "price_with_vat_raw": "732"
+      },
+      {
+        "number": "7",
+        "item_name": "Аренда SFP модуля 10G - SNR-SFP+W73-60 (одномод, 1 ОВ, 60км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "800",
+        "vat_raw": "176",
+        "price_with_vat_raw": "976"
+      },
+      {
+        "number": "8",
+        "item_name": "Аренда SFP модуля 10G -SNR-SFP+W37-3 (одномод, 1 ОВ, 3км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "400",
+        "vat_raw": "88",
+        "price_with_vat_raw": "488"
+      },
+      {
+        "number": "9",
+        "item_name": "Аренда SFP модуля 10G -SNR-SFP+W73-3 (одномод, 1 ОВ, 3км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "400",
+        "vat_raw": "88",
+        "price_with_vat_raw": "488"
+      },
+      {
+        "number": "10",
+        "item_name": "Аренда SFP модуля 1G - Cisco GLC-LH-SM (одномод, 2 ОВ, 10км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "1000",
+        "vat_raw": "220",
+        "price_with_vat_raw": "1220"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "3",
+        "tariff_period": "Rows volume:",
+        "price_without_vat_raw": "10",
+        "vat_raw": "10",
+        "price_with_vat_raw": "Примечание"
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:05.680189+00:00"
+  },
+  {
+    "service_name": "Межплатформенная связность Cloud.ru Advanced",
+    "input_service_name": "Межплатформенная связность Cloud.ru Advanced",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/platform-connect?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/platform-connect.pdf",
+    "title": "Тарифы «Межплатформенная связность Cloud.ru Advanced». Приложение №7.ADV.11.2.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Межплатформенная связность (МПС) Аренда канала для Advanced 1 ГБ/с",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "4200",
+        "vat_raw": "924",
+        "price_with_vat_raw": "5124"
+      },
+      {
+        "number": "2",
+        "item_name": "Межплатформенная связность (МПС) Аренда канала для Advanced 10 ГБ/с",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "18000",
+        "vat_raw": "3960",
+        "price_with_vat_raw": "21960"
+      },
+      {
+        "number": "3",
+        "item_name": "Межплатформенная связность (МПС) Аренда канала для Advanced 100 ГБ/с",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "145000",
+        "vat_raw": "31900",
+        "price_with_vat_raw": "176900"
+      },
+      {
+        "number": "4",
+        "item_name": "Межплатформенная связность (МПС) Аренда канала для Advanced 25 ГБ/с",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "29800",
+        "vat_raw": "6556",
+        "price_with_vat_raw": "36356"
+      },
+      {
+        "number": "5",
+        "item_name": "Межплатформенная связность (МПС) Аренда канала для Advanced 40 ГБ/с",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "62000",
+        "vat_raw": "13640",
+        "price_with_vat_raw": "75640"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Direct Connect». Приложение №7.ADV.11.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «SFP Модуль». Приложение №7.ADV.11.1."
+      }
+    ],
+    "rows_count": 6,
+    "parsed_at": "2026-05-10T16:50:06.704125+00:00"
+  },
+  {
+    "service_name": "SFP Модуль",
+    "input_service_name": "SFP Модуль",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/sfp-rent?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/sfp-rent.pdf",
+    "title": "Тарифы «SFP Модуль». Приложение №7.ADV.11.1.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Аренда SFP модуля 10G - Cisco SFP-10G-ER (одномод, 2 ОВ, 40км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "9000",
+        "vat_raw": "1980",
+        "price_with_vat_raw": "10980"
+      },
+      {
+        "number": "2",
+        "item_name": "Аренда SFP модуля 10G - Cisco SFP-10G-LR (одномод, 2 ОВ, 10км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3600",
+        "vat_raw": "792",
+        "price_with_vat_raw": "4392"
+      },
+      {
+        "number": "3",
+        "item_name": "Аренда SFP модуля 10G - Cisco SFP-10G-SR (многомод, 2 ОВ, 300-400м) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "900",
+        "vat_raw": "198",
+        "price_with_vat_raw": "1098"
+      },
+      {
+        "number": "4",
+        "item_name": "Аренда SFP модуля 10G - SNR-SFP+W37-40 (одномод, 1 ОВ, 40км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "600",
+        "vat_raw": "132",
+        "price_with_vat_raw": "732"
+      },
+      {
+        "number": "5",
+        "item_name": "Аренда SFP модуля 10G - SNR-SFP+W37-60 (одномод, 1 ОВ, 60км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "800",
+        "vat_raw": "176",
+        "price_with_vat_raw": "976"
+      },
+      {
+        "number": "6",
+        "item_name": "Аренда SFP модуля 10G - SNR-SFP+W73-40 (одномод, 1 ОВ, 40км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "600",
+        "vat_raw": "132",
+        "price_with_vat_raw": "732"
+      },
+      {
+        "number": "7",
+        "item_name": "Аренда SFP модуля 10G - SNR-SFP+W73-60 (одномод, 1 ОВ, 60км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "800",
+        "vat_raw": "176",
+        "price_with_vat_raw": "976"
+      },
+      {
+        "number": "8",
+        "item_name": "Аренда SFP модуля 10G -SNR-SFP+W37-3 (одномод, 1 ОВ, 3км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "400",
+        "vat_raw": "88",
+        "price_with_vat_raw": "488"
+      },
+      {
+        "number": "9",
+        "item_name": "Аренда SFP модуля 10G -SNR-SFP+W73-3 (одномод, 1 ОВ, 3км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "400",
+        "vat_raw": "88",
+        "price_with_vat_raw": "488"
+      },
+      {
+        "number": "10",
+        "item_name": "Аренда SFP модуля 1G - Cisco GLC-LH-SM (одномод, 2 ОВ, 10км) (Direct Connect)",
+        "tariff_unit": "шт.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "1000",
+        "vat_raw": "220",
+        "price_with_vat_raw": "1220"
+      },
+      {
+        "number": "2",
+        "item_name": "3",
+        "tariff_unit": "4",
+        "tariff_period": "Rows volume:",
+        "price_without_vat_raw": "10",
+        "vat_raw": "10",
+        "price_with_vat_raw": "Примечание"
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:07.609004+00:00"
+  },
+  {
+    "service_name": "Distributed Cache Service For Redis",
+    "input_service_name": "Distributed Cache Service For Redis",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/redis-cache?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/redis-cache.pdf",
+    "title": "Тарифы «Distributed Cache Service For Redis». Приложение №7.ADV.13.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 1024ГБ (redis.proxy.xu1.large.1024)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1337,33",
+        "vat_raw": "294,2126",
+        "price_with_vat_raw": "1631,5426"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 128ГБ (redis.proxy.xu1.large.128)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "180,72",
+        "vat_raw": "39,7584",
+        "price_with_vat_raw": "220,4784"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 16ГБ (redis.proxy.xu1.large.16)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "18,07",
+        "vat_raw": "3,9754",
+        "price_with_vat_raw": "22,0454"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 192ГБ (redis.proxy.xu1.large.192)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "253,01",
+        "vat_raw": "55,6622",
+        "price_with_vat_raw": "308,6722"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 2048ГБ (redis.proxy.xu1.large.2048)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2674,66",
+        "vat_raw": "588,4252",
+        "price_with_vat_raw": "3263,0852"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 24ГБ (redis.proxy.xu1.large.24)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "27,11",
+        "vat_raw": "5,9642",
+        "price_with_vat_raw": "33,0742"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 256ГБ (redis.proxy.xu1.large.256)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "325,3",
+        "vat_raw": "71,566",
+        "price_with_vat_raw": "396,866"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 32ГБ (redis.proxy.xu1.large.32)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "36,14",
+        "vat_raw": "7,9508",
+        "price_with_vat_raw": "44,0908"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 384ГБ (redis.proxy.xu1.large.384)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "506,02",
+        "vat_raw": "111,3244",
+        "price_with_vat_raw": "617,3444"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис кеша (DCS) Redis 4.0 и 5.0 Proxy кластер 4096ГБ (redis.proxy.xu1.large.4096)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "5349,31",
+        "vat_raw": "1176,8482",
+        "price_with_vat_raw": "6526,1582"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "3",
+        "tariff_period": "4",
+        "price_without_vat_raw": "5",
+        "vat_raw": "...",
+        "price_with_vat_raw": "28"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «SFP Модуль». Приложение №7.ADV.11.1.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Distributed Message Service For Kafka, RabbitMQ and RocketMQ». Приложение №7.ADV.14."
+      }
+    ],
+    "rows_count": 12,
+    "parsed_at": "2026-05-10T16:50:09.040044+00:00"
+  },
+  {
+    "service_name": "Distributed Message Service For Kafka, RabbitMQ and RocketMQ",
+    "input_service_name": "Distributed Message Service For Kafka, RabbitMQ and RocketMQ",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/kafka-rabbitmq?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/kafka-rabbitmq.pdf",
+    "title": "Тарифы «Distributed Message Service For Kafka, RabbitMQ and RocketMQ». Приложение №7.ADV.14.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Брокер сообщений (DMS) диски High I/O объем (dms.physical.storage.high)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0055",
+        "vat_raw": "0,00121",
+        "price_with_vat_raw": "0,00671"
+      },
+      {
+        "number": "2",
+        "item_name": "Брокер сообщений (DMS) диски Ultra-high I/O объем (dms.physical.storage.ultra)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0138",
+        "vat_raw": "0,003036",
+        "price_with_vat_raw": "0,016836"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис очередей сообщений (DMS) Distributed Message Service (DMS) для Kaffka С6 kafka, 1 часть ядра",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,2",
+        "vat_raw": "0,264",
+        "price_with_vat_raw": "1,464"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис очередей сообщений (DMS) Distributed Message Service (DMS) для RabbitMQ С6 rabbitmq, 1 часть ядра",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,2",
+        "vat_raw": "0,264",
+        "price_with_vat_raw": "1,464"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис очередей сообщений (DMS) Distributed Message Service (DMS) для RocketMQ С6 reliability, 1 часть ядра",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,2",
+        "vat_raw": "0,264",
+        "price_with_vat_raw": "1,464"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис очередей сообщений (DMS) RocketMQ автономный сервер (dms.rocketmq.basic.single.tps)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "8,51",
+        "vat_raw": "1,8722",
+        "price_with_vat_raw": "10,3822"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис очередей сообщений (DMS) RocketMQ кластер 1 часть ядра (dms.rocketmq.basic.cluster.tps)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,21",
+        "vat_raw": "0,4862",
+        "price_with_vat_raw": "2,6962"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис очередей сообщений (DMS) RocketMQ профессиональная версия автономный инстанс (dms.rocketmq.pro.single.tps)",
+        "tariff_unit": "шт/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "10,212",
+        "vat_raw": "2,24664",
+        "price_with_vat_raw": "12,45864"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис очередей сообщений (DMS) RocketMQ профессиональная версия кластер (dms.rocketmq.pro.cluster.tps)",
+        "tariff_unit": "шт/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,652",
+        "vat_raw": "0,58344",
+        "price_with_vat_raw": "3,23544"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис очередей сообщений (DMS) RocketMQ профессиональная версия эластичный инстанс (dms.rocketmq.pro.elastic.tps)",
+        "tariff_unit": "шт/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0709",
+        "vat_raw": "0,015598",
+        "price_with_vat_raw": "0,086498"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "Rows volume:",
+        "tariff_period": "10",
+        "price_without_vat_raw": "10",
+        "vat_raw": "Примечание",
+        "price_with_vat_raw": "«*» — если применимо."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:09.716760+00:00"
+  },
+  {
+    "service_name": "Document Database Service",
+    "input_service_name": "Document Database Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/document-db?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/document-db.pdf",
+    "title": "Тарифы «Document Database Service». Приложение №7.ADV.15.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис документальной БД (DDS) MongoDB cluster резервные копии OBS Standard объем (dds.mongodb.backup.space)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0023",
+        "vat_raw": "0,000506",
+        "price_with_vat_raw": "0,002806"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set диски 5 нод Ultra-high I/O (dds.volume.ultrahigh.5repset)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0822",
+        "vat_raw": "0,018084",
+        "price_with_vat_raw": "0,100284"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set диски 7 нод Ultra-high I/O (dds.volume.ultrahigh.7repset)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,1096",
+        "vat_raw": "0,024112",
+        "price_with_vat_raw": "0,133712"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set диски Ultra-high I/O (dds.volume.ultrahigh.repset)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0138",
+        "vat_raw": "0,003036",
+        "price_with_vat_raw": "0,016836"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set резервные копии OBS Standard объем (dds.mongodb.backup.space.repset)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0023",
+        "vat_raw": "0,000506",
+        "price_with_vat_raw": "0,002806"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set тип General Computing 1 vCPU 4ГБ RAM (dds.mongodb.s6.medium.4.repset)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,92",
+        "vat_raw": "0,6424",
+        "price_with_vat_raw": "3,5624"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set тип General Computing 2 vCPU 4ГБ RAM (dds.mongodb.s6.large.2.repset)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,7",
+        "vat_raw": "0,814",
+        "price_with_vat_raw": "4,514"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set тип General Computing 2 vCPU 8ГБ RAM (dds.mongodb.s6.large.4.repset)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "5,85",
+        "vat_raw": "1,287",
+        "price_with_vat_raw": "7,137"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set тип General Computing 4 vCPU 16ГБ RAM (dds.mongodb.s6.xlarge.4.repset)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "11,69",
+        "vat_raw": "2,5718",
+        "price_with_vat_raw": "14,2618"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис документальной БД (DDS) MongoDB replica set тип General Computing 4 vCPU 8ГБ RAM (dds.mongodb.s6.xlarge.2.repset)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "7,4",
+        "vat_raw": "1,628",
+        "price_with_vat_raw": "9,028"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "3",
+        "tariff_period": "4",
+        "price_without_vat_raw": "5",
+        "vat_raw": "...",
+        "price_with_vat_raw": "11"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Distributed Message Service For Kafka, RabbitMQ and RocketMQ». Приложение №7.ADV.14.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Elastic Cloud Server». Приложение №7.ADV.17."
+      }
+    ],
+    "rows_count": 12,
+    "parsed_at": "2026-05-10T16:50:10.500876+00:00"
+  },
+  {
+    "service_name": "Elastic Cloud Server",
+    "input_service_name": "Elastic Cloud Server",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-cloud?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/elastic-cloud.pdf",
+    "title": "Тарифы «Elastic Cloud Server». Приложение №7.ADV.17.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 12 vCPU 24ГБ RAM (c6.3xlarge.2.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "17,07",
+        "vat_raw": "3,7554",
+        "price_with_vat_raw": "20,8254"
+      },
+      {
+        "number": "2",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 12 vCPU 48ГБ RAM (c6.3xlarge.4.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "23,39",
+        "vat_raw": "5,1458",
+        "price_with_vat_raw": "28,5358"
+      },
+      {
+        "number": "3",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 12vCPU 12ГБ RAM (c6nl.3xlarge.1.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "13,91",
+        "vat_raw": "3,0602",
+        "price_with_vat_raw": "16,9702"
+      },
+      {
+        "number": "4",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 12vCPU 24ГБ RAM (c6nl.3xlarge.2.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "17,07",
+        "vat_raw": "3,7554",
+        "price_with_vat_raw": "20,8254"
+      },
+      {
+        "number": "5",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 12vCPU 48ГБ RAM (c6nl.3xlarge.4.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "23,39",
+        "vat_raw": "5,1458",
+        "price_with_vat_raw": "28,5358"
+      },
+      {
+        "number": "6",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 16 vCPU 32ГБ RAM (c6.4xlarge.2.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "22,76",
+        "vat_raw": "5,0072",
+        "price_with_vat_raw": "27,7672"
+      },
+      {
+        "number": "7",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 16 vCPU 64ГБ RAM (c6.4xlarge.4.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "31,19",
+        "vat_raw": "6,8618",
+        "price_with_vat_raw": "38,0518"
+      },
+      {
+        "number": "8",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 16vCPU 16ГБ RAM (c6nl.4xlarge.1.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "18,55",
+        "vat_raw": "4,081",
+        "price_with_vat_raw": "22,631"
+      },
+      {
+        "number": "9",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 16vCPU 32ГБ (c6nl.4xlarge.2.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "22,76",
+        "vat_raw": "5,0072",
+        "price_with_vat_raw": "27,7672"
+      },
+      {
+        "number": "10",
+        "item_name": "Виртуальная машина (ECS) BYOL type General computing-plus gen 6 16vCPU 64ГБ (c6nl.4xlarge.4.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "31,19",
+        "vat_raw": "6,8618",
+        "price_with_vat_raw": "38,0518"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "3",
+        "tariff_period": "4",
+        "price_without_vat_raw": "5",
+        "vat_raw": "...",
+        "price_with_vat_raw": "40"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Document Database Service». Приложение №7.ADV.15.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Elastic Load Balance». Приложение №7.ADV.18."
+      }
+    ],
+    "rows_count": 12,
+    "parsed_at": "2026-05-10T16:50:11.995197+00:00"
+  },
+  {
+    "service_name": "Elastic Load Balance",
+    "input_service_name": "Elastic Load Balance",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-load-balance?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/elastic-load-balance.pdf",
+    "title": "Тарифы «Elastic Load Balance». Приложение №7.ADV.18.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated DC 1AZ Layer 4 LCU (elbv3.basic.1az.l4_lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,9",
+        "vat_raw": "0,418",
+        "price_with_vat_raw": "2,318"
+      },
+      {
+        "number": "2",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated DC 1AZ Layer 7 LCU (elbv3.basic.1az.l7_lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,9",
+        "vat_raw": "0,418",
+        "price_with_vat_raw": "2,318"
+      },
+      {
+        "number": "3",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated DC 2AZ Layer 4 LCU (elbv3.basic.2az.l4_lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,8",
+        "vat_raw": "0,836",
+        "price_with_vat_raw": "4,636"
+      },
+      {
+        "number": "4",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated DC 2AZ Layer 7 LCU (elbv3.basic.2az.l7_lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,8",
+        "vat_raw": "0,836",
+        "price_with_vat_raw": "4,636"
+      },
+      {
+        "number": "5",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated DC 3AZ Layer 4 LCU (elbv3.basic.3az.l4_lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "5,7",
+        "vat_raw": "1,254",
+        "price_with_vat_raw": "6,954"
+      },
+      {
+        "number": "6",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated DC 3AZ Layer 7 LCU (elbv3.basic.3az.l7_lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "5,7",
+        "vat_raw": "1,254",
+        "price_with_vat_raw": "6,954"
+      },
+      {
+        "number": "7",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated DC 4AZ Layer 4 LCU (elbv3.basic.4az.l4_lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "7,6",
+        "vat_raw": "1,672",
+        "price_with_vat_raw": "9,272"
+      },
+      {
+        "number": "8",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated DC 4AZ Layer 7 LCU (elbv3.basic.4az.l7_lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "7,6",
+        "vat_raw": "1,672",
+        "price_with_vat_raw": "9,272"
+      },
+      {
+        "number": "9",
+        "item_name": "Балансировка нагрузки (ELB) Dedicated эластичный инстанс (elbv3.professional.instance_duration)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,11",
+        "vat_raw": "0,4642",
+        "price_with_vat_raw": "2,5742"
+      },
+      {
+        "number": "10",
+        "item_name": "Балансировка нагрузки (ELB) Elastic professional Layer 4 LCU (elbv3.professional.l4lcu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,28",
+        "vat_raw": "0,5016",
+        "price_with_vat_raw": "2,7816"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "Rows volume:",
+        "tariff_period": "10",
+        "price_without_vat_raw": "10",
+        "vat_raw": "Примечание",
+        "price_with_vat_raw": "«*» — если применимо."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:12.819057+00:00"
+  },
+  {
+    "service_name": "Elastic Volume Service",
+    "input_service_name": "Elastic Volume Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/elastic-volume?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/elastic-volume.pdf",
+    "title": "Тарифы «Elastic Volume Service». Приложение №7.ADV.19.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Блочное хранилище данных (EVS) диски Extreme SSD объем",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,032",
+        "vat_raw": "0,00704",
+        "price_with_vat_raw": "0,03904"
+      },
+      {
+        "number": "2",
+        "item_name": "Блочное хранилище данных (EVS) диски High I/O объем (SAS)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0055",
+        "vat_raw": "0,00121",
+        "price_with_vat_raw": "0,00671"
+      },
+      {
+        "number": "3",
+        "item_name": "Блочное хранилище данных (EVS) диски Ultra-high I/O объем (SSD)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0138",
+        "vat_raw": "0,003036",
+        "price_with_vat_raw": "0,016836"
+      }
+    ],
+    "rows_count": 3,
+    "parsed_at": "2026-05-10T16:50:13.794752+00:00"
+  },
+  {
+    "service_name": "FunctionGraph",
+    "input_service_name": "FunctionGraph",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/functiongraph?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/functiongraph.pdf",
+    "title": "Тарифы «FunctionGraph». Приложение №7.ADV.20.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Бессерверные вычисления (FG) Вызовы количество (functionstage) от 1 млн шт",
+        "tariff_unit": "млн шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "11,75",
+        "vat_raw": "2,585",
+        "price_with_vat_raw": "14,335"
+      },
+      {
+        "number": "2",
+        "item_name": "Бессерверные вычисления (FG) Продолжительность вычислений количество (functionstage) от 400000 ГБ-секунд",
+        "tariff_unit": "ГБ-секунд",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,00104444",
+        "vat_raw": "0,00022978",
+        "price_with_vat_raw": "0,00127422"
+      }
+    ],
+    "rows_count": 2,
+    "parsed_at": "2026-05-10T16:50:14.524003+00:00"
+  },
+  {
+    "service_name": "Image Management Service",
+    "input_service_name": "Image Management Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/image-management?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/image-management.pdf",
+    "title": "Тарифы «Image Management Service». Приложение №7.ADV.22.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис управления образами (IMS) OBS Standard storage объем (private.image)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0024",
+        "vat_raw": "0,000528",
+        "price_with_vat_raw": "0,002928"
+      }
+    ],
+    "rows_count": 1,
+    "parsed_at": "2026-05-10T16:50:15.420320+00:00"
+  },
+  {
+    "service_name": "Mapreduce Service",
+    "input_service_name": "Mapreduce Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/mapreduce?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/mapreduce.pdf",
+    "title": "Тарифы «Mapreduce Service». Приложение №7.ADV.23.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис MapReduce (MRS) тип Disk-intensive 16 vCPU 64ГБ RAM (d6.4xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "9,19",
+        "vat_raw": "2,0218",
+        "price_with_vat_raw": "11,2118"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис MapReduce (MRS) тип Disk-intensive 24 vCPU 96ГБ RAM (d6.6xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "13,78",
+        "vat_raw": "3,0316",
+        "price_with_vat_raw": "16,8116"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис MapReduce (MRS) тип Disk-intensive 32 vCPU 128ГБ RAM (d6.8xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "18,37",
+        "vat_raw": "4,0414",
+        "price_with_vat_raw": "22,4114"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис MapReduce (MRS) тип Disk-intensive 48 vCPU 192ГБ RAM (d6.12xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "27,56",
+        "vat_raw": "6,0632",
+        "price_with_vat_raw": "33,6232"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис MapReduce (MRS) тип Disk-intensive 64 vCPU 256ГБ RAM (d6.16xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "36,74",
+        "vat_raw": "8,0828",
+        "price_with_vat_raw": "44,8228"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис MapReduce (MRS) тип Disk-intensive 72 vCPU 288ГБ RAM (d6.18xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "41,34",
+        "vat_raw": "9,0948",
+        "price_with_vat_raw": "50,4348"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис MapReduce (MRS) тип Disk-intensive 8 vCPU 32ГБ RAM (d6.2xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,59",
+        "vat_raw": "1,0098",
+        "price_with_vat_raw": "5,5998"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис MapReduce (MRS) тип General computing 16 vCPU 32ГБ RAM (s7n.4xlarge.2.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "5,65",
+        "vat_raw": "1,243",
+        "price_with_vat_raw": "6,893"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис MapReduce (MRS) тип General computing 16 vCPU 64ГБ RAM (s7n.4xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "7,75",
+        "vat_raw": "1,705",
+        "price_with_vat_raw": "9,455"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис MapReduce (MRS) тип General computing 8 vCPU 32ГБ RAM (s7n.2xlarge.4.linux.bigdata)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,87",
+        "vat_raw": "0,8514",
+        "price_with_vat_raw": "4,7214"
+      },
+      {
+        "number": "2",
+        "item_name": "3",
+        "tariff_unit": "4",
+        "tariff_period": "Rows volume:",
+        "price_without_vat_raw": "10",
+        "vat_raw": "10",
+        "price_with_vat_raw": "Примечание"
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:16.214913+00:00"
+  },
+  {
+    "service_name": "NAT Gateway",
+    "input_service_name": "NAT Gateway",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/nat-gateway?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/nat-gateway.pdf",
+    "title": "Тарифы «NAT Gateway». Приложение №7.ADV.24.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис NAT Gateway (NGW) Extra-large количество инсталляций (natgateway_xlarge)",
+        "tariff_unit": "шт.",
+        "tariff_period": "день",
+        "price_without_vat_raw": "36,16",
+        "vat_raw": "7,9552",
+        "price_with_vat_raw": "44,1152"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис NAT Gateway (NGW) Large количество инсталляций (natgateway_large)",
+        "tariff_unit": "шт.",
+        "tariff_period": "день",
+        "price_without_vat_raw": "20,51",
+        "vat_raw": "4,5122",
+        "price_with_vat_raw": "25,0222"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис NAT Gateway (NGW) Middle количество инсталляций (natgateway_middle)",
+        "tariff_unit": "шт.",
+        "tariff_period": "день",
+        "price_without_vat_raw": "10,43",
+        "vat_raw": "2,2946",
+        "price_with_vat_raw": "12,7246"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис NAT Gateway (NGW) Small количество инсталляций (natgateway_small)",
+        "tariff_unit": "шт.",
+        "tariff_period": "день",
+        "price_without_vat_raw": "5,56",
+        "vat_raw": "1,2232",
+        "price_with_vat_raw": "6,7832"
+      }
+    ],
+    "rows_count": 4,
+    "parsed_at": "2026-05-10T16:50:16.920470+00:00"
+  },
+  {
+    "service_name": "Object Storage Service",
+    "input_service_name": "Object Storage Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/object-storage?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/object-storage.pdf",
+    "title": "Тарифы «Object Storage Service». Приложение №7.ADV.25",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис хранения (OBS) Cold storage выгрузка из хранилища внешняя (download_cold.external) до 10240 Гб",
+        "tariff_unit": "Гб",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "4,7",
+        "vat_raw": "1,034",
+        "price_with_vat_raw": "5,734"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис хранения (OBS) Cold storage выгрузка из хранилища внешняя (download_cold.external) от 10240 до 51200 Гб",
+        "tariff_unit": "Гб",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "4,23",
+        "vat_raw": "0,9306",
+        "price_with_vat_raw": "5,1606"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис хранения (OBS) Cold storage выгрузка из хранилища внешняя (download_cold.external) от 153600 Гб",
+        "tariff_unit": "Гб",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3,43",
+        "vat_raw": "0,7546",
+        "price_with_vat_raw": "4,1846"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис хранения (OBS) Cold storage выгрузка из хранилища внешняя (download_cold.external) от 51200 до 153600 Гб",
+        "tariff_unit": "Гб",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3,81",
+        "vat_raw": "0,8382",
+        "price_with_vat_raw": "4,6482"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис хранения (OBS) Cold storage вызовы API на запись (put_cold | transition_cold)",
+        "tariff_unit": "тыс. шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "0,5",
+        "vat_raw": "0,11",
+        "price_with_vat_raw": "0,61"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис хранения (OBS) Cold storage вызовы API на удаление (delete_cold)",
+        "tariff_unit": "тыс. шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "0,05",
+        "vat_raw": "0,011",
+        "price_with_vat_raw": "0,061"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис хранения (OBS) Cold storage вызовы API на чтение (get_cold | restore_ex)",
+        "tariff_unit": "тыс. шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "0,05",
+        "vat_raw": "0,011",
+        "price_with_vat_raw": "0,061"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис хранения (OBS) Cold storage объем (size_cold)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0007",
+        "vat_raw": "0,000154",
+        "price_with_vat_raw": "0,000854"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис хранения (OBS) Cross-region replication traffic (upload_crr | download_crr | download_cdn)",
+        "tariff_unit": "Гб",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "1,37",
+        "vat_raw": "0,3014",
+        "price_with_vat_raw": "1,6714"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис хранения (OBS) Parallel File System вызовы API на запись (pfs_put)",
+        "tariff_unit": "тыс. шт",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,1",
+        "vat_raw": "0,022",
+        "price_with_vat_raw": "0,122"
+      },
+      {
+        "number": "2",
+        "item_name": "3",
+        "tariff_unit": "4",
+        "tariff_period": "Rows volume:",
+        "price_without_vat_raw": "10",
+        "vat_raw": "10",
+        "price_with_vat_raw": "Примечание"
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:17.687333+00:00"
+  },
+  {
+    "service_name": "Relational Databases Service",
+    "input_service_name": "Relational Databases Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/relational-db?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/relational-db.pdf",
+    "title": "Тарифы «Relational Databases Service». Приложение №7.ADV.26.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип General computing-plus 16 vCPU 64ГБ RAM (rds.mssql.ee.c3.4xlarge.4.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "850,1",
+        "vat_raw": "187,022",
+        "price_with_vat_raw": "1037,122"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип General computing-plus 2 vCPU 8ГБ RAM (rds.mssql.ee.c3.large.4.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "106,26",
+        "vat_raw": "23,3772",
+        "price_with_vat_raw": "129,6372"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип General computing-plus 32 vCPU 128ГБ RAM (rds.mssql.ee.c3.8xlarge.4.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1700,2",
+        "vat_raw": "374,044",
+        "price_with_vat_raw": "2074,244"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип General computing-plus 4 vCPU 16ГБ RAM (rds.mssql.ee.c3.xlarge.4.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "212,53",
+        "vat_raw": "46,7566",
+        "price_with_vat_raw": "259,2866"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип General computing-plus 4 vCPU 8ГБ RAM (rds.mssql.ee.c3.xlarge.2.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "206,28",
+        "vat_raw": "45,3816",
+        "price_with_vat_raw": "251,6616"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип General computing-plus 64 vCPU 256ГБ RAM (rds.mssql.ee.c3.16xlarge.4.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3400,41",
+        "vat_raw": "748,0902",
+        "price_with_vat_raw": "4148,5002"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип General computing-plus 8 vCPU 32ГБ RAM (rds.mssql.ee.c3.2xlarge.4.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "425,05",
+        "vat_raw": "93,511",
+        "price_with_vat_raw": "518,561"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип Memory-optimized 16 vCPU 128ГБ RAM (rds.mssql.ee.m3.4xlarge.8.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "900,09",
+        "vat_raw": "198,0198",
+        "price_with_vat_raw": "1098,1098"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип Memory-optimized 2 vCPU 16ГБ RAM (rds.mssql.ee.m3.large.8.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "112,51",
+        "vat_raw": "24,7522",
+        "price_with_vat_raw": "137,2622"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис РБД (RDS) MSSQL Enterprise Edition Primary/Standby тип Memory-optimized 24 vCPU 192ГБ RAM (rds.mssql.ee.m3.6xlarge.8.ha)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1350,13",
+        "vat_raw": "297,0286",
+        "price_with_vat_raw": "1647,1586"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "3",
+        "tariff_period": "4",
+        "price_without_vat_raw": "5",
+        "vat_raw": "...",
+        "price_with_vat_raw": "26"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Object Storage Service». Приложение №7.ADV.25",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Scalable File Service». Приложение №7.ADV.27."
+      }
+    ],
+    "rows_count": 12,
+    "parsed_at": "2026-05-10T16:50:19.600887+00:00"
+  },
+  {
+    "service_name": "Scalable File Service",
+    "input_service_name": "Scalable File Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/scalable-file?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/scalable-file.pdf",
+    "title": "Тарифы «Scalable File Service». Приложение №7.ADV.27.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Управляемая файловая система (SFS) NFS Turbo Perfomance объем (sfs.turbo.performance.enhanced)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0278",
+        "vat_raw": "0,006116",
+        "price_with_vat_raw": "0,033916"
+      },
+      {
+        "number": "2",
+        "item_name": "Управляемая файловая система (SFS) NFS Turbo Standard объем (sfs.turbo.standard.enhanced)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0063",
+        "vat_raw": "0,001386",
+        "price_with_vat_raw": "0,007686"
+      },
+      {
+        "number": "3",
+        "item_name": "Управляемая файловая система (SFS) NFS/CIFS Standard объем (SFS_SATA)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0063",
+        "vat_raw": "0,001386",
+        "price_with_vat_raw": "0,007686"
+      },
+      {
+        "number": "4",
+        "item_name": "Управляемая файловая система (SFS) Turbo Perfomance для OBS 1ГБ 125MBps (sfs.turbo.125MBps)",
+        "tariff_unit": "ГБ/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,009743",
+        "vat_raw": "0,00214346",
+        "price_with_vat_raw": "0,01188646"
+      },
+      {
+        "number": "5",
+        "item_name": "Управляемая файловая система (SFS) Turbo Perfomance для OBS 1ГБ 20MBps (sfs.turbo.20MBps)",
+        "tariff_unit": "ГБ/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,006089",
+        "vat_raw": "0,00133958",
+        "price_with_vat_raw": "0,00742858"
+      },
+      {
+        "number": "6",
+        "item_name": "Управляемая файловая система (SFS) Turbo Perfomance для OBS 1ГБ 250MBps (sfs.turbo.250MBps)",
+        "tariff_unit": "ГБ/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,013396",
+        "vat_raw": "0,00294712",
+        "price_with_vat_raw": "0,01634312"
+      },
+      {
+        "number": "7",
+        "item_name": "Управляемая файловая система (SFS) Turbo Perfomance для OBS 1ГБ 40MBps (sfs.turbo.40MBps)",
+        "tariff_unit": "ГБ/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,007307",
+        "vat_raw": "0,00160754",
+        "price_with_vat_raw": "0,00891454"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Relational Databases Service». Приложение №7.ADV.26.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «ServiceStage». Приложение №7.ADV.29."
+      }
+    ],
+    "rows_count": 8,
+    "parsed_at": "2026-05-10T16:50:20.399928+00:00"
+  },
+  {
+    "service_name": "ServiceStage",
+    "input_service_name": "ServiceStage",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/servicestage?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/servicestage.pdf",
+    "title": "Тарифы «ServiceStage». Приложение №7.ADV.29.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Управление м/с приложениями, инфраструктура (CSE) Exclusive edition HA тип General computing 100 microservice instances 2 vCPU 4GB RAM [s6.large.2] (servicestage.cse.s1.small)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "142,74",
+        "vat_raw": "31,4028",
+        "price_with_vat_raw": "174,1428"
+      },
+      {
+        "number": "2",
+        "item_name": "Управление м/с приложениями, инфраструктура (CSE) Exclusive edition HA тип General computing 2000 microservice instances 8 vCPU 16ГБ RAM [s6.2xlarge.2] (servicestage.cse.s1.xlarge)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3441,36",
+        "vat_raw": "757,0992",
+        "price_with_vat_raw": "4198,4592"
+      },
+      {
+        "number": "3",
+        "item_name": "Управление м/с приложениями, инфраструктура (CSE) Exclusive edition HA тип General computing 500 microservice instances 4 vCPU 8GB RAM [s6.xlarge.2] (servicestage.cse.s1.large)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1290,12",
+        "vat_raw": "283,8264",
+        "price_with_vat_raw": "1573,9464"
+      },
+      {
+        "number": "4",
+        "item_name": "Управление м/с приложениями, инфраструктура (CSE) Exclusive edition тип General computing 100 microservice instances 2 vCPU 4GB RAM [s6.large.2] (servicestage.cse.c1.small)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "25,74",
+        "vat_raw": "5,6628",
+        "price_with_vat_raw": "31,4028"
+      }
+    ],
+    "rows_count": 4,
+    "parsed_at": "2026-05-10T16:50:21.371426+00:00"
+  },
+  {
+    "service_name": "Simple Message Notification",
+    "input_service_name": "Simple Message Notification",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/message-notification?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/message-notification.pdf",
+    "title": "Тарифы «Simple Message Notification». Приложение №7.ADV.30.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис нотификации (SMN) Вызовы API количество (smn) от 1 млн. шт",
+        "tariff_unit": "10 тыс. шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "7,96",
+        "vat_raw": "1,7512",
+        "price_with_vat_raw": "9,7112"
+      }
+    ],
+    "rows_count": 1,
+    "parsed_at": "2026-05-10T16:50:22.254730+00:00"
+  },
+  {
+    "service_name": "Virtual Private Cloud & Elastic IP",
+    "input_service_name": "Virtual Private Cloud & Elastic IP",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/vpc?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/vpc.pdf",
+    "title": "Тарифы «Virtual Private Cloud & Elastic IP». Приложение №7.ADV.32.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Доступ в интернет (EIP) Внешний IP количество (5_bgp | 5_bznbgp)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,17",
+        "vat_raw": "0,0374",
+        "price_with_vat_raw": "0,2074"
+      },
+      {
+        "number": "2",
+        "item_name": "Доступ в интернет (EIP) Выделенный канал полоса пропускания (19_bgp | 19_bznbgp) до 5 Мбит/с",
+        "tariff_unit": "Мбит/с",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,017",
+        "vat_raw": "0,00374",
+        "price_with_vat_raw": "0,02074"
+      },
+      {
+        "number": "3",
+        "item_name": "Доступ в интернет (EIP) Выделенный канал полоса пропускания (19_bgp | 19_bznbgp) от 5 Мбит/с",
+        "tariff_unit": "Мбит/с",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,022",
+        "vat_raw": "0,00484",
+        "price_with_vat_raw": "0,02684"
+      },
+      {
+        "number": "4",
+        "item_name": "Доступ в интернет (EIP) Разделяемый канал полоса пропускания (19_share) до 4 Мбит/с",
+        "tariff_unit": "Мбит/с",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,017",
+        "vat_raw": "0,00374",
+        "price_with_vat_raw": "0,02074"
+      },
+      {
+        "number": "5",
+        "item_name": "Доступ в интернет (EIP) Разделяемый канал полоса пропускания (19_share) от 4 Мбит/с",
+        "tariff_unit": "Мбит/с",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,022",
+        "vat_raw": "0,00484",
+        "price_with_vat_raw": "0,02684"
+      },
+      {
+        "number": "6",
+        "item_name": "Доступ в интернет (EIP) Трафик количество трафика (12_bgp | 12_bznbgp)",
+        "tariff_unit": "Гб",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3,23",
+        "vat_raw": "0,7106",
+        "price_with_vat_raw": "3,9406"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Simple Message Notification». Приложение №7.ADV.30.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Virtual Private Network». Приложение №7.ADV.33."
+      }
+    ],
+    "rows_count": 7,
+    "parsed_at": "2026-05-10T16:50:23.072551+00:00"
+  },
+  {
+    "service_name": "Virtual Private Network",
+    "input_service_name": "Virtual Private Network",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/vpn?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/vpn.pdf",
+    "title": "Тарифы «Virtual Private Network». Приложение №7.ADV.33.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис VPN (VPN) Каналы количество (vpn.s1)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,28",
+        "vat_raw": "0,5016",
+        "price_with_vat_raw": "2,7816"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис VPN (VPN) тип Enterprise Professional 1 (300 Мбит/с) (V300) до 1 шт.",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "14,85",
+        "vat_raw": "3,267",
+        "price_with_vat_raw": "18,117"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис VPN (VPN) тип Enterprise Professional 1 (300 Мбит/с) (V300) от 1 шт.",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,575",
+        "vat_raw": "0,3465",
+        "price_with_vat_raw": "1,9215"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис VPN (VPN) тип Enterprise Professional 2 (1 Гбит/с) (V1G) до 1 шт.",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "28,35",
+        "vat_raw": "6,237",
+        "price_with_vat_raw": "34,587"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис VPN (VPN) тип Enterprise Professional 2 (1 Гбит/с) (V1G) от 1 шт.",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,575",
+        "vat_raw": "0,3465",
+        "price_with_vat_raw": "1,9215"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Virtual Private Cloud &amp; Elastic IP». Приложение №7.ADV.32.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «API Gateway». Приложение №7.ADV.34."
+      }
+    ],
+    "rows_count": 6,
+    "parsed_at": "2026-05-10T16:50:23.932617+00:00"
+  },
+  {
+    "service_name": "API Gateway",
+    "input_service_name": "API Gateway",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/api-gateway?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/api-gateway.pdf",
+    "title": "Тарифы «API Gateway». Приложение №7.ADV.34.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис API Gateway (APIGW) Выделенный APIGW Размер пакета TPS 10000 (PLATINUM)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "125",
+        "vat_raw": "27,5",
+        "price_with_vat_raw": "152,5"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис API Gateway (APIGW) Выделенный APIGW Размер пакета TPS 2000 (BASIC)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "25",
+        "vat_raw": "5,5",
+        "price_with_vat_raw": "30,5"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис API Gateway (APIGW) Выделенный APIGW Размер пакета TPS 4000 (PROFESSIONAL)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "50",
+        "vat_raw": "11",
+        "price_with_vat_raw": "61"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис API Gateway (APIGW) Выделенный APIGW Размер пакета TPS 6000 (ENTERPRISE)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "75",
+        "vat_raw": "16,5",
+        "price_with_vat_raw": "91,5"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис API Gateway (APIGW) Выделенный канал полоса пропускания (publicip) до 5 Мбит/с",
+        "tariff_unit": "Мбит/с",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,017",
+        "vat_raw": "0,00374",
+        "price_with_vat_raw": "0,02074"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис API Gateway (APIGW) Выделенный канал полоса пропускания (publicip) от 5 Мбит/с",
+        "tariff_unit": "Мбит/с",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,022",
+        "vat_raw": "0,00484",
+        "price_with_vat_raw": "0,02684"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис API Gateway (APIGW) Вызовы API количество (apig) до 10 млн шт",
+        "tariff_unit": "млн шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "30,8",
+        "vat_raw": "6,776",
+        "price_with_vat_raw": "37,576"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис API Gateway (APIGW) Вызовы API количество (apig) от 10 до 100 млн шт",
+        "tariff_unit": "млн шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "20,53",
+        "vat_raw": "4,5166",
+        "price_with_vat_raw": "25,0466"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис API Gateway (APIGW) Вызовы API количество (apig) от 100 млн шт",
+        "tariff_unit": "млн шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "15,4",
+        "vat_raw": "3,388",
+        "price_with_vat_raw": "18,788"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис API Gateway (APIGW) Исходящий трафик API в публичные сети количество трафика (apig)",
+        "tariff_unit": "ГБ.",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3,49",
+        "vat_raw": "0,7678",
+        "price_with_vat_raw": "4,2578"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Virtual Private Network». Приложение №7.ADV.33.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Data Lake Insight». Приложение №7.ADV.35."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:24.748514+00:00"
+  },
+  {
+    "service_name": "Data Lake Insight",
+    "input_service_name": "Data Lake Insight",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-lake?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/data-lake.pdf",
+    "title": "Тарифы «Data Lake Insight». Приложение №7.ADV.35.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис анализа больших данных (DLI) Data scanning объем (uquery.scan)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,17",
+        "vat_raw": "0,0374",
+        "price_with_vat_raw": "0,2074"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис анализа больших данных (DLI) Data stored объем (uquery.internaltable)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0025",
+        "vat_raw": "0,00055",
+        "price_with_vat_raw": "0,00305"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис анализа больших данных (DLI) elastic resource pool 1vCPU 4ГБ (dli.elasticresourcepool)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,159",
+        "vat_raw": "0,69498",
+        "price_with_vat_raw": "3,85398"
+      }
+    ],
+    "rows_count": 3,
+    "parsed_at": "2026-05-10T16:50:25.617379+00:00"
+  },
+  {
+    "service_name": "Graph Engine Service",
+    "input_service_name": "Graph Engine Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/graph-engine?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/graph-engine.pdf",
+    "title": "Тарифы «Graph Engine Service». Приложение №7.ADV.36.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис графов (GES) 1 миллиард edge в графе количество графов (ges.billion.graph)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "210,65",
+        "vat_raw": "46,343",
+        "price_with_vat_raw": "256,993"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис графов (GES) 1 миллион edge в графе количество графов (ges.million.graph)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "22,57",
+        "vat_raw": "4,9654",
+        "price_with_vat_raw": "27,5354"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис графов (GES) 10 миллиардов edge в графе количество графов (ges.10billion.graph)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1203,7",
+        "vat_raw": "264,814",
+        "price_with_vat_raw": "1468,514"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис графов (GES) 10 миллионов edge в графе количество графов (ges.10million.graph)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "52,66",
+        "vat_raw": "11,5852",
+        "price_with_vat_raw": "64,2452"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис графов (GES) 10 тысяч edge в графе количество графов (ges.10thousand.graph)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "9,67",
+        "vat_raw": "2,1274",
+        "price_with_vat_raw": "11,7974"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис графов (GES) 100 миллиардов edge в графе количество графов (ges.100billion.graph)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3662,04",
+        "vat_raw": "805,6488",
+        "price_with_vat_raw": "4467,6888"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис графов (GES) 100 миллионов edge в графе количество графов (ges.100million.graph)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "105,32",
+        "vat_raw": "23,1704",
+        "price_with_vat_raw": "128,4904"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Data Lake Insight». Приложение №7.ADV.35.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Data Warehouse Service». Приложение №7.ADV.37."
+      }
+    ],
+    "rows_count": 8,
+    "parsed_at": "2026-05-10T16:50:26.572855+00:00"
+  },
+  {
+    "service_name": "Data Warehouse Service",
+    "input_service_name": "Data Warehouse Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-warehouse?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/data-warehouse.pdf",
+    "title": "Тарифы «Data Warehouse Service». Приложение №7.ADV.37.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис обработки данных (DWS) OBS Standard storage объем (dws.backup.space)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0023",
+        "vat_raw": "0,000506",
+        "price_with_vat_raw": "0,002806"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB диск EVS High I/O (dws.volume.high)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0055",
+        "vat_raw": "0,00121",
+        "price_with_vat_raw": "0,00671"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB диск EVS Ultra-high I/O (dws.volume.ultrahigh)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0138",
+        "vat_raw": "0,003036",
+        "price_with_vat_raw": "0,016836"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB тип Memory-optimized 16 vCPU 128ГБ RAM (dws2.m6.4xlarge.8)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "127,51",
+        "vat_raw": "28,0522",
+        "price_with_vat_raw": "155,5622"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB тип Memory-optimized 32 vCPU 256ГБ RAM (dws2.m6.8xlarge.8)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "255,02",
+        "vat_raw": "56,1044",
+        "price_with_vat_raw": "311,1244"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB тип Memory-optimized 32 vCPU 256ГБ RAM (dwsx2.8xlarge.m7n)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "255,02",
+        "vat_raw": "56,1044",
+        "price_with_vat_raw": "311,1244"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB тип Memory-optimized 4 vCPU 32ГБ RAM (dwsx2.xlarge.m7n)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "31,88",
+        "vat_raw": "7,0136",
+        "price_with_vat_raw": "38,8936"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB тип Memory-optimized 64 vCPU 512ГБ RAM (dws2.m6.16xlarge.8)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "510,04",
+        "vat_raw": "112,2088",
+        "price_with_vat_raw": "622,2488"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB тип Memory-optimized 64 vCPU 512ГБ RAM (dwsx2.16xlarge.m7n)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "510,04",
+        "vat_raw": "112,2088",
+        "price_with_vat_raw": "622,2488"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис обработки данных (DWS) Нода GaussDB тип Memory-optimized 8 vCPU 64ГБ RAM (dwsx2.2xlarge.m7n)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "63,76",
+        "vat_raw": "14,0272",
+        "price_with_vat_raw": "77,7872"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "Rows volume:",
+        "tariff_period": "10",
+        "price_without_vat_raw": "10",
+        "vat_raw": "Примечание",
+        "price_with_vat_raw": "«*» — если применимо."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:27.319187+00:00"
+  },
+  {
+    "service_name": "Data Replication Service",
+    "input_service_name": "Data Replication Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-replication?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/data-replication.pdf",
+    "title": "Тарифы «Data Replication Service». Приложение №7.ADV.38.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) Elastic IP Объем исходящего трафика миграции (drs.eip.flow.out.mig)",
+        "tariff_unit": "Гб",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3,23",
+        "vat_raw": "0,7106",
+        "price_with_vat_raw": "3,9406"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) Elastic IP Объем исходящего трафика синхронизации (drs.eip.flow.out.sync)",
+        "tariff_unit": "Гб",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3,23",
+        "vat_raw": "0,7106",
+        "price_with_vat_raw": "3,9406"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) ВМ MySQL для входящей миграции 4 vCPU 8ГБ RAM drs (drs.mysql.mysql.lg.in.mig)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "11,27",
+        "vat_raw": "2,4794",
+        "price_with_vat_raw": "13,7494"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) ВМ MySQL для входящей синхронизации 4 vCPU 8ГБ RAM drs (drs.mysql.mysql.lg.in.sync)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "11,27",
+        "vat_raw": "2,4794",
+        "price_with_vat_raw": "13,7494"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) ВМ MySQL для исходящей миграции 4 vCPU 8ГБ RAM drs (drs.mysql.mysql.lg.out.mig)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "112,67",
+        "vat_raw": "24,7874",
+        "price_with_vat_raw": "137,4574"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) ВМ MySQL для исходящей синхронизации 4 vCPU 8ГБ RAM drs (drs.mysql.mysql.lg.out.sync)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "112,67",
+        "vat_raw": "24,7874",
+        "price_with_vat_raw": "137,4574"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) ВМ для синхронизации 1vCPU 4ГБ RAM (drs.mic.sync)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,06",
+        "vat_raw": "0,4532",
+        "price_with_vat_raw": "2,5132"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) ВМ для синхронизации 2vCPU 4ГБ RAM (drs.sml.sync)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,6",
+        "vat_raw": "0,572",
+        "price_with_vat_raw": "3,172"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) ВМ для синхронизации 2vCPU 8ГБ RAM (drs.med.sync)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,102",
+        "vat_raw": "0,90244",
+        "price_with_vat_raw": "5,00444"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис миграции и синхронизации БД (DRS) ВМ для синхронизации 4vCPU 8ГБ RAM (drs.lg.sync)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "5,19",
+        "vat_raw": "1,1418",
+        "price_with_vat_raw": "6,3318"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "Rows volume:",
+        "tariff_period": "10",
+        "price_without_vat_raw": "10",
+        "vat_raw": "Примечание",
+        "price_with_vat_raw": "«*» — если применимо."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:50:28.350400+00:00"
+  },
+  {
+    "service_name": "GPU Accelerated Servers",
+    "input_service_name": "GPU Accelerated Servers",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/gpu-accelerated?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/gpu-accelerated.pdf",
+    "title": "Тарифы «GPU Accelerated Servers». Приложение №7.ADV.40.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Виртуальная машина (ECS) BYOL тип GPU Computing-accelerated (P2s) NVIDIA V100 16 vCPU 128ГБ RAM (p2s.4xlarge.8.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "398,89",
+        "vat_raw": "87,7558",
+        "price_with_vat_raw": "486,6458"
+      },
+      {
+        "number": "2",
+        "item_name": "Виртуальная машина (ECS) BYOL тип GPU Computing-accelerated (P2s) NVIDIA V100 32 vCPU 256ГБ RAM (p2s.8xlarge.8.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "797,77",
+        "vat_raw": "175,5094",
+        "price_with_vat_raw": "973,2794"
+      },
+      {
+        "number": "3",
+        "item_name": "Виртуальная машина (ECS) BYOL тип GPU Computing-accelerated (P2s) NVIDIA V100 64 vCPU 512ГБ RAM (p2s.16xlarge.8.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1595,55",
+        "vat_raw": "351,021",
+        "price_with_vat_raw": "1946,571"
+      },
+      {
+        "number": "4",
+        "item_name": "Виртуальная машина (ECS) BYOL тип GPU Computing-accelerated (P2s) NVIDIA V100 8 vCPU 64ГБ RAM (p2s.2xlarge.8.byol)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "199,44",
+        "vat_raw": "43,8768",
+        "price_with_vat_raw": "243,3168"
+      },
+      {
+        "number": "5",
+        "item_name": "Виртуальная машина (ECS) BYOL тип GPU Computing-accelerated (P5a) NVIDIA H100 160 vCPU 936ГБ RAM (p5a.40xlarge.6.byol)",
+        "tariff_unit": "шт/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "6312,3",
+        "vat_raw": "1388,706",
+        "price_with_vat_raw": "7701,006"
+      },
+      {
+        "number": "6",
+        "item_name": "Виртуальная машина (ECS) BYOL тип GPU Computing-accelerated (P5a) NVIDIA H100 20 vCPU 117ГБ RAM (p5a.5xlarge.6.byol)",
+        "tariff_unit": "шт/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "789,04",
+        "vat_raw": "173,5888",
+        "price_with_vat_raw": "962,6288"
+      },
+      {
+        "number": "7",
+        "item_name": "Виртуальная машина (ECS) BYOL тип GPU Computing-accelerated (P5a) NVIDIA H100 40 vCPU 234ГБ RAM (p5a.10xlarge.6.byol)",
+        "tariff_unit": "шт/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1578,07",
+        "vat_raw": "347,1754",
+        "price_with_vat_raw": "1925,2454"
+      },
+      {
+        "number": "8",
+        "item_name": "Виртуальная машина (ECS) BYOL тип GPU Computing-accelerated (P5a) NVIDIA H100 80 vCPU 468ГБ RAM (p5a.20xlarge.6.byol)",
+        "tariff_unit": "шт/час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3156,15",
+        "vat_raw": "694,353",
+        "price_with_vat_raw": "3850,503"
+      },
+      {
+        "number": "9",
+        "item_name": "Виртуальная машина (ECS) OS Essentials тип GPU Computing-accelerated (P3a) NVIDIA A100 160 vCPU 936ГБ RAM (p3a.40xlarge.6.win)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3145,9",
+        "vat_raw": "692,098",
+        "price_with_vat_raw": "3837,998"
+      },
+      {
+        "number": "10",
+        "item_name": "Виртуальная машина (ECS) OS Essentials тип GPU Computing-accelerated (P3a) NVIDIA A100 20 vCPU 117ГБ RAM (p3a.5xlarge.6.win)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "393,24",
+        "vat_raw": "86,5128",
+        "price_with_vat_raw": "479,7528"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "3",
+        "tariff_period": "4",
+        "price_without_vat_raw": "5",
+        "vat_raw": "Rows volume:",
+        "price_with_vat_raw": "10"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Data Replication Service». Приложение №7.ADV.38.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Distributed Database Middleware». Приложение №7.ADV.42."
+      }
+    ],
+    "rows_count": 12,
+    "parsed_at": "2026-05-10T16:50:29.287481+00:00"
+  },
+  {
+    "service_name": "Distributed Database Middleware",
+    "input_service_name": "Distributed Database Middleware",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/db-middleware?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/db-middleware.pdf",
+    "title": "Тарифы «Distributed Database Middleware». Приложение №7.ADV.42.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис БД (DDM) тип General computing-plus 16 vCPU 32ГБ RAM (ddm.c6.4xlarge.2)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "39,52",
+        "vat_raw": "8,6944",
+        "price_with_vat_raw": "48,2144"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис БД (DDM) тип General computing-plus 32 vCPU 64ГБ RAM (ddm.c6.8xlarge.2)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "79,04",
+        "vat_raw": "17,3888",
+        "price_with_vat_raw": "96,4288"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис БД (DDM) тип General computing-plus 4 vCPU 8ГБ RAM (ddm.c6.xlarge.2)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "9,88",
+        "vat_raw": "2,1736",
+        "price_with_vat_raw": "12,0536"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис БД (DDM) тип General computing-plus 8 vCPU 16ГБ RAM (ddm.c6.2xlarge.2)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "19,76",
+        "vat_raw": "4,3472",
+        "price_with_vat_raw": "24,1072"
+      }
+    ],
+    "rows_count": 4,
+    "parsed_at": "2026-05-10T16:50:30.007664+00:00"
+  },
+  {
+    "service_name": "VPC Endpoint",
+    "input_service_name": "VPC Endpoint",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/vpc-endpoint?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/vpc-endpoint.pdf",
+    "title": "Тарифы «VPC Endpoint». Приложение №7.ADV.43.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Выделенная облачная сеть (VPCE) Базовая конфигурация количество инсталляций (vpcep.basic)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,39",
+        "vat_raw": "0,0858",
+        "price_with_vat_raw": "0,4758"
+      }
+    ],
+    "rows_count": 1,
+    "parsed_at": "2026-05-10T16:50:30.770273+00:00"
+  },
+  {
+    "service_name": "Web Application Firewall",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/web-app-firewall?source-platform=Advanced",
+    "error": "HTTPSConnectionPool(host='cloud.ru', port=443): Read timed out. (read timeout=30)",
+    "rows": [],
+    "rows_count": 0,
+    "parsed_at": "2026-05-10T16:51:01.352380+00:00"
+  },
+  {
+    "service_name": "Data Admin Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-admin?source-platform=Advanced",
+    "error": "HTTPSConnectionPool(host='cloud.ru', port=443): Read timed out.",
+    "rows": [],
+    "rows_count": 0,
+    "parsed_at": "2026-05-10T16:51:34.794697+00:00"
+  },
+  {
+    "service_name": "Data Encryption Workshop",
+    "input_service_name": "Data Encryption Workshop",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/data-encryption?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/data-encryption.pdf",
+    "title": "Тарифы «Data Encryption Workshop». Приложение №7.ADV.51.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Выделенный HSM (DHSM) Сервер количество (overseas.hsm.cryptopro)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "330,01",
+        "vat_raw": "72,6022",
+        "price_with_vat_raw": "402,6122"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис управления ключами (KMS) Customized CMK количество (kms.ud.customer)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,14",
+        "vat_raw": "0,0308",
+        "price_with_vat_raw": "0,1708"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис управления ключами (KMS) Вызовы API количество (kms.api) от 20 тыс. шт",
+        "tariff_unit": "10 тыс. шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "3",
+        "vat_raw": "0,66",
+        "price_with_vat_raw": "3,66"
+      },
+      {
+        "number": "4",
+        "item_name": "Шифрование данных (DEW) Сервис менеджмента секретов Вызовы API для секретов 10 000 шт.",
+        "tariff_unit": "10 тыс. шт",
+        "tariff_period": "месяц",
+        "price_without_vat_raw": "2,25",
+        "vat_raw": "0,495",
+        "price_with_vat_raw": "2,745"
+      },
+      {
+        "number": "5",
+        "item_name": "Шифрование данных (DEW) Сервис менеджмента секретов Секрет",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,48",
+        "vat_raw": "0,1056",
+        "price_with_vat_raw": "0,5856"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Data Admin Service». Приложение №7.ADV.50.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «DataArts Studio». Приложение №7.ADV.52."
+      }
+    ],
+    "rows_count": 6,
+    "parsed_at": "2026-05-10T16:51:35.965812+00:00"
+  },
+  {
+    "service_name": "DataArts Studio",
+    "input_service_name": "DataArts Studio",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/dayu?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/dayu.pdf",
+    "title": "Тарифы «DataArts Studio». Приложение №7.ADV.52.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Платформа управления данными (DataArts Studio) Data Service базовая версия кластера (dlm.basic)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "33",
+        "vat_raw": "7,26",
+        "price_with_vat_raw": "40,26"
+      },
+      {
+        "number": "2",
+        "item_name": "Платформа управления данными (DataArts Studio) Data Service продвинутая версия кластера (dlm.advance)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "132,01",
+        "vat_raw": "29,0422",
+        "price_with_vat_raw": "161,0522"
+      },
+      {
+        "number": "3",
+        "item_name": "Платформа управления данными (DataArts Studio) Data Service профессиональная версия кластера (dlm.professional)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "528,15",
+        "vat_raw": "116,193",
+        "price_with_vat_raw": "644,343"
+      },
+      {
+        "number": "4",
+        "item_name": "Платформа управления данными (DataArts Studio) Базовая конфигурация количество инсталляций (dayu.starter)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "28,47",
+        "vat_raw": "6,2634",
+        "price_with_vat_raw": "34,7334"
+      },
+      {
+        "number": "5",
+        "item_name": "Платформа управления данными (DataArts Studio) Кластер миграции выключеный кластер (dayu.cdm.offline)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,98",
+        "vat_raw": "0,2156",
+        "price_with_vat_raw": "1,1956"
+      },
+      {
+        "number": "6",
+        "item_name": "Платформа управления данными (DataArts Studio) Кластер миграции кластер 16 vCPU 32ГБ RAM (dayu.cdm.xlarge)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "68,3",
+        "vat_raw": "15,026",
+        "price_with_vat_raw": "83,326"
+      },
+      {
+        "number": "7",
+        "item_name": "Платформа управления данными (DataArts Studio) Кластер миграции кластер 64 vCPU 128ГБ RAM (dayu.cdm.4xlarge)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "273,2",
+        "vat_raw": "60,104",
+        "price_with_vat_raw": "333,304"
+      },
+      {
+        "number": "8",
+        "item_name": "Платформа управления данными (DataArts Studio) Кластер миграции кластер 8 vCPU 16ГБ RAM (dayu.cdm.large)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "34,15",
+        "vat_raw": "7,513",
+        "price_with_vat_raw": "41,663"
+      },
+      {
+        "number": "9",
+        "item_name": "Платформа управления данными (DataArts Studio) Служба приема данных Advanced partition (dayu.dis.advanced.partition)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "22,77",
+        "vat_raw": "5,0094",
+        "price_with_vat_raw": "27,7794"
+      },
+      {
+        "number": "10",
+        "item_name": "Платформа управления данными (DataArts Studio) Служба приема данных General partition (dayu.dis.general.partition)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,88",
+        "vat_raw": "1,0736",
+        "price_with_vat_raw": "5,9536"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "Rows volume:",
+        "tariff_period": "10",
+        "price_without_vat_raw": "10",
+        "vat_raw": "Примечание",
+        "price_with_vat_raw": "«*» — если применимо."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:51:36.788696+00:00"
+  },
+  {
+    "service_name": "Database Security Service",
+    "input_service_name": "Database Security Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/db-security?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/db-security.pdf",
+    "title": "Тарифы «Database Security Service». Приложение №7.ADV.53.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Безопасность БД (DBSS) Advanced конфигурация количество инсталляций (dbss.bypassaudit.high)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "388,97",
+        "vat_raw": "85,5734",
+        "price_with_vat_raw": "474,5434"
+      },
+      {
+        "number": "2",
+        "item_name": "Безопасность БД (DBSS) Профессиональная конфигурация количество инсталляций (dbss.bypassaudit.medium)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "116,73",
+        "vat_raw": "25,6806",
+        "price_with_vat_raw": "142,4106"
+      }
+    ],
+    "rows_count": 2,
+    "parsed_at": "2026-05-10T16:51:37.839381+00:00"
+  },
+  {
+    "service_name": "Host Security Service",
+    "input_service_name": "Host Security Service",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/host-security?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/host-security.pdf",
+    "title": "Тарифы «Host Security Service». Приложение №7.ADV.54.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Безопасность сервера (HSS) Enterprise конфигурация количество инсталляций (hss.version.enterprise)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,89",
+        "vat_raw": "0,6358",
+        "price_with_vat_raw": "3,5258"
+      },
+      {
+        "number": "2",
+        "item_name": "Безопасность сервера (HSS) Premium конфигурация количество инсталляций (hss.version.premium)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "5,77",
+        "vat_raw": "1,2694",
+        "price_with_vat_raw": "7,0394"
+      },
+      {
+        "number": "3",
+        "item_name": "Безопасность сервера (HSS) Web Tamper Protection конфигурация количество инсталляций (hss.version.wtp)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "28,86",
+        "vat_raw": "6,3492",
+        "price_with_vat_raw": "35,2092"
+      },
+      {
+        "number": "4",
+        "item_name": "Безопасность сервера (HSS) Базовая конфигурация количество инсталляций (hss.version.basic)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,29",
+        "vat_raw": "0,0638",
+        "price_with_vat_raw": "0,3538"
+      },
+      {
+        "number": "5",
+        "item_name": "Безопасность сервера (HSS) Безопасность контейнера Enterprise конфигурация",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "5,77",
+        "vat_raw": "1,2694",
+        "price_with_vat_raw": "7,0394"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Database Security Service». Приложение №7.ADV.53.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Cloud Bastion Host». Приложение №7.ADV.56."
+      }
+    ],
+    "rows_count": 6,
+    "parsed_at": "2026-05-10T16:51:38.641059+00:00"
+  },
+  {
+    "service_name": "Cloud Bastion Host",
+    "input_service_name": "Cloud Bastion Host",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/bastion-host?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/bastion-host.pdf",
+    "title": "Тарифы «Cloud Bastion Host». Приложение №7.ADV.56.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host Primary/Standby - тип Professional 100 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "112,5",
+        "vat_raw": "24,75",
+        "price_with_vat_raw": "137,25"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host Primary/Standby - тип Professional 1000 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "375",
+        "vat_raw": "82,5",
+        "price_with_vat_raw": "457,5"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host Primary/Standby - тип Professional 200 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "131,25",
+        "vat_raw": "28,875",
+        "price_with_vat_raw": "160,125"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host Primary/Standby - тип Professional 2000 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "619,79",
+        "vat_raw": "136,3538",
+        "price_with_vat_raw": "756,1438"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host Primary/Standby - тип Professional 50 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "100",
+        "vat_raw": "22",
+        "price_with_vat_raw": "122"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host Primary/Standby - тип Professional 500 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "206,25",
+        "vat_raw": "45,375",
+        "price_with_vat_raw": "251,625"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host Primary/Standby - тип Professional 5000 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1062,5",
+        "vat_raw": "233,75",
+        "price_with_vat_raw": "1296,25"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host автономный сервер - тип Standard 100 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "75",
+        "vat_raw": "16,5",
+        "price_with_vat_raw": "91,5"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host автономный сервер - тип Standard 1000 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "250",
+        "vat_raw": "55",
+        "price_with_vat_raw": "305"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис удаленного доступа (CBH) Cloud Bastion Host автономный сервер - тип Standard 200 управляемых экземпляров/максимальных параллельных доступов",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "87,5",
+        "vat_raw": "19,25",
+        "price_with_vat_raw": "106,75"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "Rows volume:",
+        "tariff_period": "10",
+        "price_without_vat_raw": "10",
+        "vat_raw": "Примечание",
+        "price_with_vat_raw": "«*» — если применимо."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:51:39.553535+00:00"
+  },
+  {
+    "service_name": "CodeArts",
+    "input_service_name": "CodeArts",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/codearts?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/codearts.pdf",
+    "title": "Тарифы «CodeArts». Приложение №7.ADV.57.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "DevCloud CodeArts для разработчиков API тестирование (dev.apitest.shared.standard)",
+        "tariff_unit": "шт.",
+        "tariff_period": "минута",
+        "price_without_vat_raw": "2,187",
+        "vat_raw": "0,48114",
+        "price_with_vat_raw": "2,66814"
+      },
+      {
+        "number": "2",
+        "item_name": "DevCloud CodeArts для разработчиков CloudBuild Code CI (dev.codeci.shared.low)",
+        "tariff_unit": "шт.",
+        "tariff_period": "минута",
+        "price_without_vat_raw": "2,4",
+        "vat_raw": "0,528",
+        "price_with_vat_raw": "2,928"
+      },
+      {
+        "number": "3",
+        "item_name": "DevCloud CodeArts для разработчиков CodeHub объем (dev.codehub.shared.mid)",
+        "tariff_unit": "ГБ.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0037",
+        "vat_raw": "0,000814",
+        "price_with_vat_raw": "0,004514"
+      },
+      {
+        "number": "4",
+        "item_name": "DevCloud CodeArts для разработчиков DevPackage за добавление пользователя (dev.package.shared.mid)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,0375",
+        "vat_raw": "0,66825",
+        "price_with_vat_raw": "3,70575"
+      },
+      {
+        "number": "5",
+        "item_name": "DevCloud CodeArts для разработчиков ReleaseMan объем (dev.releaseman.shared.s3)",
+        "tariff_unit": "ГБ.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0037",
+        "vat_raw": "0,000814",
+        "price_with_vat_raw": "0,004514"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «Cloud Bastion Host». Приложение №7.ADV.56.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Cloud Certificate Manager». Приложение №7.ADV.58."
+      }
+    ],
+    "rows_count": 6,
+    "parsed_at": "2026-05-10T16:51:40.358214+00:00"
+  },
+  {
+    "service_name": "Cloud Certificate Manager",
+    "input_service_name": "Cloud Certificate Manager",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/certificate-manager?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/certificate-manager.pdf",
+    "title": "Тарифы «Cloud Certificate Manager». Приложение №7.ADV.58.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Облачный менеджер сертификатов (CCM) Сервис приватной сертификации Private CA (длительность)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "37,2105",
+        "vat_raw": "8,18631",
+        "price_with_vat_raw": "45,39681"
+      },
+      {
+        "number": "2",
+        "item_name": "Облачный менеджер сертификатов (CCM) Сервис приватной сертификации приватный сертификат (количество запросов)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "27,288",
+        "vat_raw": "6,00336",
+        "price_with_vat_raw": "33,29136"
+      }
+    ],
+    "rows_count": 2,
+    "parsed_at": "2026-05-10T16:51:41.506049+00:00"
+  },
+  {
+    "service_name": "DataArts Insight",
+    "input_service_name": "DataArts Insight",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/dataarts-insight?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/dataarts-insight.pdf",
+    "title": "Тарифы «DataArts Insight». Приложение №7.ADV.59.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Платформа управления данными (DataArts Insight) BI Acceleration Engine (DataArtsInsight.unit.accelerator.meu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,477",
+        "vat_raw": "0,10494",
+        "price_with_vat_raw": "0,58194"
+      },
+      {
+        "number": "2",
+        "item_name": "Платформа управления данными (DataArts Insight) BI Data Screen (DataArtsInsight.unit.screen)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,363",
+        "vat_raw": "0,07986",
+        "price_with_vat_raw": "0,44286"
+      },
+      {
+        "number": "3",
+        "item_name": "Платформа управления данными (DataArts Insight) BI Embedded Report (DataArtsInsight.unit.embedded)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,091",
+        "vat_raw": "0,02002",
+        "price_with_vat_raw": "0,11102"
+      },
+      {
+        "number": "4",
+        "item_name": "Платформа управления данными (DataArts Insight) BI Enterprise Edition (Dataartsinsight.unit.enterprise.universalist)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,135",
+        "vat_raw": "0,2497",
+        "price_with_vat_raw": "1,3847"
+      }
+    ],
+    "rows_count": 4,
+    "parsed_at": "2026-05-10T16:51:42.341788+00:00"
+  },
+  {
+    "service_name": "Cloud Service Engine",
+    "input_service_name": "Cloud Service Engine",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-service-engine?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/cloud-service-engine.pdf",
+    "title": "Тарифы «Cloud Service Engine». Приложение №7.ADV.60.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Cloud Service Engine (CSE) Nacos инстанс (cse.nacos.instance)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "7,98",
+        "vat_raw": "1,7556",
+        "price_with_vat_raw": "9,7356"
+      },
+      {
+        "number": "2",
+        "item_name": "Cloud Service Engine (CSE) Nacos количество инстансов (cse.nacos.capacity)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,04",
+        "vat_raw": "0,6688",
+        "price_with_vat_raw": "3,7088"
+      }
+    ],
+    "rows_count": 2,
+    "parsed_at": "2026-05-10T16:51:43.072782+00:00"
+  },
+  {
+    "service_name": "CloudTable",
+    "input_service_name": "CloudTable",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloudtable?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/cloudtable.pdf",
+    "title": "Тарифы «CloudTable». Приложение №7.ADV.61.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Сервис CloudTable ClickHouse вычислительная единица 1vCPU 2ГБ RAM (clickhouse.cloudtable.vm.spec-cu.2)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,5791",
+        "vat_raw": "0,567402",
+        "price_with_vat_raw": "3,146502"
+      },
+      {
+        "number": "2",
+        "item_name": "Сервис CloudTable ClickHouse вычислительная единица 1vCPU 4ГБ RAM (clickhouse.cloudtable.vm.spec-cu.4)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,5223",
+        "vat_raw": "0,774906",
+        "price_with_vat_raw": "4,297206"
+      },
+      {
+        "number": "3",
+        "item_name": "Сервис CloudTable ClickHouse диски Extreme SSD объем (clickhouse.cloudtable.volume.spec-essd)",
+        "tariff_unit": "ГБ x час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0352",
+        "vat_raw": "0,007744",
+        "price_with_vat_raw": "0,042944"
+      },
+      {
+        "number": "4",
+        "item_name": "Сервис CloudTable Clickhouse диски High I/O объем (clickhouse.cloudtable.volume.spec-sas)",
+        "tariff_unit": "ГБ x час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,00605",
+        "vat_raw": "0,001331",
+        "price_with_vat_raw": "0,007381"
+      },
+      {
+        "number": "5",
+        "item_name": "Сервис CloudTable Clickhouse диски Ultra-high I/O объем (clickhouse.cloudtable.volume.spec-ssd)",
+        "tariff_unit": "ГБ x час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,01518",
+        "vat_raw": "0,0033396",
+        "price_with_vat_raw": "0,0185196"
+      },
+      {
+        "number": "6",
+        "item_name": "Сервис CloudTable Doris вычислительная единица 1vCPU 2ГБ RAM (doris.cloudtable.vm.spec-cu.2)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,5791",
+        "vat_raw": "0,567402",
+        "price_with_vat_raw": "3,146502"
+      },
+      {
+        "number": "7",
+        "item_name": "Сервис CloudTable Doris вычислительная единица 1vCPU 4ГБ RAM (doris.cloudtable.vm.spec-cu.4)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "3,5223",
+        "vat_raw": "0,774906",
+        "price_with_vat_raw": "4,297206"
+      },
+      {
+        "number": "8",
+        "item_name": "Сервис CloudTable Doris диски Extreme SSD объем (doris.cloudtable.volume.spec-essd)",
+        "tariff_unit": "ГБ x час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,0352",
+        "vat_raw": "0,007744",
+        "price_with_vat_raw": "0,042944"
+      },
+      {
+        "number": "9",
+        "item_name": "Сервис CloudTable Doris диски High I/O объем (doris.cloudtable.volume.spec-sas)",
+        "tariff_unit": "ГБ x час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,00605",
+        "vat_raw": "0,001331",
+        "price_with_vat_raw": "0,007381"
+      },
+      {
+        "number": "10",
+        "item_name": "Сервис CloudTable Doris диски Ultra-high I/O объем (doris.cloudtable.volume.spec-ssd)",
+        "tariff_unit": "ГБ x час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "0,01518",
+        "vat_raw": "0,0033396",
+        "price_with_vat_raw": "0,0185196"
+      },
+      {
+        "number": "1",
+        "item_name": "2",
+        "tariff_unit": "Rows volume:",
+        "tariff_period": "10",
+        "price_without_vat_raw": "10",
+        "vat_raw": "Примечание",
+        "price_with_vat_raw": "«*» — если применимо."
+      }
+    ],
+    "rows_count": 11,
+    "parsed_at": "2026-05-10T16:51:44.161183+00:00"
+  },
+  {
+    "service_name": "Enterprise Router",
+    "input_service_name": "Enterprise Router",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/enterprise-router?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/enterprise-router.pdf",
+    "title": "Тарифы «Enterprise Router». Приложение №7.ADV.62.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Enterprise Router (ER) для связи с DC трафик объем (er.gdgw.attachment.traffic)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,5",
+        "vat_raw": "0,33",
+        "price_with_vat_raw": "1,83"
+      },
+      {
+        "number": "2",
+        "item_name": "Enterprise Router (ER) для связи с DC трафик объем (er.vgw.attachment.traffic)",
+        "tariff_unit": "ГБ x час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,5",
+        "vat_raw": "0,33",
+        "price_with_vat_raw": "1,83"
+      },
+      {
+        "number": "3",
+        "item_name": "Enterprise Router (ER) для связи с VPN трафик объем (er.vpn.attachment.traffic)",
+        "tariff_unit": "ГБ x час",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,5",
+        "vat_raw": "0,33",
+        "price_with_vat_raw": "1,83"
+      },
+      {
+        "number": "4",
+        "item_name": "Enterprise Router (ER) для связи с VPС трафик объем (er.vpc.attachment.traffic)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "1,5",
+        "vat_raw": "0,33",
+        "price_with_vat_raw": "1,83"
+      },
+      {
+        "number": "5",
+        "item_name": "Enterprise Router (ER) маршрутизатор (er.peering.attachment)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,956",
+        "vat_raw": "1,09032",
+        "price_with_vat_raw": "6,04632"
+      },
+      {
+        "number": "6",
+        "item_name": "Enterprise Router (ER) маршрутизатор для связи с DC (er.gdgw.attachment)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,956",
+        "vat_raw": "1,09032",
+        "price_with_vat_raw": "6,04632"
+      },
+      {
+        "number": "7",
+        "item_name": "Enterprise Router (ER) маршрутизатор для связи с DC (er.vgw.attachment)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,956",
+        "vat_raw": "1,09032",
+        "price_with_vat_raw": "6,04632"
+      },
+      {
+        "number": "8",
+        "item_name": "Enterprise Router (ER) маршрутизатор для связи с VPN (er.vpn.attachment)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,956",
+        "vat_raw": "1,09032",
+        "price_with_vat_raw": "6,04632"
+      },
+      {
+        "number": "9",
+        "item_name": "Enterprise Router (ER) маршрутизатор для связи с VPС (er.vpc.attachment)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4,956",
+        "vat_raw": "1,09032",
+        "price_with_vat_raw": "6,04632"
+      },
+      {
+        "number": "10",
+        "item_name": "Примечание",
+        "tariff_unit": "«*» — если применимо.",
+        "tariff_period": "Предыдущая статья",
+        "price_without_vat_raw": "Тарифы «CloudTable». Приложение №7.ADV.61.",
+        "vat_raw": "Следующая статья",
+        "price_with_vat_raw": "Тарифы «Cloud Container Instance». Приложение №7.ADV.63."
+      }
+    ],
+    "rows_count": 10,
+    "parsed_at": "2026-05-10T16:51:44.927827+00:00"
+  },
+  {
+    "service_name": "Cloud Container Instance",
+    "input_service_name": "Cloud Container Instance",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-container-instance?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/cloud-container-instance.pdf",
+    "title": "Тарифы «Cloud Container Instance». Приложение №7.ADV.63.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Бессерверные контейнеры (CCI) 1GiB память (cci.container.mem)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,667",
+        "vat_raw": "0,58674",
+        "price_with_vat_raw": "3,25374"
+      },
+      {
+        "number": "2",
+        "item_name": "Бессерверные контейнеры (CCI) 1vCPU (cci.container.cpu)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "4",
+        "vat_raw": "0,88",
+        "price_with_vat_raw": "4,88"
+      }
+    ],
+    "rows_count": 2,
+    "parsed_at": "2026-05-10T16:51:45.829376+00:00"
+  },
+  {
+    "service_name": "Cloud Firewall",
+    "input_service_name": "Cloud Firewall",
+    "tariff_url": "https://cloud.ru/documents/tariffs/advanced/services/cloud-firewall?source-platform=Advanced",
+    "pdf_url": "https://cdn.cloud.ru/docs/legal/tariffs/advanced/current-version/cloud-firewall.pdf",
+    "title": "Тарифы «Cloud Firewall». Приложение №7.ADV.64.",
+    "rows": [
+      {
+        "number": "1",
+        "item_name": "Cloud Firewall (CFW) Профессиональная конфигурация инстанс (cfw.professional)",
+        "tariff_unit": "шт.",
+        "tariff_period": "час",
+        "price_without_vat_raw": "27,468",
+        "vat_raw": "6,04296",
+        "price_with_vat_raw": "33,51096"
+      },
+      {
+        "number": "2",
+        "item_name": "Cloud Firewall (CFW) Профессиональная конфигурация трафик (cfw.expack.trafficflow.professional)",
+        "tariff_unit": "Гб",
+        "tariff_period": "час",
+        "price_without_vat_raw": "2,8",
+        "vat_raw": "0,616",
+        "price_with_vat_raw": "3,416"
+      }
+    ],
+    "rows_count": 2,
+    "parsed_at": "2026-05-10T16:51:46.631826+00:00"
+  }
+]

@@ -1,0 +1,1143 @@
+[
+  {
+    "service_id": "t1-cloud-alt-linux-licenses",
+    "provider_id": "t1-cloud",
+    "name": "Alt Linux Licenses",
+    "category": "Other",
+    "description": "Предоставление лицензий на операционные системы Alt Linux для серверов и рабочих станций.",
+    "tech_stack_tags": [
+      "Linux",
+      "Alt Linux",
+      "сервер",
+      "рабочая станция",
+      "образование"
+    ],
+    "use_case_tags": [
+      "software-license",
+      "operating-system",
+      "server-environment",
+      "workstation",
+      "education"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 175.0,
+    "price_unit": "руб/1 вирт. машина/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114516Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-astra-linux-licenses",
+    "provider_id": "t1-cloud",
+    "name": "Astra Linux Licenses",
+    "category": "Other",
+    "description": "Предоставление лицензий для использования операционной системы Astra Linux.",
+    "tech_stack_tags": [
+      "Linux",
+      "Astra Linux",
+      "лицензии"
+    ],
+    "use_case_tags": [
+      "software-license",
+      "operating-system",
+      "virtual-machines"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 92.13,
+    "price_unit": "руб/пользователь/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114541Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-backup",
+    "provider_id": "t1-cloud",
+    "name": "Cloud Backup",
+    "category": "Backup",
+    "description": "Сервис резервного копирования виртуальных машин, серверов, рабочих станций и баз данных с использованием Veeam и OpenStack.",
+    "tech_stack_tags": [
+      "Backup",
+      "Veeam",
+      "OpenStack",
+      "Storage",
+      "Kubernetes"
+    ],
+    "use_case_tags": [
+      "backup",
+      "disaster-recovery",
+      "data-protection",
+      "virtual-machines-backup",
+      "servers-backup",
+      "databases-backup"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 1.98,
+    "price_unit": "руб/ГБ*мин/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114565Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-bi-platform",
+    "provider_id": "t1-cloud",
+    "name": "BI Platform T1 Cloud",
+    "category": "Analytics",
+    "description": "Платформа бизнес-аналитики T1 Cloud для создания отчётов и анализа данных.",
+    "tech_stack_tags": [
+      "BI",
+      "Analytics",
+      "Отчётность"
+    ],
+    "use_case_tags": [
+      "analytics",
+      "reports",
+      "business-intelligence",
+      "data-analysis"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2354.17,
+    "price_unit": "руб/шт/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114575Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-cdn",
+    "provider_id": "t1-cloud",
+    "name": "Cloud CDN",
+    "category": "Network",
+    "description": "Сервис CDN для эффективной доставки контента, обработки трафика и запросов.",
+    "tech_stack_tags": [
+      "CDN",
+      "HTTP",
+      "Content Delivery",
+      "Трафик",
+      "Запросы"
+    ],
+    "use_case_tags": [
+      "content-delivery",
+      "web-hosting",
+      "highload",
+      "image-optimization",
+      "traffic-management",
+      "request-processing"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 0.67,
+    "price_unit": "руб/10000 шт/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114583Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-clickhouse",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for ClickHouse",
+    "category": "Analytics",
+    "description": "Управляемая база данных ClickHouse для аналитических задач и обработки больших данных с использованием OLAP.",
+    "tech_stack_tags": [
+      "ClickHouse",
+      "OLAP",
+      "Database",
+      "Analytics"
+    ],
+    "use_case_tags": [
+      "analytics",
+      "data-processing",
+      "big-data",
+      "olap",
+      "database"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114593Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-compute-cloud-director-payg",
+    "provider_id": "t1-cloud",
+    "name": "Compute Cloud Director PAYG",
+    "category": "Compute",
+    "description": "Вычислительные ресурсы Cloud Director с оплатой по мере использования (PAYG).",
+    "tech_stack_tags": [
+      "VMware",
+      "Cloud Director",
+      "PAYG",
+      "CPU",
+      "RAM",
+      "Storage",
+      "Network"
+    ],
+    "use_case_tags": [
+      "iaas",
+      "pay-as-you-go",
+      "enterprise-infrastructure",
+      "compute-resources",
+      "data-storage",
+      "networking"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2.5,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114606Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-compute-cloud-engine",
+    "provider_id": "t1-cloud",
+    "name": "Compute Cloud Engine",
+    "category": "Compute",
+    "description": "Предоставление облачных вычислительных ресурсов для виртуальных машин, включая vCPU, RAM и дисковое пространство.",
+    "tech_stack_tags": [
+      "OpenStack",
+      "Virtual Machine",
+      "Compute",
+      "CPU",
+      "RAM",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "web-hosting",
+      "backend",
+      "test-stand",
+      "iaas",
+      "application-hosting",
+      "data-processing"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114616Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-container-registry",
+    "provider_id": "t1-cloud",
+    "name": "Repository for Containers",
+    "category": "Kubernetes",
+    "description": "Репозиторий для хранения контейнерных образов, используемый в DevOps и CI/CD-процессах.",
+    "tech_stack_tags": [
+      "Docker",
+      "Container Registry",
+      "Containers",
+      "Kubernetes"
+    ],
+    "use_case_tags": [
+      "devops",
+      "ci-cd",
+      "container-delivery",
+      "kubernetes-management"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 2.03,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114624Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-direct-connect",
+    "provider_id": "t1-cloud",
+    "name": "Direct Connect",
+    "category": "Network",
+    "description": "Выделенное сетевое подключение Direct Connect для надёжного соединения с облачной инфраструктурой.",
+    "tech_stack_tags": [
+      "Direct Connect",
+      "Network",
+      "SFP-модули",
+      "Оптический порт"
+    ],
+    "use_case_tags": [
+      "dedicated-connectivity",
+      "networking",
+      "enterprise-infrastructure",
+      "data-transfer",
+      "high-speed-connection"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 170.0,
+    "price_unit": "руб/шт/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114636Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-disk",
+    "provider_id": "t1-cloud",
+    "name": "T1 Disk",
+    "category": "Storage",
+    "description": "Облачное файловое хранилище для хранения и совместного использования данных.",
+    "tech_stack_tags": [
+      "Cloud Storage",
+      "File System",
+      "Data Storage"
+    ],
+    "use_case_tags": [
+      "file-storage",
+      "collaboration",
+      "data-backup",
+      "remote-access",
+      "team-work"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 100.0,
+    "price_unit": "руб/1 пользователь/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114644Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-dns",
+    "provider_id": "t1-cloud",
+    "name": "CloudDNS",
+    "category": "Network",
+    "description": "Сервис для управления доменными зонами и DNS-записями.",
+    "tech_stack_tags": [
+      "DNS",
+      "Network",
+      "Доменные зоны"
+    ],
+    "use_case_tags": [
+      "dns-management",
+      "networking",
+      "web-hosting",
+      "domain-management"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 180.0,
+    "price_unit": "руб/шт/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114653Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-documentdb",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for DocumentDB",
+    "category": "Database",
+    "description": "Управляемая документная база данных для хранения неструктурированных и JSON-подобных данных.",
+    "tech_stack_tags": [
+      "DocumentDB",
+      "NoSQL",
+      "Database",
+      "JSON"
+    ],
+    "use_case_tags": [
+      "database",
+      "backend",
+      "document-storage",
+      "data-storage",
+      "nosql-database"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114662Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-gitlab",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for GitLab",
+    "category": "Other",
+    "description": "Управляемый сервис GitLab для хранения исходного кода и автоматизации процессов CI/CD.",
+    "tech_stack_tags": [
+      "GitLab",
+      "Git",
+      "CI/CD",
+      "VCPU",
+      "RAM",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "devops",
+      "source-code-management",
+      "continuous-integration",
+      "continuous-delivery"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114670Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-gpuaas-cloud-director",
+    "provider_id": "t1-cloud",
+    "name": "GPUaaS Cloud Director",
+    "category": "Compute",
+    "description": "Предоставление GPU-ресурсов в среде Cloud Director для вычислительно интенсивных задач.",
+    "tech_stack_tags": [
+      "GPU",
+      "NVIDIA",
+      "Cloud Director",
+      "H-100",
+      "PCIe",
+      "vCPU",
+      "RAM"
+    ],
+    "use_case_tags": [
+      "machine-learning",
+      "ai",
+      "high-performance-computing",
+      "data-science",
+      "deep-learning",
+      "scientific-computing"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 7.8,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114679Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-gpuaas-cloud-engine",
+    "provider_id": "t1-cloud",
+    "name": "GPUaaS Cloud Engine",
+    "category": "Compute",
+    "description": "Предоставление GPU-ресурсов для машинного обучения, искусственного интеллекта и высокопроизводительных вычислений.",
+    "tech_stack_tags": [
+      "GPU",
+      "NVIDIA",
+      "ML",
+      "CPU",
+      "AMD",
+      "Intel"
+    ],
+    "use_case_tags": [
+      "machine-learning",
+      "ai",
+      "high-performance-computing",
+      "data-processing",
+      "scientific-computing"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 178.31,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114689Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-haas",
+    "provider_id": "t1-cloud",
+    "name": "Dedicated Server HaaS",
+    "category": "Compute",
+    "description": "Предоставление выделенных серверов по модели Hardware as a Service.",
+    "tech_stack_tags": [
+      "Bare Metal",
+      "Dedicated Server",
+      "Intel Xeon",
+      "SSD"
+    ],
+    "use_case_tags": [
+      "highload",
+      "dedicated-infrastructure",
+      "enterprise-infrastructure",
+      "performance-critical-apps"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 125000.0,
+    "price_unit": "руб/шт/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114697Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-inmemorydb",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for InmemoryDB",
+    "category": "Database",
+    "description": "Управляемое in-memory хранилище данных для кэширования и высоконагруженных приложений.",
+    "tech_stack_tags": [
+      "Redis",
+      "In-Memory",
+      "Database",
+      "CPU",
+      "RAM",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "cache",
+      "backend",
+      "highload",
+      "data-storage",
+      "application-performance",
+      "memory-intensive-apps"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114706Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-kafka",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for Kafka",
+    "category": "Other",
+    "description": "Управляемый сервис для работы с Apache Kafka, предназначенный для потоковой обработки событий и обмена сообщениями между сервисами.",
+    "tech_stack_tags": [
+      "Kafka",
+      "Streaming",
+      "Message Broker",
+      "Apache"
+    ],
+    "use_case_tags": [
+      "event-streaming",
+      "backend",
+      "microservices",
+      "data-processing"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114714Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-kubernetes-as-a-service",
+    "provider_id": "t1-cloud",
+    "name": "Kubernetes as a Service",
+    "category": "Kubernetes",
+    "description": "Сервис для управления контейнеризированными приложениями с помощью Kubernetes.",
+    "tech_stack_tags": [
+      "Kubernetes",
+      "Containers",
+      "CPU",
+      "RAM",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "container-orchestration",
+      "microservices",
+      "devops",
+      "application-deployment",
+      "scalable-infrastructure"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114724Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-managed-kubernetes",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for Kubernetes",
+    "category": "Kubernetes",
+    "description": "Управляемый сервис для развёртывания и управления кластерами Kubernetes.",
+    "tech_stack_tags": [
+      "Kubernetes",
+      "Docker",
+      "Containers",
+      "Оркестрация"
+    ],
+    "use_case_tags": [
+      "microservices",
+      "devops",
+      "container-orchestration",
+      "application-deployment",
+      "cluster-management"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114733Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-microsoft-licenses",
+    "provider_id": "t1-cloud",
+    "name": "Microsoft Licenses",
+    "category": "Other",
+    "description": "Предоставление лицензий на программное обеспечение Microsoft для бизнеса.",
+    "tech_stack_tags": [
+      "Microsoft",
+      "Windows",
+      "SQL Server",
+      "Office",
+      "Dynamics NAV",
+      "Exchange",
+      "System Center"
+    ],
+    "use_case_tags": [
+      "software-license",
+      "enterprise-software",
+      "project-management",
+      "devops",
+      "database-management",
+      "email-services",
+      "business-applications"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 38.03,
+    "price_unit": "руб/пользователь/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114751Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-ml-hub",
+    "provider_id": "t1-cloud",
+    "name": "ML Hub",
+    "category": "Analytics",
+    "description": "Сервис для разработки, обучения и использования моделей машинного обучения.",
+    "tech_stack_tags": [
+      "ML",
+      "AI",
+      "Machine Learning",
+      "GPU",
+      "Analytics"
+    ],
+    "use_case_tags": [
+      "machine-learning",
+      "ai",
+      "data-science",
+      "model-training",
+      "model-deployment"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 12.0,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114760Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-mysql",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for MySQL",
+    "category": "Database",
+    "description": "Управляемая база данных MySQL для веб-приложений и backend-сервисов.",
+    "tech_stack_tags": [
+      "MySQL",
+      "SQL",
+      "Database",
+      "CPU",
+      "RAM",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "backend",
+      "database",
+      "web-app",
+      "data-storage",
+      "application-development"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114768Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-network-load-balancer",
+    "provider_id": "t1-cloud",
+    "name": "Network Load Balancer",
+    "category": "Network",
+    "description": "Балансировщик сетевой нагрузки для распределения трафика между сервисами.",
+    "tech_stack_tags": [
+      "Load Balancer",
+      "Network",
+      "Traffic Distribution"
+    ],
+    "use_case_tags": [
+      "load-balancing",
+      "highload",
+      "web-hosting",
+      "traffic-management"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3705.02,
+    "price_unit": "руб/шт/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114775Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-network-services",
+    "provider_id": "t1-cloud",
+    "name": "Network Services",
+    "category": "Network",
+    "description": "Предоставление сетевых услуг, включая публичные IP-адреса и доступ в интернет.",
+    "tech_stack_tags": [
+      "Network",
+      "IP",
+      "Internet",
+      "Traffic"
+    ],
+    "use_case_tags": [
+      "networking",
+      "web-hosting",
+      "traffic-delivery",
+      "public-ip"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 16.67,
+    "price_unit": "руб/Мбит/с/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114784Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-object-storage-s3",
+    "provider_id": "t1-cloud",
+    "name": "Object Storage S3",
+    "category": "Storage",
+    "description": "Объектное хранилище, совместимое с S3, для хранения файлов, резервных копий, логов и медиаконтента.",
+    "tech_stack_tags": [
+      "S3",
+      "API",
+      "Object Storage",
+      "Хранение данных",
+      "Запросы"
+    ],
+    "use_case_tags": [
+      "backup",
+      "media-storage",
+      "static-hosting",
+      "data-lake",
+      "log-storage"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.819e-05,
+    "price_unit": "руб/ГБ*мин*мин без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114792Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-opensearch",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for OpenSearch",
+    "category": "Analytics",
+    "description": "Управляемый сервис OpenSearch для поиска, аналитики и обработки логов.",
+    "tech_stack_tags": [
+      "OpenSearch",
+      "Search",
+      "Logs",
+      "Analytics"
+    ],
+    "use_case_tags": [
+      "search",
+      "monitoring",
+      "analytics",
+      "log-processing"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114800Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-postgresql",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for PostgreSQL",
+    "category": "Database",
+    "description": "Управляемая база данных PostgreSQL для хранения структурированных данных и использования в backend-приложениях.",
+    "tech_stack_tags": [
+      "PostgreSQL",
+      "SQL",
+      "Database",
+      "CPU",
+      "RAM",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "backend",
+      "database",
+      "data-storage",
+      "structured-data",
+      "application-development"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114809Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-rabbitmq",
+    "provider_id": "t1-cloud",
+    "name": "Managed Service for RabbitMQ",
+    "category": "Other",
+    "description": "Управляемый сервис для работы с очередями сообщений через RabbitMQ.",
+    "tech_stack_tags": [
+      "RabbitMQ",
+      "Queue",
+      "Message Broker",
+      "CPU",
+      "RAM",
+      "Storage"
+    ],
+    "use_case_tags": [
+      "message-queue",
+      "backend",
+      "microservices",
+      "application-integration",
+      "data-processing"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 3.66,
+    "price_unit": "руб/ГБ/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114819Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-redos-licenses",
+    "provider_id": "t1-cloud",
+    "name": "RED OS Licenses",
+    "category": "Other",
+    "description": "Предоставление лицензий на использование операционной системы РЕД ОС.",
+    "tech_stack_tags": [
+      "Linux",
+      "RED OS",
+      "лицензии"
+    ],
+    "use_case_tags": [
+      "software-license",
+      "operating-system",
+      "server-environment"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 1000.0,
+    "price_unit": "руб/шт/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114826Z",
+    "is_synthetic": false
+  },
+  {
+    "service_id": "t1-cloud-scibox",
+    "provider_id": "t1-cloud",
+    "name": "ML Platform SCIBOX",
+    "category": "Analytics",
+    "description": "ML-платформа SCIBOX для разработки и внедрения решений в области машинного обучения и анализа данных.",
+    "tech_stack_tags": [
+      "ML",
+      "AI",
+      "Machine Learning",
+      "GPU",
+      "CPU",
+      "RAM"
+    ],
+    "use_case_tags": [
+      "machine-learning",
+      "ai",
+      "data-science",
+      "analytics",
+      "ml-development",
+      "data-analysis"
+    ],
+    "compliance_tags": [
+      "152-FZ"
+    ],
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "pricing_model": "pay-as-you-go",
+    "price_from_rub": 400.4,
+    "price_unit": "руб/шт/мес без НДС",
+    "support_level": null,
+    "service_url": null,
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114835Z",
+    "is_synthetic": false
+  }
+]

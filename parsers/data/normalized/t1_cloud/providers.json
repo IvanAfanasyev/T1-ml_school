@@ -1,0 +1,16 @@
+[
+  {
+    "provider_id": "t1-cloud",
+    "name": "Т1 Облако",
+    "base_platform": "OpenStack",
+    "is_152fz_compliant": true,
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "api_docs_url": "https://t1-cloud.ru/docs",
+    "pricing_url": "https://t1-cloud.ru/documents/rates",
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T14:43:56.232825Z"
+  }
+]

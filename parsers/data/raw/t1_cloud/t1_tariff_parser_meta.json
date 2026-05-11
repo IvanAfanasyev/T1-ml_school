@@ -1,0 +1,240 @@
+{
+  "provider_id": "t1-cloud",
+  "source_file": "data\\raw\\t1_cloud\\t1_current_tariff.pdf",
+  "parsed_at": "2026-05-10T14:45:26.943548+00:00",
+  "total_items": 375,
+  "pages": [
+    {
+      "page": 1,
+      "groups_found": [
+        "1. Группа услуг Compute (Cloud Engine)"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 2,
+      "groups_found": [
+        "2. Группа услуг GPUaaS (Cloud Engine)"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 3,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 4,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 5,
+      "groups_found": [
+        "3. Группа услуг Compute (Cloud Director)",
+        "4. Группа услуг Compute (Cloud Director c тарификацией PAYG)"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 6,
+      "groups_found": [
+        "5. Группа услуг GPUaaS (Cloud Director)"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 7,
+      "groups_found": [
+        "6. Группа услуг хранение и резервное копирование"
+      ],
+      "tables_found": 1
+    },
+    {
+      "page": 8,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 9,
+      "groups_found": [
+        "7. Группа услуг «Выделенный сервер» (HaaS)",
+        "8. Сетевые услуги"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 10,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 11,
+      "groups_found": [
+        "9. Программные услуги на базе лицензий Microsoft"
+      ],
+      "tables_found": 1
+    },
+    {
+      "page": 12,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 13,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 14,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 15,
+      "groups_found": [
+        "10. Программные услуги на базе лицензий Astra Linux",
+        "11. Программные услуги на базе лицензий Альт Сервер",
+        "12. Программные услуги на базе лицензий РЕД ОС"
+      ],
+      "tables_found": 3
+    },
+    {
+      "page": 16,
+      "groups_found": [
+        "14. Группа услуг Контейнеры",
+        "13. Услуга Т1 Диск"
+      ],
+      "tables_found": 3
+    },
+    {
+      "page": 17,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 18,
+      "groups_found": [
+        "15. Услуга Managed Service for PostgreSQL"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 19,
+      "groups_found": [
+        "16. Услуга Managed Service for InmemoryDB"
+      ],
+      "tables_found": 1
+    },
+    {
+      "page": 20,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 21,
+      "groups_found": [
+        "17. Услуга Managed Service for DocumentDB"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 22,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 23,
+      "groups_found": [
+        "18. Услуга Managed Service for ClickHouse"
+      ],
+      "tables_found": 1
+    },
+    {
+      "page": 24,
+      "groups_found": [
+        "19. Услуга Managed Service for MySQL"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 25,
+      "groups_found": [
+        "20. Услуга Managed Service for OpenSearch"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 26,
+      "groups_found": [
+        "21. Услуга Managed Service for Kafka"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 27,
+      "groups_found": [
+        "22. Услуга Managed Service for RabbitMQ"
+      ],
+      "tables_found": 1
+    },
+    {
+      "page": 28,
+      "groups_found": [],
+      "tables_found": 1
+    },
+    {
+      "page": 29,
+      "groups_found": [
+        "23. Услуга ML Hub",
+        "24. Услуга Repository for Containers",
+        "25. Услуга Managed Service for GitLab"
+      ],
+      "tables_found": 3
+    },
+    {
+      "page": 30,
+      "groups_found": [
+        "26. Услуга Network Load Balancer"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 31,
+      "groups_found": [
+        "27. Услуга CloudDNS",
+        "28. Услуга Kubernetes as a Service"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 32,
+      "groups_found": [
+        "29. Услуга Платформа бизнес-аналитики T1 Cloud (by Glarus BI)",
+        "30. Услуга ML-Платформа SCIBOX"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 33,
+      "groups_found": [
+        "31. Услуга Direct Connect"
+      ],
+      "tables_found": 2
+    },
+    {
+      "page": 34,
+      "groups_found": [],
+      "tables_found": 1
+    }
+  ],
+  "pdf_version_text": "Версия от 13 апреля 2026 г.",
+  "pdf_effective_text": "вступает в силу с 16 апреля 2026 г",
+  "notes": [
+    "This is raw extraction, not final normalization.",
+    "raw_group_name is only a hint and may be wrong on pages with multiple groups.",
+    "tariff_name_cleaned was removed in v3 to avoid corrupting names like vCPU a1, b2, T1 Cloud, H1, S3.",
+    "Use raw_tariff_name for LLM/code normalization.",
+    "Prices are extracted from PDF tables and should not be changed by LLM."
+  ]
+}

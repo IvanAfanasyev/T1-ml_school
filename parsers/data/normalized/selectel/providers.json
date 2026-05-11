@@ -1,0 +1,31 @@
+[
+  {
+    "provider_id": "selectel",
+    "name": "Selectel",
+    "base_platform": "Selectel",
+    "is_152fz_compliant": true,
+    "regions": [
+      "Санкт-Петербург",
+      "Москва",
+      "Новосибирск"
+    ],
+    "foreign_regions": [
+      "Ташкент",
+      "Алматы",
+      "Найроби"
+    ],
+    "availability_zones": [],
+    "compliance_tags": [
+      "152-FZ",
+      "UZ-1",
+      "A-COD"
+    ],
+    "compliance_note": "Selectel предоставляет А-ЦОД — аттестованный сегмент ЦОД. Страница документов указывает, что А-ЦОД соответствует требованиям 152-ФЗ и позволяет хранить и обрабатывать персональные данные до УЗ-1.",
+    "compliance_source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "availability_source_url": "https://docs.selectel.ru/infrastructure/availability-matrix/",
+    "pricing_url": "https://selectel.ru/prices/",
+    "api_docs_url": "https://docs.selectel.ru/",
+    "source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "parsed_at": "2026-05-10T18:52:24.199439+00:00"
+  }
+]

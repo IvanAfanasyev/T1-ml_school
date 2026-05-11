@@ -1,0 +1,44 @@
+[
+  {
+    "step": "parse_provider",
+    "status": "success",
+    "started_at": "2026-05-10T16:49:56.856365+00:00",
+    "finished_at": "2026-05-10T16:49:58.449658+00:00",
+    "error": null
+  },
+  {
+    "step": "parse_tariffs_index",
+    "status": "success",
+    "started_at": "2026-05-10T16:49:58.449685+00:00",
+    "finished_at": "2026-05-10T16:49:59.291983+00:00",
+    "error": null
+  },
+  {
+    "step": "parse_tariff_pages",
+    "status": "success",
+    "started_at": "2026-05-10T16:49:59.292014+00:00",
+    "finished_at": "2026-05-10T16:51:46.636034+00:00",
+    "error": null
+  },
+  {
+    "step": "normalize_pricing_items",
+    "status": "success",
+    "started_at": "2026-05-10T16:51:46.636062+00:00",
+    "finished_at": "2026-05-10T16:51:46.716238+00:00",
+    "error": null
+  },
+  {
+    "step": "normalize_services",
+    "status": "success",
+    "started_at": "2026-05-10T16:51:46.716282+00:00",
+    "finished_at": "2026-05-10T16:52:30.379670+00:00",
+    "error": null
+  },
+  {
+    "step": "summary",
+    "status": "success",
+    "services_count": 49,
+    "pricing_items_count": 293,
+    "finished_at": "2026-05-10T16:52:30.400285+00:00"
+  }
+]
