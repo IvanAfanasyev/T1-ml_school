@@ -213,7 +213,11 @@ def build_storage_amount_unit(
 ) -> str:
     amount = int(storage_gb) if storage_gb.is_integer() else storage_gb
     period_label = PERIOD_LABELS[normalize_budget_period(target_period)]
-    return f"руб/{period_label} за {amount} ГБ ({base_price:g} {base_unit})"
+    return f"руб/{period_label} за {amount} ГБ ({format_source_price(base_price)} {base_unit})"
+
+
+def format_source_price(value: float) -> str:
+    return f"{value:.8f}".rstrip("0").rstrip(".")
 
 
 def build_database_component_price_summary(
