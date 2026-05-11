@@ -1,0 +1,170 @@
+[
+  {
+    "provider_id": "cloud-ru",
+    "url": "parser://cloud-ru/parse_provider",
+    "parsed_at": "2026-05-10T16:49:58.449658+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "cloud-ru",
+    "url": "parser://cloud-ru/parse_tariffs_index",
+    "parsed_at": "2026-05-10T16:49:59.291983+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "cloud-ru",
+    "url": "parser://cloud-ru/parse_tariff_pages",
+    "parsed_at": "2026-05-10T16:51:46.636034+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "cloud-ru",
+    "url": "parser://cloud-ru/normalize_pricing_items",
+    "parsed_at": "2026-05-10T16:51:46.716238+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "cloud-ru",
+    "url": "parser://cloud-ru/normalize_services",
+    "parsed_at": "2026-05-10T16:52:30.379670+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "cloud-ru",
+    "url": "parser://cloud-ru/summary",
+    "parsed_at": "2026-05-10T16:52:30.400285+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "selectel",
+    "url": "parser://selectel/parse_provider",
+    "parsed_at": "2026-05-10T18:52:24.201643+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "selectel",
+    "url": "parser://selectel/parse_availability",
+    "parsed_at": "2026-05-10T18:52:24.752279+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "selectel",
+    "url": "parser://selectel/parse_prices",
+    "parsed_at": "2026-05-10T18:52:25.745453+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "selectel",
+    "url": "parser://selectel/normalize_pricing_items",
+    "parsed_at": "2026-05-10T18:52:25.797853+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "selectel",
+    "url": "parser://selectel/normalize_services",
+    "parsed_at": "2026-05-10T18:52:35.997841+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "selectel",
+    "url": "parser://selectel/summary",
+    "parsed_at": "2026-05-10T18:52:36.017419+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "t1-cloud",
+    "url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.071534Z",
+    "status": "success",
+    "records_added": 1,
+    "error": null
+  },
+  {
+    "provider_id": "t1-cloud",
+    "url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:06.114446Z",
+    "status": "success",
+    "records_added": 375,
+    "error": null
+  },
+  {
+    "provider_id": "t1-cloud",
+    "url": "llm://services-enrichment",
+    "parsed_at": "2026-05-10T15:56:32.721619Z",
+    "status": "success",
+    "records_added": 32,
+    "error": null
+  },
+  {
+    "provider_id": "t1-cloud",
+    "url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T15:56:32.738420Z",
+    "status": "success",
+    "records_added": 32,
+    "error": null
+  },
+  {
+    "provider_id": "vk-cloud",
+    "url": "parser://vk-cloud/parse_provider",
+    "parsed_at": "2026-05-10T17:31:41.039175+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "vk-cloud",
+    "url": "parser://vk-cloud/parse_pricelist",
+    "parsed_at": "2026-05-10T17:31:43.023259+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "vk-cloud",
+    "url": "parser://vk-cloud/normalize_pricing_items",
+    "parsed_at": "2026-05-10T17:31:47.221514+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "vk-cloud",
+    "url": "parser://vk-cloud/normalize_services",
+    "parsed_at": "2026-05-10T17:32:16.291148+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  },
+  {
+    "provider_id": "vk-cloud",
+    "url": "parser://vk-cloud/summary",
+    "parsed_at": "2026-05-10T17:32:16.329883+00:00",
+    "status": "success",
+    "records_added": 0,
+    "error": null
+  }
+]

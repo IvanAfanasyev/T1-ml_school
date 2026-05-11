@@ -1,0 +1,360 @@
+[
+  {
+    "query_id": "q001",
+    "query": "Нужен управляемый PostgreSQL в Москве",
+    "relevant_service_ids": [
+      "t1-cloud-managed-postgresql",
+      "selectel-managed-postgresql",
+      "selectel-postgresql-для-1с",
+      "cloud-ru-evolution-managed-postgresql",
+      "cloud-ru-postgresql-database-service"
+    ],
+    "primary_service_id": "t1-cloud-managed-postgresql",
+    "notes": "Запрос про managed PostgreSQL. Релевантны PostgreSQL database services в Москве/России."
+  },
+  {
+    "query_id": "q002",
+    "query": "Нужна управляемая PostgreSQL база данных для production-нагрузки в России",
+    "relevant_service_ids": [
+      "t1-cloud-managed-postgresql",
+      "selectel-managed-postgresql",
+      "cloud-ru-evolution-managed-postgresql",
+      "cloud-ru-postgresql-database-service",
+      "selectel-postgresql-для-1с"
+    ],
+    "primary_service_id": "cloud-ru-evolution-managed-postgresql",
+    "notes": "Production PostgreSQL. Cloud.ru Evolution и T1/Selectel PostgreSQL релевантны."
+  },
+  {
+    "query_id": "q003",
+    "query": "Нужна управляемая MySQL база данных для сайта",
+    "relevant_service_ids": [
+      "selectel-облако-для-mysql",
+      "t1-cloud-managed-mysql",
+      "cloud-ru-mysql-database-service",
+      "selectel-облачные-базы-данных"
+    ],
+    "primary_service_id": "selectel-облако-для-mysql",
+    "notes": "Запрос явно про MySQL managed database."
+  },
+  {
+    "query_id": "q004",
+    "query": "Нужен Redis для кэша и очередей сообщений",
+    "relevant_service_ids": [
+      "selectel-managed-redis",
+      "t1-cloud-managed-redis",
+      "cloud-ru-managed-redis",
+      "selectel-облачные-базы-данных"
+    ],
+    "primary_service_id": "selectel-managed-redis",
+    "notes": "Redis как cache/message queue."
+  },
+  {
+    "query_id": "q005",
+    "query": "Нужен ClickHouse для аналитики и больших данных",
+    "relevant_service_ids": [
+      "t1-cloud-managed-clickhouse",
+      "cloud-ru-managed-clickhouse",
+      "cloud-ru-advanced-cloudtable",
+      "cloud-ru-mapreduce-service"
+    ],
+    "primary_service_id": "t1-cloud-managed-clickhouse",
+    "notes": "ClickHouse/columnar database/big data analytics."
+  },
+  {
+    "query_id": "q006",
+    "query": "Нужен Kafka для потоковой обработки данных и очередей сообщений",
+    "relevant_service_ids": [
+      "selectel-managed-kafka",
+      "t1-cloud-managed-kafka",
+      "cloud-ru-managed-kafka-service",
+      "cloud-ru-mapreduce-service"
+    ],
+    "primary_service_id": "selectel-managed-kafka",
+    "notes": "Kafka/streaming/message queue."
+  },
+  {
+    "query_id": "q007",
+    "query": "Нужен OpenSearch для логов, поиска и real-time analytics",
+    "relevant_service_ids": [
+      "selectel-managed-opensearch",
+      "t1-cloud-opensearch-managed-service",
+      "cloud-ru-managed-opensearch"
+    ],
+    "primary_service_id": "selectel-managed-opensearch",
+    "notes": "OpenSearch/log-storage/search/real-time analytics."
+  },
+  {
+    "query_id": "q008",
+    "query": "Нужно S3-совместимое объектное хранилище для бэкапов и архивов",
+    "relevant_service_ids": [
+      "cloud-ru-object-storage",
+      "t1-cloud-объектное-хранилище-s3",
+      "selectel-s3",
+      "selectel-объектное-хранилище",
+      "t1-cloud-т1-диск"
+    ],
+    "primary_service_id": "cloud-ru-object-storage",
+    "notes": "S3/object storage/backup/archive."
+  },
+  {
+    "query_id": "q009",
+    "query": "Нужно хранилище для файлов и резервных копий в Москве",
+    "relevant_service_ids": [
+      "t1-cloud-т1-диск",
+      "cloud-ru-object-storage",
+      "selectel-файловое-хранилище",
+      "selectel-s3",
+      "t1-cloud-объектное-хранилище-s3"
+    ],
+    "primary_service_id": "t1-cloud-т1-диск",
+    "notes": "File storage + backup."
+  },
+  {
+    "query_id": "q010",
+    "query": "Нужно резервное копирование виртуальных машин и физических серверов",
+    "relevant_service_ids": [
+      "t1-cloud-резервное-копирование-veeam",
+      "t1-cloud-резервное-копирование-киберпротект",
+      "t1-cloud-openstack-backup",
+      "selectel-резервное-копирование",
+      "selectel-vmware-cloud-backup",
+      "cloud-ru-cloud-backup-and-recovery"
+    ],
+    "primary_service_id": "t1-cloud-резервное-копирование-veeam",
+    "notes": "Backup VM/server/workstation."
+  },
+  {
+    "query_id": "q011",
+    "query": "Нужен backup для OpenStack виртуальных машин",
+    "relevant_service_ids": [
+      "t1-cloud-openstack-backup",
+      "t1-cloud-резервное-копирование-veeam",
+      "selectel-vmware-cloud-backup",
+      "cloud-ru-cloud-backup-and-recovery"
+    ],
+    "primary_service_id": "t1-cloud-openstack-backup",
+    "notes": "OpenStack backup."
+  },
+  {
+    "query_id": "q012",
+    "query": "Нужен Kubernetes для Docker-контейнеров и микросервисов",
+    "relevant_service_ids": [
+      "t1-cloud-managed-kubernetes",
+      "t1-cloud-kubernetes-as-a-service",
+      "selectel-deckhouse-kubernetes-as-a-service",
+      "selectel-managed-kubernetes-with-gpu",
+      "cloud-ru-managed-kubernetes",
+      "cloud-ru-cloud-container-engine"
+    ],
+    "primary_service_id": "t1-cloud-managed-kubernetes",
+    "notes": "Kubernetes/container orchestration/microservices."
+  },
+  {
+    "query_id": "q013",
+    "query": "Нужен Kubernetes с GPU для ML-нагрузок",
+    "relevant_service_ids": [
+      "selectel-managed-kubernetes-with-gpu",
+      "cloud-ru-managed-kubernetes",
+      "t1-cloud-managed-kubernetes",
+      "cloud-ru-gpu-аренда"
+    ],
+    "primary_service_id": "selectel-managed-kubernetes-with-gpu",
+    "notes": "Kubernetes + GPU."
+  },
+  {
+    "query_id": "q014",
+    "query": "Нужен container registry для Docker-образов и CI/CD",
+    "relevant_service_ids": [
+      "t1-cloud-container-registry",
+      "selectel-container-registry",
+      "cloud-ru-container-registry",
+      "cloud-ru-artifact-registry",
+      "t1-cloud-gitlab-managed-service"
+    ],
+    "primary_service_id": "t1-cloud-container-registry",
+    "notes": "Docker registry/artifact registry/CI-CD."
+  },
+  {
+    "query_id": "q015",
+    "query": "Нужен GitLab Managed Service для хранения кода и CI/CD",
+    "relevant_service_ids": [
+      "t1-cloud-gitlab-managed-service",
+      "cloud-ru-artifact-registry",
+      "selectel-container-registry"
+    ],
+    "primary_service_id": "t1-cloud-gitlab-managed-service",
+    "notes": "GitLab/version control/CI-CD."
+  },
+  {
+    "query_id": "q016",
+    "query": "Нужен CDN для ускорения сайта и доставки видео",
+    "relevant_service_ids": [
+      "t1-cloud-cdn",
+      "cloud-ru-cdn"
+    ],
+    "primary_service_id": "t1-cloud-cdn",
+    "notes": "CDN/content delivery/web acceleration."
+  },
+  {
+    "query_id": "q017",
+    "query": "Нужен балансировщик нагрузки L4 для высокой доступности",
+    "relevant_service_ids": [
+      "t1-cloud-network-load-balancer",
+      "selectel-балансировщик-нагрузки",
+      "cloud-ru-evolution-load-balancer"
+    ],
+    "primary_service_id": "t1-cloud-network-load-balancer",
+    "notes": "Load balancer/high availability/traffic distribution."
+  },
+  {
+    "query_id": "q018",
+    "query": "Нужен API Gateway для публикации и защиты API",
+    "relevant_service_ids": [
+      "cloud-ru-api-gateway"
+    ],
+    "primary_service_id": "cloud-ru-api-gateway",
+    "notes": "API Gateway."
+  },
+  {
+    "query_id": "q019",
+    "query": "Нужна ML-платформа с Jupyter Notebooks для data science",
+    "relevant_service_ids": [
+      "t1-cloud-ml-hub",
+      "cloud-ru-evolution-notebooks",
+      "selectel-data-science-virtual-machine",
+      "selectel-ml-platform"
+    ],
+    "primary_service_id": "t1-cloud-ml-hub",
+    "notes": "Jupyter/ML/data science."
+  },
+  {
+    "query_id": "q020",
+    "query": "Нужна платформа для распределенного обучения моделей с GPU",
+    "relevant_service_ids": [
+      "cloud-ru-evolution-distributed-train",
+      "cloud-ru-gpu-аренда",
+      "selectel-data-science-virtual-machine",
+      "selectel-ml-platform",
+      "selectel-managed-kubernetes-with-gpu"
+    ],
+    "primary_service_id": "cloud-ru-evolution-distributed-train",
+    "notes": "Distributed training/GPU/ML training."
+  },
+  {
+    "query_id": "q021",
+    "query": "Нужны облачные серверы для Python backend-приложения",
+    "relevant_service_ids": [
+      "vk-cloud-cloud-servers",
+      "selectel-облачные-серверы",
+      "cloud-ru-cloud-servers",
+      "t1-cloud-виртуальная-машина"
+    ],
+    "primary_service_id": "vk-cloud-cloud-servers",
+    "notes": "Compute/cloud servers/backend."
+  },
+  {
+    "query_id": "q022",
+    "query": "Нужен сервис для Django-приложения с PostgreSQL в Москве",
+    "relevant_service_ids": [
+      "t1-cloud-managed-postgresql",
+      "selectel-managed-postgresql",
+      "cloud-ru-evolution-managed-postgresql",
+      "cloud-ru-postgresql-database-service",
+      "vk-cloud-cloud-servers",
+      "selectel-облачные-серверы"
+    ],
+    "primary_service_id": "t1-cloud-managed-postgresql",
+    "notes": "Запрос составной: database + compute. MVP ранжирует отдельные сервисы."
+  },
+  {
+    "query_id": "q023",
+    "query": "Нужно защищенное облако для персональных данных с 152-ФЗ и ФСТЭК",
+    "relevant_service_ids": [
+      "selectel-облако-152-фз",
+      "selectel-аттестованное-облако",
+      "selectel-приватное-облако-vmware",
+      "selectel-частное-облако"
+    ],
+    "primary_service_id": "selectel-облако-152-фз",
+    "notes": "Compliance/security/152-FZ/FSTEC."
+  },
+  {
+    "query_id": "q024",
+    "query": "Нужно приватное облако VMware для изолированной инфраструктуры",
+    "relevant_service_ids": [
+      "selectel-приватное-облако-vmware",
+      "selectel-частное-облако",
+      "selectel-аттестованное-облако"
+    ],
+    "primary_service_id": "selectel-приватное-облако-vmware",
+    "notes": "Private cloud/VMware/isolation."
+  },
+  {
+    "query_id": "q025",
+    "query": "Нужна база PostgreSQL для 1С",
+    "relevant_service_ids": [
+      "selectel-postgresql-для-1с",
+      "selectel-managed-postgresql",
+      "t1-cloud-managed-postgresql"
+    ],
+    "primary_service_id": "selectel-postgresql-для-1с",
+    "notes": "PostgreSQL optimized for 1C."
+  },
+  {
+    "query_id": "q026",
+    "query": "Нужна выделенная облачная база данных на dedicated server",
+    "relevant_service_ids": [
+      "selectel-выделенные-облачные-базы-данных",
+      "selectel-managed-postgresql",
+      "selectel-облачные-базы-данных"
+    ],
+    "primary_service_id": "selectel-выделенные-облачные-базы-данных",
+    "notes": "Dedicated managed database."
+  },
+  {
+    "query_id": "q027",
+    "query": "Нужен сервис для мониторинга, логов и поиска по событиям",
+    "relevant_service_ids": [
+      "selectel-managed-opensearch",
+      "t1-cloud-opensearch-managed-service",
+      "cloud-ru-managed-opensearch"
+    ],
+    "primary_service_id": "selectel-managed-opensearch",
+    "notes": "Logs/search/OpenSearch."
+  },
+  {
+    "query_id": "q028",
+    "query": "Нужно хранилище S3 для видеофайлов и big data",
+    "relevant_service_ids": [
+      "cloud-ru-object-storage",
+      "selectel-s3",
+      "t1-cloud-объектное-хранилище-s3"
+    ],
+    "primary_service_id": "cloud-ru-object-storage",
+    "notes": "Object Storage/S3/video/big data."
+  },
+  {
+    "query_id": "q029",
+    "query": "Нужен RabbitMQ или брокер сообщений для очередей",
+    "relevant_service_ids": [
+      "t1-cloud-managed-rabbitmq",
+      "cloud-ru-managed-kafka-service",
+      "selectel-managed-kafka"
+    ],
+    "primary_service_id": "t1-cloud-managed-rabbitmq",
+    "notes": "Message broker/RabbitMQ/Kafka as nearby alternative."
+  },
+  {
+    "query_id": "q030",
+    "query": "Нужна Data Analytics платформа для BI и анализа больших данных",
+    "relevant_service_ids": [
+      "cloud-ru-advanced-dataarts-insight",
+      "cloud-ru-mapreduce-service",
+      "t1-cloud-managed-clickhouse",
+      "cloud-ru-advanced-cloudtable"
+    ],
+    "primary_service_id": "cloud-ru-advanced-dataarts-insight",
+    "notes": "Analytics/BI/big data."
+  }
+]

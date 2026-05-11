@@ -1,0 +1,58 @@
+[
+  {
+    "provider_id": "vk-cloud",
+    "name": "VK Cloud",
+    "base_platform": "VK Cloud",
+    "is_152fz_compliant": true,
+    "regions": [
+      "Moscow"
+    ],
+    "api_docs_url": "https://cloud.vk.com/docs",
+    "pricing_url": "https://cloud.vk.com/pricelist/",
+    "source_url": "https://cloud.vk.com/docs/ru/start/legal/vk/policy-152fz",
+    "parsed_at": "2026-05-10T17:31:40.949067+00:00"
+  },
+  {
+    "provider_id": "t1-cloud",
+    "name": "Т1 Облако",
+    "base_platform": "OpenStack",
+    "is_152fz_compliant": true,
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "api_docs_url": "https://t1-cloud.ru/docs",
+    "pricing_url": "https://t1-cloud.ru/documents/rates",
+    "source_url": "https://t1-cloud.ru/documents/rates",
+    "parsed_at": "2026-05-10T14:43:56.232825Z"
+  },
+  {
+    "provider_id": "selectel",
+    "name": "Selectel",
+    "base_platform": "Selectel",
+    "is_152fz_compliant": true,
+    "regions": [
+      "Saint-Petersburg",
+      "Moscow",
+      "Novosibirsk"
+    ],
+    "api_docs_url": "https://docs.selectel.ru/",
+    "pricing_url": "https://selectel.ru/prices/",
+    "source_url": "https://docs.selectel.ru/certified-data-center-segment/about/documents/",
+    "parsed_at": "2026-05-10T18:52:24.199439+00:00"
+  },
+  {
+    "provider_id": "cloud-ru",
+    "name": "Cloud.ru",
+    "base_platform": "Advanced",
+    "is_152fz_compliant": true,
+    "regions": [
+      "Russia",
+      "Moscow"
+    ],
+    "api_docs_url": "https://cloud.ru/docs",
+    "pricing_url": "https://cloud.ru/documents/tariffs/advanced/services/index?source-platform=Advanced",
+    "source_url": "https://cloud.ru/docs/overview/security-introduction/topics/compliance",
+    "parsed_at": "2026-05-10T16:49:58.440459+00:00"
+  }
+]

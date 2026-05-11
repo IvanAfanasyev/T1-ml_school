@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CloudMatch</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" data-tab-link="storefront" aria-label="CloudMatch">
+          CloudMatch
+        </a>
+
+        <nav class="tabs" aria-label="Основная навигация">
+          <button class="tab-button is-active" type="button" data-tab-link="storefront">
+            Витрина
+          </button>
+          <button class="tab-button" type="button" data-tab-link="agent">
+            Агент
+          </button>
+          <button class="tab-button" type="button" data-tab-link="about">
+            О проекте
+          </button>
+        </nav>
+      </header>
+
+      <main class="main">
+        <section class="tab-panel is-active" id="storefront" data-tab-panel="storefront">
+          <div class="section-heading">
+            <p class="eyebrow">Каталог сервисов</p>
+            <h1>Облачные сервисы для инфраструктурных задач</h1>
+            <p>
+              Карточки собираются из нормализованного каталога провайдеров и тарифных
+              позиций backend.
+            </p>
+            <p class="catalog-count" id="catalogCount">Загрузка каталога...</p>
+          </div>
+
+          <div class="store-grid" id="serviceGrid" aria-live="polite"></div>
+        </section>
+
+        <section class="tab-panel" id="agent" data-tab-panel="agent">
+          <div class="chat-layout">
+            <div class="chat-heading">
+              <p class="eyebrow">Диалоговый подбор</p>
+              <h1>Опишите задачу обычным языком</h1>
+              <p>
+                Агент уточнит недостающие параметры и вернет подходящие облачные сервисы.
+              </p>
+            </div>
+
+            <div class="chat-window" aria-live="polite">
+              <div class="chat-toolbar">
+                <div>
+                  <span>CloudMatch Agent</span>
+                  <small>Подбор облачной инфраструктуры</small>
+                </div>
+                <button class="clear-chat-button" type="button" id="clearChatButton">
+                  Сбросить чат
+                </button>
+              </div>
+
+              <div class="messages" id="messages"></div>
+
+              <form class="prompt-form" id="chatForm">
+                <label class="visually-hidden" for="promptInput">Сообщение агенту</label>
+                <textarea
+                  id="promptInput"
+                  name="message"
+                  rows="3"
+                  placeholder="Например: нужна база PostgreSQL в Москве до 20000 рублей"
+                ></textarea>
+                <button class="send-button" type="submit" aria-label="Отправить сообщение">
+                  <span aria-hidden="true">↑</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="about" data-tab-panel="about">
+          <div class="about-grid">
+            <article class="about-copy">
+              <p class="eyebrow">CloudMatch</p>
+              <h1>Маркетплейс облачных сервисов с диалоговым подбором</h1>
+              <p>
+                Проект помогает выбрать облачный сервис под задачу пользователя:
+                базу данных, Kubernetes, object storage, backend-инфраструктуру и
+                другие сценарии.
+              </p>
+              <p>
+                Backend работает на FastAPI, использует нормализованные JSON-данные
+                провайдеров, ранжирует сервисы и возвращает готовые карточки для сайта.
+              </p>
+              <a class="primary-link" href="https://github.com/IvanAfanasyev/T1-ml_school" target="_blank" rel="noreferrer">
+                Открыть GitHub
+              </a>
+            </article>
+
+            <div class="about-facts" aria-label="Ключевые части проекта">
+              <div class="fact">
+                <span>API</span>
+                <strong>FastAPI</strong>
+              </div>
+              <div class="fact">
+                <span>Данные</span>
+                <strong>JSON-каталог</strong>
+              </div>
+              <div class="fact">
+                <span>Деплой</span>
+                <strong>Docker</strong>
+              </div>
+              <div class="fact">
+                <span>Память чата</span>
+                <strong>localStorage</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="service-dialog" id="serviceDialog">
+      <button class="dialog-close" type="button" id="dialogClose" aria-label="Закрыть">
+        ×
+      </button>
+      <div id="dialogContent"></div>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
