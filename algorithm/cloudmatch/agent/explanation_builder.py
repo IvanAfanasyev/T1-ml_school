@@ -1,5 +1,6 @@
 from typing import Any
 
+from algorithm.cloudmatch.ranking.compliance_filter import service_has_required_compliance
 from algorithm.cloudmatch.schemas.provider import Provider
 from algorithm.cloudmatch.schemas.query import StructuredQuery
 from algorithm.cloudmatch.schemas.ranking import RankingResult
@@ -80,9 +81,15 @@ def build_result_payload(
         "service_fields": {
             "tech_stack_tags": service.tech_stack_tags,
             "use_case_tags": service.use_case_tags,
+            "compliance_tags": service.compliance_tags,
             "regions": service.regions,
             "pricing_model": service.pricing_model,
             "support_level": service.support_level,
+        },
+        "compliance": {
+            "confirmed_152fz": service_has_required_compliance(service, provider),
+            "service_tags": service.compliance_tags,
+            "provider_is_152fz_compliant": bool(provider and provider.is_152fz_compliant),
         },
         "price_summary": result.price_summary.model_dump(),
         "matched_entities": {
@@ -146,6 +153,7 @@ def build_explanation_payload(
             "important": "LLM does not choose providers or services. The algorithm already selected the recommendations.",
             "ranking_mode": "simple requests return top providers; each provider is represented by its strongest matching service.",
             "compliance_rule": "152-FZ is mandatory. Services without confirmed 152-FZ are filtered out before ranking.",
+            "compliance_wording": "If compliance.confirmed_152fz is true, never say that 152-FZ information is missing. Say that 152-FZ is confirmed by service or provider data.",
             "forbidden_user_facing_wording": [
                 "Do not mention score, final_score, retrieval_score, entity_match_score, embedding_score, bm25_score.",
                 "Do not explain that an item is second or third because its score is lower.",

@@ -3,8 +3,12 @@ import unittest
 from algorithm.cloudmatch.ranking.budget_matcher import (
     build_price_summary,
     calculate_budget_status_and_score,
+    estimate_monthly_price,
+    estimate_price_for_period,
 )
+from algorithm.cloudmatch.ranking.pricing_matcher import select_pricing_items_for_display
 from algorithm.cloudmatch.schemas.pricing import ServicePricingItem
+from algorithm.cloudmatch.schemas.query import QueryRequirement, StructuredQuery
 from algorithm.cloudmatch.schemas.service import Service
 
 
@@ -60,6 +64,117 @@ class PricingBudgetTest(unittest.TestCase):
 
         self.assertEqual(status, "over_budget")
         self.assertEqual(score, 0.0)
+
+    def test_hourly_price_is_converted_to_31_day_month(self) -> None:
+        self.assertAlmostEqual(
+            estimate_monthly_price(
+                price_rub=16.9702,
+                price_unit="руб/шт/час",
+                billing_period="hour",
+            ),
+            16.9702 * 24 * 31,
+        )
+
+    def test_hourly_price_can_be_converted_to_week(self) -> None:
+        self.assertAlmostEqual(
+            estimate_price_for_period(
+                price_rub=10,
+                price_unit="руб/шт/час",
+                billing_period="hour",
+                target_period="week",
+            ),
+            10 * 24 * 7,
+        )
+
+    def test_storage_price_uses_requested_volume(self) -> None:
+        service = build_service(
+            service_id="vk-storage",
+            name="VK Object Storage Icebox",
+            category="Cloud Storage",
+            price_from_rub=1.09,
+            price_unit="руб/1 Гб/мес",
+        )
+        query = StructuredQuery(
+            raw_query="хранилище для бэкапов 500 ГБ",
+            requirements=[
+                QueryRequirement(
+                    name="storage_gb",
+                    value=500,
+                    required=True,
+                )
+            ],
+        )
+
+        summary = build_price_summary(
+            service=service,
+            pricing_items=[],
+            query=query,
+        )
+
+        self.assertEqual(summary.price_from_rub, 545)
+        self.assertEqual(summary.monthly_estimate_rub, 545)
+        self.assertIn("500 ГБ", summary.price_unit or "")
+
+    def test_storage_price_uses_requested_week_period(self) -> None:
+        service = build_service(
+            service_id="vk-storage",
+            name="VK Object Storage Icebox",
+            category="Cloud Storage",
+            price_from_rub=1.09,
+            price_unit="руб/1 Гб/мес",
+        )
+        query = StructuredQuery(
+            raw_query="хранилище 500 ГБ до 200 рублей в неделю",
+            requirements=[
+                QueryRequirement(
+                    name="storage_gb",
+                    value=500,
+                    required=True,
+                )
+            ],
+        )
+        query.constraints.budget_max = 200
+        query.constraints.budget_period = "week"
+
+        summary = build_price_summary(
+            service=service,
+            pricing_items=[],
+            query=query,
+        )
+        status, score = calculate_budget_status_and_score(
+            budget_max=query.constraints.budget_max,
+            price_summary=summary,
+        )
+
+        self.assertAlmostEqual(summary.monthly_estimate_rub or 0, 545)
+        self.assertAlmostEqual(summary.period_estimate_rub or 0, 545 / 31 * 7)
+        self.assertEqual(summary.estimate_period, "week")
+        self.assertEqual(status, "within_budget")
+        self.assertEqual(score, 1.0)
+
+    def test_database_price_uses_minimal_component_estimate(self) -> None:
+        service = build_service(
+            service_id="t1-postgresql",
+            name="Managed Service for PostgreSQL",
+            category="Database",
+            price_from_rub=3.66,
+            price_unit="руб/ГБ/мес",
+        )
+        items = [
+            build_item("cpu", service.service_id, "vCPU b5", "cpu", 405.93, "руб/шт/мес", "month"),
+            build_item("ram", service.service_id, "Память, RAM", "ram", 292.43, "руб/ГБ/мес", "month"),
+            build_item("disk", service.service_id, "Дисковое пространство, Light", "storage", 3.66, "руб/ГБ/мес", "month"),
+        ]
+
+        summary = build_price_summary(service=service, pricing_items=items)
+        display_items = select_pricing_items_for_display(
+            pricing_items=items,
+            service=service,
+            query=StructuredQuery(raw_query="postgresql"),
+        )
+
+        self.assertAlmostEqual(summary.monthly_estimate_rub or 0, 702.02)
+        self.assertEqual([item.item_type for item in display_items], ["cpu", "ram", "storage"])
 
 
 def build_service(

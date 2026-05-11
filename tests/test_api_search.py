@@ -149,6 +149,7 @@ class ApiSearchTest(unittest.TestCase):
                     price_summary=PriceSummary(
                         price_from_rub=1200,
                         price_unit="rub/month",
+                        monthly_estimate_rub=1200,
                     ),
                     score_breakdown=ScoreBreakdown(final_score=0.91),
                     matched_entities=MatchedEntities(
@@ -169,6 +170,9 @@ class ApiSearchTest(unittest.TestCase):
         self.assertEqual(api_response.results[0].provider_name, "Selectel")
         self.assertEqual(api_response.results[0].service_name, "Managed PostgreSQL")
         self.assertEqual(api_response.results[0].price_from_rub, 1200)
+        self.assertEqual(api_response.results[0].monthly_estimate_rub, 1200)
+        self.assertTrue(api_response.results[0].compliance_confirmed)
+        self.assertIn("152-ФЗ подтверждено", api_response.answer)
         self.assertEqual(api_response.results[0].selected_pricing_items[0].item_name, "PostgreSQL Small")
         self.assertEqual(api_response.results[0].score_breakdown["final_score"], 0.91)
         self.assertIn("## Рекомендации", api_response.answer)

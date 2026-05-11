@@ -8,7 +8,7 @@ from algorithm.cloudmatch.geo.region_resolver import (
     match_available_region,
     resolve_nearby_available_regions,
 )
-from algorithm.cloudmatch.schemas.query import RequiredComponent, StructuredQuery
+from algorithm.cloudmatch.schemas.query import QueryRequirement, RequiredComponent, StructuredQuery
 
 
 def normalize_string(value: str) -> str:
@@ -121,6 +121,32 @@ def add_component_if_missing(
             required=True,
             subtype=subtype,
             db_engine=db_engine,
+            reason=reason,
+        )
+    )
+
+
+def set_requirement(
+    query: StructuredQuery,
+    name: str,
+    value,
+    source_text: str | None = None,
+    reason: str | None = None,
+) -> None:
+    for requirement in query.requirements:
+        if requirement.name == name:
+            requirement.value = value
+            requirement.source_text = source_text
+            requirement.reason = reason
+            return
+
+    query.requirements.append(
+        QueryRequirement(
+            name=name,
+            value=value,
+            required=True,
+            confidence=1.0,
+            source_text=source_text,
             reason=reason,
         )
     )
@@ -413,6 +439,23 @@ def normalize_constraints(query: StructuredQuery) -> None:
 
     if query.constraints.budget_max is not None or query.constraints.budget_min is not None:
         query.constraints.budget_required = True
+        query.constraints.budget_period = (
+            extract_budget_period_from_text(query.raw_query)
+            or query.constraints.budget_period
+            or "month"
+        )
+    else:
+        query.constraints.budget_period = None
+
+    extracted_storage_gb = extract_storage_gb_from_text(query.raw_query)
+    if extracted_storage_gb is not None:
+        set_requirement(
+            query=query,
+            name="storage_gb",
+            value=extracted_storage_gb,
+            source_text=f"{int(extracted_storage_gb) if extracted_storage_gb.is_integer() else extracted_storage_gb} ГБ",
+            reason="Пользователь указал нужный объем хранения.",
+        )
 
 
 def extract_budget_max_from_text(text: str) -> float | None:
@@ -439,7 +482,7 @@ def extract_budget_max_from_text(text: str) -> float | None:
         r"(?:до|максимум|не больше|не дороже)\s+(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)?",
         r"(?:за|на|бюджет)\s+(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)?\s*(?:руб|рублей|р)?",
         r"(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)\s*(?:руб|рублей|р)?",
-        r"(\d[\d\s]{3,})\s*(?:руб|рублей|р)?",
+        r"(\d[\d\s]{3,})\s*(?:руб|рублей|р)",
     )
 
     for pattern in patterns:
@@ -452,6 +495,42 @@ def extract_budget_max_from_text(text: str) -> float | None:
         return amount * multiplier
 
     return None
+
+
+def extract_budget_period_from_text(text: str) -> str | None:
+    normalized = " ".join(text.strip().lower().replace("ё", "е").split())
+
+    if re.search(r"(?:в|за|на)\s+(?:час|1\s*час|ч)\b|/час|руб/?час", normalized):
+        return "hour"
+
+    if re.search(r"(?:в|за|на)\s+(?:день|сутки|суток)\b|/день|/сут", normalized):
+        return "day"
+
+    if re.search(r"(?:в|за|на)\s+(?:неделю|недели|неделя)\b|/нед", normalized):
+        return "week"
+
+    if re.search(r"(?:в|за|на)\s+(?:месяц|мес)\b|/мес|руб/?мес", normalized):
+        return "month"
+
+    return None
+
+
+def extract_storage_gb_from_text(text: str) -> float | None:
+    normalized = " ".join(text.strip().lower().replace("ё", "е").split())
+
+    pattern = r"(\d[\d\s]*(?:[.,]\d+)?)\s*(тб|tb|терабайт|терабайта|гб|gb|гигабайт|гигабайта)"
+    match = re.search(pattern, normalized)
+
+    if not match:
+        return None
+
+    amount = float(match.group(1).replace(" ", "").replace(",", "."))
+    unit = match.group(2)
+
+    if unit in {"тб", "tb", "терабайт", "терабайта"}:
+        amount *= 1024
+
+    return amount if amount > 0 else None
 
 
 def _build_region_fallback_reason(

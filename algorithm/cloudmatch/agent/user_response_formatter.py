@@ -1,4 +1,5 @@
 from algorithm.cloudmatch.data.repositories import DataRepository
+from algorithm.cloudmatch.ranking.compliance_filter import service_has_required_compliance
 from algorithm.cloudmatch.schemas.ranking import RankingResult, SearchResponse
 
 
@@ -56,11 +57,15 @@ def _format_structured_query(response: SearchResponse) -> list[str]:
         else:
             lines.append(f"- Регион: {region}")
     if constraints.get("budget_max"):
-        lines.append(f"- Бюджет: до {_format_number(constraints.get('budget_max'))} руб. в месяц")
+        period = _format_period_label(constraints.get("budget_period") or "month")
+        lines.append(f"- Бюджет: до {_format_number(constraints.get('budget_max'))} руб. / {period}")
 
     requirements = query.get("requirements") or []
     if requirements:
-        req_parts = [f"{item.get('name')}={item.get('value')}" for item in requirements]
+        req_parts = [
+            _humanize_entity_value(f"{item.get('name')}={item.get('value')}")
+            for item in requirements
+        ]
         lines.append(f"- Дополнительные требования: {', '.join(req_parts)}")
 
     return lines or ["- Ключевые параметры не были явно выделены."]
@@ -185,7 +190,7 @@ def _format_service_card(result: RankingResult, data_repository: DataRepository)
         lines.append(f"- Ссылка: {service_url}")
     lines.append(f"- Цена: {_format_price(result)}")
 
-    matched_line = _format_matched_line(result)
+    matched_line = _format_matched_line(result, data_repository)
     if matched_line:
         lines.append(f"- Что совпало: {matched_line}")
 
@@ -224,7 +229,7 @@ def _format_provider_card(
         lines.append(f"- Ссылка: {service_url}")
     lines.append(f"- Цена: {_format_price(result)}")
 
-    matched_line = _format_matched_line(result)
+    matched_line = _format_matched_line(result, data_repository)
     if matched_line:
         lines.append(f"- Что совпало: {matched_line}")
 
@@ -295,7 +300,39 @@ def _format_price(result: RankingResult) -> str:
     unit = result.price_summary.price_unit
     if price is None:
         return "точная стартовая цена не определена в нормализованных данных"
-    return f"от {_format_number(price)} {unit}" if unit else f"от {_format_number(price)} руб."
+
+    base = f"от {_format_number(price)} {unit}" if unit else f"от {_format_number(price)} руб."
+    monthly_estimate = result.price_summary.monthly_estimate_rub
+    period_estimate = result.price_summary.period_estimate_rub
+    estimate_period = result.price_summary.estimate_period
+
+    if (
+        estimate_period != "month"
+        and period_estimate is not None
+        and abs(period_estimate - price) > 0.01
+    ):
+        base += (
+            f" (примерно {_format_number(period_estimate)} руб./"
+            f"{_format_period_label(estimate_period)} при работе 24/7)"
+        )
+
+    if (
+        monthly_estimate is not None
+        and abs(monthly_estimate - price) > 0.01
+    ):
+        base += f" (примерно {_format_number(monthly_estimate)} руб./мес при работе 24/7)"
+
+    return base
+
+
+def _format_period_label(period: str | None) -> str:
+    labels = {
+        "hour": "час",
+        "day": "день",
+        "week": "неделю",
+        "month": "месяц",
+    }
+    return labels.get(period or "month", "месяц")
 
 
 def _format_pricing_item_price(item) -> str:
@@ -313,7 +350,10 @@ def _format_number(value) -> str:
     return f"{number:,.6f}".rstrip("0").rstrip(".").replace(",", " ")
 
 
-def _format_matched_line(result: RankingResult) -> str:
+def _format_matched_line(
+    result: RankingResult,
+    data_repository: DataRepository | None = None,
+) -> str:
     matched = result.matched_entities
     parts = []
     if matched.matched_tech_stack:
@@ -326,6 +366,10 @@ def _format_matched_line(result: RankingResult) -> str:
         parts.append(_format_entity_values(matched.matched_requirements))
     if matched.matched_region:
         parts.append(f"регион {matched.matched_region}")
+    if data_repository is not None:
+        provider = data_repository.providers_by_id.get(result.service.provider_id)
+        if service_has_required_compliance(result.service, provider):
+            parts.append("152-ФЗ подтверждено")
     if matched.budget_status == "within_budget":
         parts.append("укладывается в бюджет")
     if matched.budget_status == "slightly_over_budget":
@@ -375,6 +419,10 @@ def _humanize_entity_value(value: str) -> str:
         amount = text.split("=", 1)[1]
         return f"бюджет до {amount} руб."
 
+    if normalized.startswith("storage_gb="):
+        amount = text.split("=", 1)[1]
+        return f"объем {amount} ГБ"
+
     return text.replace("_", " ")
 
 
@@ -414,4 +462,32 @@ def _sanitize_user_text(text: str) -> str:
     }
     for source, target in replacements.items():
         result = result.replace(source, target)
+    result = _remove_false_152fz_warning(result)
     return result
+
+
+def _remove_false_152fz_warning(text: str) -> str:
+    lowered = text.lower()
+    if "152" not in lowered:
+        return text
+
+    markers = (
+        "нет информации",
+        "не указано",
+        "не указана",
+        "не подтверждено",
+        "не подтверждена",
+    )
+
+    if not any(marker in lowered for marker in markers):
+        return text
+
+    sentences = []
+    for sentence in text.split("."):
+        normalized = sentence.lower()
+        if "152" in normalized and any(marker in normalized for marker in markers):
+            continue
+        sentences.append(sentence)
+
+    cleaned = ".".join(part for part in sentences if part.strip()).strip()
+    return cleaned or "Соответствие 152-ФЗ подтверждено по данным сервиса или провайдера."

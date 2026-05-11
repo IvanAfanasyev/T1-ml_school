@@ -27,6 +27,7 @@ class DialogSlots(BaseModel):
     db_engine: str | None = None
     region: str | None = None
     budget_max: float | None = None
+    budget_period: str | None = None
 
 
 class DialogMemory(BaseModel):
@@ -291,6 +292,7 @@ def extract_dialog_slots(message: str) -> DialogSlots:
     service_area = detect_service_area(normalized, technologies, db_engine)
     region = canonicalize_region(extract_region_from_text(message))
     budget_max = extract_budget_max(message)
+    budget_period = extract_budget_period(message) if budget_max is not None else None
 
     return DialogSlots(
         service_area=service_area,
@@ -298,6 +300,7 @@ def extract_dialog_slots(message: str) -> DialogSlots:
         db_engine=db_engine,
         region=region,
         budget_max=budget_max,
+        budget_period=budget_period,
     )
 
 
@@ -413,7 +416,7 @@ def extract_budget_max(normalized_message: str) -> float | None:
         r"(?:до|максимум|не больше|не дороже)\s+(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)?",
         r"(?:за|на|бюджет)\s+(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)?\s*(?:руб|рублей|р)?",
         r"(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)\s*(?:руб|рублей|р)?",
-        r"(\d[\d\s]{3,})\s*(?:руб|рублей|р)?",
+        r"(\d[\d\s]{3,})\s*(?:руб|рублей|р)",
     )
 
     for pattern in patterns:
@@ -426,6 +429,24 @@ def extract_budget_max(normalized_message: str) -> float | None:
         return amount * multiplier
 
     return None
+
+
+def extract_budget_period(message: str) -> str | None:
+    normalized_message = normalize_message(message)
+
+    if re.search(r"(?:в|за|на)\s+(?:час|1\s*час|ч)\b|/час|руб/?час", normalized_message):
+        return "hour"
+
+    if re.search(r"(?:в|за|на)\s+(?:день|сутки|суток)\b|/день|/сут", normalized_message):
+        return "day"
+
+    if re.search(r"(?:в|за|на)\s+(?:неделю|недели|неделя)\b|/нед", normalized_message):
+        return "week"
+
+    if re.search(r"(?:в|за|на)\s+(?:месяц|мес)\b|/мес|руб/?мес", normalized_message):
+        return "month"
+
+    return "month"
 
 
 def merge_slots(current: DialogSlots, new_slots: DialogSlots) -> None:
@@ -447,6 +468,7 @@ def merge_slots(current: DialogSlots, new_slots: DialogSlots) -> None:
 
     if new_slots.budget_max is not None:
         current.budget_max = new_slots.budget_max
+        current.budget_period = new_slots.budget_period or "month"
 
 
 def should_start_new_request(memory: DialogMemory, new_slots: DialogSlots) -> bool:
@@ -571,7 +593,14 @@ def build_search_query(slots: DialogSlots, original_message: str | None = None) 
         parts.append(f"в регионе {slots.region}")
 
     if slots.budget_max is not None:
-        parts.append(f"бюджет до {int(slots.budget_max)} рублей")
+        period = slots.budget_period or "month"
+        period_text = {
+            "hour": "в час",
+            "day": "в день",
+            "week": "в неделю",
+            "month": "в месяц",
+        }.get(period, "в месяц")
+        parts.append(f"бюджет до {int(slots.budget_max)} рублей {period_text}")
 
     return " ".join(parts)
 

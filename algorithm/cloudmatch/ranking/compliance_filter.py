@@ -8,6 +8,11 @@ def normalize_for_compare(value: str) -> str:
     return normalize_location_key(canonicalize_region(value) or value)
 
 
+def is_152fz_tag(value: str) -> bool:
+    normalized = str(value).strip().lower().replace("_", "-").replace(" ", "-")
+    return normalized == "152-fz" or normalized.startswith("152-fz-")
+
+
 def service_has_required_compliance(
     service: Service,
     provider: Provider | None,
@@ -21,12 +26,12 @@ def service_has_required_compliance(
 
     required_tag = normalize_for_compare(REQUIRED_COMPLIANCE_TAG)
 
-    service_compliance_tags = {
-        normalize_for_compare(tag)
-        for tag in service.compliance_tags
-    }
+    service_compliance_tags = {normalize_for_compare(tag) for tag in service.compliance_tags}
 
     if required_tag in service_compliance_tags:
+        return True
+
+    if any(is_152fz_tag(tag) for tag in service.compliance_tags):
         return True
 
     if provider is not None and provider.is_152fz_compliant:

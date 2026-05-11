@@ -31,6 +31,28 @@ class QueryValidatorTest(unittest.TestCase):
 
         self.assertEqual(query.constraints.budget_max, 50000)
         self.assertTrue(query.constraints.budget_required)
+        self.assertEqual(query.constraints.budget_period, "month")
+
+    def test_extracts_weekly_budget_period(self) -> None:
+        query = validate_structured_query(
+            StructuredQuery(raw_query="Хранилище 500 ГБ до 200 рублей в неделю.")
+        )
+
+        self.assertEqual(query.constraints.budget_max, 200)
+        self.assertEqual(query.constraints.budget_period, "week")
+
+    def test_extracts_storage_volume_requirement(self) -> None:
+        query = validate_structured_query(
+            StructuredQuery(raw_query="Хранилище для бэкапов, 500 ГБ, любой регион РФ.")
+        )
+
+        requirements = {
+            requirement.name: requirement.value
+            for requirement in query.requirements
+        }
+
+        self.assertEqual(requirements["storage_gb"], 500)
+        self.assertIsNone(query.constraints.budget_max)
 
     def test_infers_components_for_composite_shop_request(self) -> None:
         query = validate_structured_query(

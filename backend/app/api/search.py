@@ -8,6 +8,8 @@ from algorithm.cloudmatch.agent.user_response_formatter import format_user_respo
 from algorithm.cloudmatch.core.constants import PRICING_ITEMS_PER_SERVICE_LIMIT
 from algorithm.cloudmatch.data.pricing_repository import PricingRepository
 from algorithm.cloudmatch.data.repositories import DataRepository
+from algorithm.cloudmatch.ranking.compliance_filter import service_has_required_compliance
+from algorithm.cloudmatch.ranking.budget_matcher import build_price_summary
 from algorithm.cloudmatch.schemas.pricing import ServicePricingItem
 from algorithm.cloudmatch.schemas.provider import Provider
 from algorithm.cloudmatch.schemas.ranking import RankingResult, SearchResponse
@@ -46,12 +48,17 @@ class SearchResultView(BaseModel):
     category: str
     description: str
     regions: list[str]
+    compliance_tags: list[str] = Field(default_factory=list)
+    compliance_confirmed: bool = False
     service_url: str
     source_url: str
     pricing_model: str | None = None
     support_level: str | None = None
     price_from_rub: float | None = None
     price_unit: str | None = None
+    monthly_estimate_rub: float | None = None
+    period_estimate_rub: float | None = None
+    estimate_period: str = "month"
     selected_pricing_items: list[PricingItemView] = Field(default_factory=list)
     matched_entities: dict[str, Any] = Field(default_factory=dict)
     score_breakdown: dict[str, Any] = Field(default_factory=dict)
@@ -87,6 +94,7 @@ class ServiceView(BaseModel):
     regions: list[str]
     price_from_rub: float | None = None
     price_unit: str | None = None
+    monthly_estimate_rub: float | None = None
     service_url: str
 
 
@@ -112,6 +120,7 @@ class CatalogServiceCard(BaseModel):
     support_level: str | None = None
     price_from_rub: float | None = None
     price_unit: str | None = None
+    monthly_estimate_rub: float | None = None
     service_url: str
     source_url: str
     pricing_items_count: int
@@ -227,12 +236,17 @@ def build_search_result_view(
         category=service.category,
         description=service.description,
         regions=service.regions,
+        compliance_tags=service.compliance_tags,
+        compliance_confirmed=service_has_required_compliance(service, provider),
         service_url=service.service_url,
         source_url=service.source_url,
         pricing_model=service.pricing_model,
         support_level=service.support_level,
         price_from_rub=result.price_summary.price_from_rub,
         price_unit=result.price_summary.price_unit,
+        monthly_estimate_rub=result.price_summary.monthly_estimate_rub,
+        period_estimate_rub=result.price_summary.period_estimate_rub,
+        estimate_period=result.price_summary.estimate_period,
         selected_pricing_items=[
             PricingItemView(
                 item_name=item.item_name,
@@ -351,6 +365,11 @@ def build_service_view(
     provider = data_repository.providers_by_id.get(service.provider_id)
     provider_name = provider.name if provider else service.provider_id
 
+    price_summary = build_price_summary(
+        service=service,
+        pricing_items=[],
+    )
+
     return ServiceView(
         service_id=service.service_id,
         provider_id=service.provider_id,
@@ -359,8 +378,9 @@ def build_service_view(
         category=service.category,
         description=service.description,
         regions=service.regions,
-        price_from_rub=service.price_from_rub,
-        price_unit=service.price_unit,
+        price_from_rub=price_summary.price_from_rub,
+        price_unit=price_summary.price_unit,
+        monthly_estimate_rub=price_summary.monthly_estimate_rub,
         service_url=service.service_url,
     )
 
@@ -376,6 +396,10 @@ def build_catalog_service_card(
         pricing_items=pricing_items,
         limit=pricing_limit,
     )
+    price_summary = build_price_summary(
+        service=service,
+        pricing_items=pricing_items,
+    )
 
     return CatalogServiceCard(
         service_id=service.service_id,
@@ -390,8 +414,9 @@ def build_catalog_service_card(
         regions=service.regions,
         pricing_model=service.pricing_model,
         support_level=service.support_level,
-        price_from_rub=service.price_from_rub,
-        price_unit=service.price_unit,
+        price_from_rub=price_summary.price_from_rub,
+        price_unit=price_summary.price_unit,
+        monthly_estimate_rub=price_summary.monthly_estimate_rub,
         service_url=service.service_url,
         source_url=service.source_url,
         pricing_items_count=len(pricing_items),

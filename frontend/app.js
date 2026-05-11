@@ -207,7 +207,7 @@ function renderServiceCard(service) {
         </div>
         <div class="price-row">
           <span>${formatTariffCount(service.pricing_items_count)}</span>
-          <strong>${formatPrice(service.price_from_rub, service.price_unit)}</strong>
+          <strong>${formatPrice(service.price_from_rub, service.price_unit, service.monthly_estimate_rub)}</strong>
         </div>
         <div class="card-actions">
           <button class="details-button" type="button" data-service-id="${escapeHtml(service.service_id)}">Подробнее</button>
@@ -259,6 +259,10 @@ function renderDialogContent(service) {
       <div class="card-meta">
         ${(service.regions || []).slice(0, 3).map((region) => `<span class="meta-pill">${escapeHtml(region)}</span>`).join("")}
         ${(service.tech_stack_tags || []).slice(0, 3).map((tag) => `<span class="meta-pill">${escapeHtml(tag)}</span>`).join("")}
+      </div>
+      <div class="price-row dialog-price">
+        <span>Оценка цены</span>
+        <strong>${escapeHtml(formatPrice(service.price_from_rub, service.price_unit, service.monthly_estimate_rub))}</strong>
       </div>
       ${serviceLink}
       <div class="pricing-list">${pricingHtml}</div>
@@ -508,7 +512,13 @@ function formatTariffCount(count) {
   return `${value} тарифных позиций`;
 }
 
-function formatPrice(price, unit) {
+function formatPrice(
+  price,
+  unit,
+  monthlyEstimate = null,
+  periodEstimate = null,
+  estimatePeriod = "month",
+) {
   if (price === null || price === undefined) {
     return "Цена уточняется";
   }
@@ -517,7 +527,38 @@ function formatPrice(price, unit) {
     maximumFractionDigits: 6,
   }).format(Number(price));
 
-  return unit ? `от ${formatted} ${unit}` : `от ${formatted} ₽`;
+  let result = unit ? `от ${formatted} ${unit}` : `от ${formatted} ₽`;
+  const normalizedPeriod = estimatePeriod || "month";
+
+  if (
+    normalizedPeriod !== "month"
+    && periodEstimate !== null
+    && periodEstimate !== undefined
+    && Math.abs(Number(periodEstimate) - Number(price)) > 0.01
+  ) {
+    result += `, примерно ${formatNumber(periodEstimate)} ₽/${formatPeriodLabel(normalizedPeriod)} при 24/7`;
+  }
+
+  if (
+    monthlyEstimate !== null
+    && monthlyEstimate !== undefined
+    && Math.abs(Number(monthlyEstimate) - Number(price)) > 0.01
+  ) {
+    result += `, примерно ${formatNumber(monthlyEstimate)} ₽/мес при 24/7`;
+  }
+
+  return result;
+}
+
+function formatPeriodLabel(period) {
+  const labels = {
+    hour: "час",
+    day: "день",
+    week: "нед",
+    month: "мес",
+  };
+
+  return labels[period] || "мес";
 }
 
 function getServiceUrl(service) {
@@ -759,6 +800,14 @@ function buildQueryChips(query) {
     chips.push(`Соответствие: ${constraints.compliance_tags.join(", ")}`);
   }
 
+  if (query.requirements?.length) {
+    query.requirements.forEach((requirement) => {
+      if (requirement?.name === "storage_gb") {
+        chips.push(`Объем: ${formatNumber(requirement.value)} ГБ`);
+      }
+    });
+  }
+
   if (!chips.length) {
     chips.push("Параметры явно не выделены");
   }
@@ -768,7 +817,7 @@ function buildQueryChips(query) {
 
 function buildRecommendationCard(result, options = {}) {
   const url = getServiceUrl(result);
-  const matched = formatMatchedEntities(result.matched_entities || {});
+  const matched = formatMatchedEntities(result);
   const missing = formatMissingEntities(result.matched_entities || {});
   const label = result.solution_component
     ? formatComponentShortTitle(result.solution_component)
@@ -777,6 +826,7 @@ function buildRecommendationCard(result, options = {}) {
     ? `${result.provider_name}`
     : `${result.provider_name} — ${result.service_name}`;
   const rankReason = buildRankReason(result, matched, missing);
+  const cleanExplanation = cleanUserText(result.explanation || "");
   const tag = options.compact ? "div" : "article";
 
   return `
@@ -802,19 +852,42 @@ function buildRecommendationCard(result, options = {}) {
         </div>
         <div>
           <dt>Цена</dt>
-          <dd>${escapeHtml(formatPrice(result.price_from_rub, result.price_unit))}</dd>
+          <dd>${escapeHtml(formatPrice(
+            result.price_from_rub,
+            result.price_unit,
+            result.monthly_estimate_rub,
+            result.period_estimate_rub,
+            result.estimate_period,
+          ))}</dd>
         </div>
       </dl>
+      ${buildPricingPreview(result.selected_pricing_items || [])}
       ${matched ? `<p><strong>Совпало:</strong> ${escapeHtml(matched)}</p>` : ""}
       ${missing ? `<p><strong>Проверить отдельно:</strong> ${escapeHtml(missing)}</p>` : ""}
       <p class="rank-reason">${escapeHtml(rankReason)}</p>
-      ${result.explanation ? `<p>${escapeHtml(cleanUserText(result.explanation))}</p>` : ""}
+      ${cleanExplanation ? `<p>${escapeHtml(cleanExplanation)}</p>` : ""}
       ${
         url
           ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Открыть сайт сервиса</a>`
           : ""
       }
     </${tag}>
+  `;
+}
+
+function buildPricingPreview(items) {
+  const visibleItems = items.slice(0, 3);
+
+  if (!visibleItems.length) {
+    return "";
+  }
+
+  return `
+    <div class="recommendation-pricing">
+      ${visibleItems.map((item) => `
+        <span>${escapeHtml(item.item_name)}: ${escapeHtml(formatPrice(item.price_rub, item.price_unit))}</span>
+      `).join("")}
+    </div>
   `;
 }
 
@@ -828,7 +901,8 @@ function buildRankReason(result, matched, missing) {
   return `${base}${matchedPart}${missingPart}`;
 }
 
-function formatMatchedEntities(matched) {
+function formatMatchedEntities(result) {
+  const matched = result.matched_entities || {};
   const parts = [];
 
   if (matched.matched_tech_stack?.length) {
@@ -849,6 +923,10 @@ function formatMatchedEntities(matched) {
 
   if (matched.matched_region) {
     parts.push(`регион ${matched.matched_region}`);
+  }
+
+  if (result.compliance_confirmed) {
+    parts.push("152-ФЗ подтверждено");
   }
 
   if (matched.budget_status === "within_budget") {
@@ -921,6 +999,11 @@ function humanizeEntityValue(value) {
     return `бюджет до ${amount} руб.`;
   }
 
+  if (lower.startsWith("storage_gb=")) {
+    const amount = text.split("=").slice(1).join("=");
+    return `объем ${amount} ГБ`;
+  }
+
   return text.replaceAll("_", " ");
 }
 
@@ -976,13 +1059,18 @@ function linkifyEscapedText(text) {
 }
 
 function cleanUserText(text) {
-  return String(text || "")
+  const cleaned = String(text || "")
     .replaceAll("final_score", "релевантность")
     .replaceAll("retrieval_score", "релевантность")
     .replaceAll("entity_match_score", "совпадение требований")
     .replaceAll("embedding_score", "релевантность")
     .replaceAll("bm25_score", "текстовое совпадение")
     .replaceAll("score", "релевантность");
+
+  return cleaned
+    .replace(/[^.!?]*(?:152[-\s]?фз|152-fz)[^.!?]*(?:нет информации|не указано|не указана|не подтверждено|не подтверждена)[^.!?]*[.!?]?/gi, "")
+    .replace(/[^.!?]*(?:нет информации|не указано|не указана|не подтверждено|не подтверждена)[^.!?]*(?:152[-\s]?фз|152-fz)[^.!?]*[.!?]?/gi, "")
+    .trim();
 }
 
 function escapeHtml(value) {

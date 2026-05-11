@@ -143,6 +143,11 @@ QUERY_EXTRACTOR_SYSTEM_PROMPT = """
 - "за 1 рубль", "сервер за один рубль" -> budget_max = 1.
 - "любой бюджет", "бюджет любой", "по бюджету все равно" -> budget_max = null,
   budget_required = false.
+- Если пользователь указал период бюджета, заполни constraints.budget_period:
+  "в час" -> "hour", "в день" -> "day", "в неделю" -> "week",
+  "в месяц" или период не указан -> "month".
+- "500 ГБ", "2 ТБ" для хранилища -> добавь requirement:
+  name = "storage_gb", value = число в ГБ.
 
 Дополнительные требования:
 - Поддержка 24/7 -> requirements: name = "support_level", value = "24/7"
@@ -228,6 +233,7 @@ Data catalog из текущей базы:
     "budget_min": null,
     "budget_max": null,
     "budget_required": false,
+    "budget_period": "month",
     "compliance_required": true,
     "compliance_tags": ["152-FZ"],
     "additional": []

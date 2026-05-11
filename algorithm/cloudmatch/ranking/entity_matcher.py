@@ -465,6 +465,18 @@ def match_requirement(
     if name == "pricing-model":
         return match_pricing_model(requirement, service)
 
+    if name in {"storage-gb", "storage-capacity-gb", "capacity-gb"}:
+        return any(
+            marker in service_text
+            for marker in [
+                "storage",
+                "object storage",
+                "s3",
+                "хранилищ",
+                "диск",
+            ]
+        )
+
     if name == "managed-service":
         return match_managed_service(
             requirement=requirement,
@@ -524,6 +536,7 @@ def calculate_requirements_match_score(
     query: StructuredQuery,
     service: Service,
     pricing_items: list[ServicePricingItem],
+    budget_status: str,
 ) -> tuple[float, list[str], list[str]]:
     requirements = []
     requirements.extend(query.requirements)
@@ -542,6 +555,14 @@ def calculate_requirements_match_score(
 
     for requirement in requirements:
         label = requirement_label(requirement)
+        name = canonical(requirement.name)
+
+        if name in {"budget-max", "budget"}:
+            if budget_status == "within_budget":
+                matched.append(label)
+            else:
+                missing.append(label)
+            continue
 
         if match_requirement(
             requirement=requirement,
@@ -608,6 +629,7 @@ def calculate_entity_match_score(
             query=query,
             service=service,
             pricing_items=pricing_items,
+            budget_status=budget_status,
         )
     )
 

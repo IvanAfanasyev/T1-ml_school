@@ -1,4 +1,5 @@
 import json
+import re
 from typing import Any
 
 from algorithm.cloudmatch.llm.client import LLMClient
@@ -84,6 +85,12 @@ class RankingExplainer:
         explanations_by_service_id: dict[str, str] = {}
 
         if isinstance(items, list):
+            payload_by_service_id = {
+                str(result.get("service_id")): result
+                for result in payload.get("top_3", [])
+                if result.get("service_id")
+            }
+
             for item in items:
                 if not isinstance(item, dict):
                     continue
@@ -92,8 +99,12 @@ class RankingExplainer:
                 explanation = item.get("explanation")
 
                 if service_id and explanation:
+                    result_payload = payload_by_service_id.get(str(service_id), {})
                     explanations_by_service_id[str(service_id)] = (
-                        clean_user_facing_text(str(explanation))
+                        clean_user_facing_text(
+                            str(explanation),
+                            compliance_confirmed=is_152fz_confirmed(result_payload),
+                        )
                     )
 
         for result in payload.get("top_3", []):
@@ -191,6 +202,9 @@ class RankingExplainer:
         if matched_requirements:
             parts.append(f"Совпавшие дополнительные требования: {matched_requirements}.")
 
+        if is_152fz_confirmed(result):
+            parts.append("Соответствие 152-ФЗ подтверждено по данным сервиса или провайдера.")
+
         if missing_requirements:
             parts.append(
                 f"Не подтверждены дополнительные требования: {missing_requirements}."
@@ -199,10 +213,13 @@ class RankingExplainer:
         if budget_status:
             parts.append(format_budget_status_for_user(budget_status))
 
-        return " ".join(parts)
+        return clean_user_facing_text(
+            " ".join(parts),
+            compliance_confirmed=is_152fz_confirmed(result),
+        )
 
 
-def clean_user_facing_text(text: str) -> str:
+def clean_user_facing_text(text: str, compliance_confirmed: bool = False) -> str:
     result = text
     forbidden_fragments = [
         "final_score",
@@ -214,7 +231,30 @@ def clean_user_facing_text(text: str) -> str:
     ]
     for fragment in forbidden_fragments:
         result = result.replace(fragment, "релевантность")
+
+    if compliance_confirmed:
+        result = remove_false_152fz_warning(result)
+
     return result
+
+
+def is_152fz_confirmed(result_payload: dict[str, Any]) -> bool:
+    compliance = result_payload.get("compliance", {})
+    return bool(compliance.get("confirmed_152fz"))
+
+
+def remove_false_152fz_warning(text: str) -> str:
+    false_warning_pattern = re.compile(
+        r"[^.!?]*(?:152[-\s]?фз|152-fz)[^.!?]*"
+        r"(?:нет информации|не указано|не указана|не подтверждено|не подтверждена|явно не найдено)"
+        r"[^.!?]*[.!?]?"
+        r"|[^.!?]*(?:нет информации|не указано|не указана|не подтверждено|не подтверждена|явно не найдено)"
+        r"[^.!?]*(?:152[-\s]?фз|152-fz)[^.!?]*[.!?]?",
+        flags=re.IGNORECASE,
+    )
+    replacement = " Соответствие 152-ФЗ подтверждено по данным сервиса или провайдера."
+    cleaned = false_warning_pattern.sub(replacement, text)
+    return " ".join(cleaned.split())
 
 
 def format_budget_status_for_user(budget_status: str) -> str:

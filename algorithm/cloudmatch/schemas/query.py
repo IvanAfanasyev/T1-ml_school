@@ -70,6 +70,7 @@ class QueryConstraints(BaseModel):
     budget_min: Optional[float] = None
     budget_max: Optional[float] = None
     budget_required: bool = False
+    budget_period: Optional[str] = None
 
     # 152-ФЗ обязателен всегда.
     compliance_required: bool = True

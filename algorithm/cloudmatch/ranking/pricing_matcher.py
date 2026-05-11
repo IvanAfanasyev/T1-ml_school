@@ -129,6 +129,51 @@ def is_compute_resource_item(item: ServicePricingItem) -> bool:
     )
 
 
+def get_database_component_type(item: ServicePricingItem) -> str | None:
+    text = build_item_text(item)
+    item_type = canonical(item.item_type)
+
+    if item_type in {"cpu", "vcpu"} or "vcpu" in text or "cpu" in text:
+        return "cpu"
+
+    if item_type == "ram" or "ram" in text or "память" in text:
+        return "ram"
+
+    if item_type in {"storage", "disk"} or "диск" in text or "storage" in text:
+        return "storage"
+
+    return None
+
+
+def select_database_component_items(
+    pricing_items: list[ServicePricingItem],
+    limit: int = 3,
+) -> list[ServicePricingItem]:
+    best_by_component: dict[str, ServicePricingItem] = {}
+    component_order = ("cpu", "ram", "storage")
+
+    for item in pricing_items:
+        if is_suspicious_display_price(item) or is_backup_item(item):
+            continue
+
+        component_type = get_database_component_type(item)
+
+        if component_type not in component_order:
+            continue
+
+        current = best_by_component.get(component_type)
+        if current is None or (item.price_rub or float("inf")) < (
+            current.price_rub or float("inf")
+        ):
+            best_by_component[component_type] = item
+
+    return [
+        best_by_component[component_type]
+        for component_type in component_order
+        if component_type in best_by_component
+    ][:limit]
+
+
 def is_kubernetes_service(service: Service) -> bool:
     service_text = build_service_text(service)
     category = canonical(service.category)
@@ -392,7 +437,7 @@ def is_main_pricing_item_for_service(
         return is_database_main_item(item, service)
 
     if is_compute_service(service):
-            return is_compute_main_item(item)
+        return is_compute_main_item(item)
 
     if category in {"backup", "cloud-backup"}:
         return is_backup_item(item)
@@ -441,7 +486,7 @@ def is_item_allowed_for_display(
     category = canonical(service.category)
 
     if category in {"database", "managed-database", "databases"}:
-        return is_database_main_item(item, service)
+        return is_database_main_item(item, service) or get_database_component_type(item) is not None
 
     if is_kubernetes_service(service):
         return is_kubernetes_main_item(item)
@@ -551,9 +596,20 @@ def select_pricing_items_for_display(
     """
     Выбирает тарифные позиции для пользовательского вывода.
 
-    Если нормальных тарифных позиций нет, возвращаем пустой список.
-    Это лучше, чем показывать пользователю ram/disk/backup как цену PostgreSQL.
+    Если у database-сервиса нет единой цены кластера, показываем базовые
+    составляющие тарифа: CPU, RAM и диск.
     """
+
+    category = canonical(service.category)
+
+    if category in {"database", "managed-database", "databases"}:
+        database_items = select_database_component_items(
+            pricing_items=pricing_items,
+            limit=limit,
+        )
+
+        if database_items:
+            return database_items
 
     scored_items = []
 

@@ -226,6 +226,7 @@ class QueryExtractor:
             "budget_min": value.get("budget_min"),
             "budget_max": value.get("budget_max"),
             "budget_required": value.get("budget_required", False),
+            "budget_period": value.get("budget_period"),
             "compliance_required": True,
             "compliance_tags": ["152-FZ"],
             "additional": self._normalize_requirements(
