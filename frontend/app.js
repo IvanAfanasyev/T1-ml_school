@@ -614,8 +614,8 @@ function buildSearchResponseHtml(search) {
   const results = search.results || [];
   const isBundle = results.some((result) => result.solution_component_rank);
   const fallbackSummary = isBundle
-    ? "Запрос разбит на отдельные инфраструктурные роли, и для каждой роли подобраны свои кандидаты."
-    : "Я подобрал варианты по вашему запросу.";
+    ? buildBundleFallbackSummary(results)
+    : buildSimpleFallbackSummary(results);
 
   return `
     <div class="answer-layout">
@@ -645,7 +645,7 @@ function buildSearchResponseHtml(search) {
       }
 
       <section class="answer-section">
-        <h3>Подобранные сервисы</h3>
+        <h3>${isBundle ? "Подобранные связки провайдеров" : "Top-3 провайдера"}</h3>
         ${buildRecommendationContent(results)}
       </section>
     </div>
@@ -662,7 +662,7 @@ function buildRecommendationContent(results) {
   if (!isBundle) {
     return `
       <div class="recommendation-list">
-        ${results.map((result) => buildRecommendationCard(result, { compact: false })).join("")}
+        ${results.map((result) => buildRecommendationCard(result, { compact: false, providerMode: true })).join("")}
       </div>
     `;
   }
@@ -709,6 +709,32 @@ function buildBundleCard(rank, results) {
   `;
 }
 
+function buildBundleFallbackSummary(results) {
+  const groupCount = new Set(
+    results
+      .filter((result) => result.solution_component_rank)
+      .map((result) => Number(result.solution_component_rank)),
+  ).size;
+
+  if (groupCount > 0 && groupCount < 3) {
+    return `Запрос состоит из нескольких инфраструктурных частей. В текущих данных найдено ${groupCount} связк(и), которые закрывают обязательные роли вместе. Остальные провайдеры не попали в список, потому что не закрывают полный набор компонентов, регион или обязательные требования.`;
+  }
+
+  return "Запрос разбит на отдельные инфраструктурные роли, и для каждой роли подобраны свои кандидаты.";
+}
+
+function buildSimpleFallbackSummary(results) {
+  const hasOnlyOverBudget = results.length > 0 && results.every((result) => {
+    const status = result.matched_entities?.budget_status;
+    return status === "over_budget" || status === "slightly_over_budget";
+  });
+
+  if (hasOnlyOverBudget) {
+    return "Точных вариантов в указанном бюджете не найдено. Ниже показаны ближайшие провайдеры из каталога, но цену по ним нужно проверять отдельно.";
+  }
+
+  return "Я подобрал top-3 провайдера и показал сервис, который лучше всего представляет каждого из них для этой задачи.";
+}
 function buildQueryChips(query) {
   const constraints = query.constraints || {};
   const chips = [];
@@ -747,6 +773,9 @@ function buildRecommendationCard(result, options = {}) {
   const label = result.solution_component
     ? formatComponentShortTitle(result.solution_component)
     : `#${result.rank}`;
+  const title = options.providerMode
+    ? `${result.provider_name}`
+    : `${result.provider_name} — ${result.service_name}`;
   const rankReason = buildRankReason(result, matched, missing);
   const tag = options.compact ? "div" : "article";
 
@@ -754,8 +783,13 @@ function buildRecommendationCard(result, options = {}) {
     <${tag} class="recommendation-card ${options.compact ? "is-compact" : ""}">
       <div class="recommendation-topline">
         <span>${escapeHtml(label)}</span>
-        <strong>${escapeHtml(result.provider_name)} — ${escapeHtml(result.service_name)}</strong>
+        <strong>${escapeHtml(title)}</strong>
       </div>
+      ${
+        options.providerMode
+          ? `<p class="recommendation-role">Релевантный сервис: ${escapeHtml(result.service_name)}</p>`
+          : ""
+      }
       ${
         result.solution_component_reason
           ? `<p class="recommendation-role">${escapeHtml(result.solution_component_reason)}</p>`
@@ -786,8 +820,8 @@ function buildRecommendationCard(result, options = {}) {
 
 function buildRankReason(result, matched, missing) {
   const base = result.solution_component
-    ? `Этот сервис выбран для роли «${formatComponentShortTitle(result.solution_component)}», потому что лучше других кандидатов на этом месте совпал с подзадачей.`
-    : `Это место #${result.rank}: сервис лучше других кандидатов сочетает близость к запросу и совпадение требований.`;
+   ? `Этот сервис выбран для роли «${formatComponentShortTitle(result.solution_component)}», потому что в данных есть совпадения с этой частью задачи.`
+    : `Провайдер представлен этим сервисом, потому что в данных есть совпадения с запросом пользователя.`;
   const matchedPart = matched ? ` Сильные совпадения: ${matched}.` : "";
   const missingPart = missing ? ` Отдельно проверить: ${missing}.` : "";
 
@@ -821,6 +855,10 @@ function formatMatchedEntities(matched) {
     parts.push("укладывается в бюджет");
   }
 
+  if (matched.budget_status === "slightly_over_budget") {
+    parts.push("близко к бюджету");
+  }
+
   return parts.join("; ");
 }
 
@@ -849,6 +887,10 @@ function formatMissingEntities(matched) {
 
   if (matched.budget_status === "over_budget") {
     parts.push("выше бюджета");
+  }
+
+  if (matched.budget_status === "slightly_over_budget") {
+    parts.push("может немного превышать бюджет");
   }
 
   return parts.join("; ");
@@ -935,12 +977,12 @@ function linkifyEscapedText(text) {
 
 function cleanUserText(text) {
   return String(text || "")
-    .replaceAll("final_score", "итоговая релевантность")
-    .replaceAll("retrieval_score", "поисковая близость")
+    .replaceAll("final_score", "релевантность")
+    .replaceAll("retrieval_score", "релевантность")
     .replaceAll("entity_match_score", "совпадение требований")
-    .replaceAll("embedding_score", "семантическая близость")
+    .replaceAll("embedding_score", "релевантность")
     .replaceAll("bm25_score", "текстовое совпадение")
-    .replaceAll("score", "оценка");
+    .replaceAll("score", "релевантность");
 }
 
 function escapeHtml(value) {

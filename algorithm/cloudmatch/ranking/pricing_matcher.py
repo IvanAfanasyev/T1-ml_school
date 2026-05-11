@@ -129,6 +129,53 @@ def is_compute_resource_item(item: ServicePricingItem) -> bool:
     )
 
 
+def is_kubernetes_service(service: Service) -> bool:
+    service_text = build_service_text(service)
+    category = canonical(service.category)
+    tags = {
+        canonical(tag)
+        for tag in [
+            *service.tech_stack_tags,
+            *service.use_case_tags,
+        ]
+    }
+
+    return (
+        category in {"kubernetes", "managed-kubernetes", "containers", "containers-and-serverless"}
+        or "kubernetes" in service_text
+        or "kubernetes" in tags
+    )
+
+
+def is_compute_service(service: Service) -> bool:
+    service_text = build_service_text(service)
+    category = canonical(service.category)
+    tags = {
+        canonical(tag)
+        for tag in [
+            *service.tech_stack_tags,
+            *service.use_case_tags,
+        ]
+    }
+
+    return (
+        category
+        in {
+            "compute",
+            "cloud-compute",
+            "virtual-machines",
+            "virtual-servers",
+            "dedicated-servers",
+            "iaas",
+            "servers",
+            "containers-and-serverless",
+        }
+        or "compute" in tags
+        or "virtual-machine" in tags
+        or "виртуаль" in service_text
+    )
+
+
 def is_other_item(item: ServicePricingItem) -> bool:
     return canonical(item.item_type) in {"other", "unknown", ""}
 
@@ -209,6 +256,118 @@ def is_database_main_item(item: ServicePricingItem, service: Service) -> bool:
     )
 
 
+def is_kubernetes_main_item(item: ServicePricingItem) -> bool:
+    if not is_positive_price(item):
+        return False
+
+    if is_storage_item(item):
+        return False
+
+    text = build_item_text(item)
+    item_type = canonical(item.item_type)
+
+    if any(
+        marker in text
+        for marker in [
+            "балансировщик",
+            "load balancer",
+            "load-balancer",
+            "public ip",
+            "публичного ip",
+            "repository",
+            "registry",
+            "репозитор",
+        ]
+    ):
+        return False
+
+    if item_type not in {"container", "service", "cluster", "kubernetes"}:
+        return False
+
+    return any(
+        marker in text
+        for marker in [
+            "kubernetes",
+            "master",
+            "мастер",
+            "cluster",
+            "кластер",
+            "node",
+            "нода",
+            "cce",
+        ]
+    )
+
+
+def is_compute_main_item(item: ServicePricingItem) -> bool:
+    if not is_positive_price(item):
+        return False
+
+    if is_storage_item(item):
+        return False
+
+    if is_backup_item(item):
+        return False
+
+    text = build_item_text(item)
+    item_type = canonical(item.item_type)
+
+    if any(
+        marker in text
+        for marker in [
+            "балансировщик",
+            "load balancer",
+            "public ip",
+            "публичн",
+            "подсеть",
+            "dns",
+            "лиценз",
+            "доступ к установке",
+            "образ",
+            "превышение лимита",
+            "резервное копирование",
+            "backup",
+        ]
+    ):
+        return False
+
+    if item_type in {"cpu-ram-vm", "cpu_ram_vm", "vm", "server", "instance"}:
+        return True
+
+    if item_type == "compute":
+        return any(
+            marker in text
+            for marker in [
+                "vcpu",
+                "cpu",
+                "процессор",
+                "ядр",
+                "gpu",
+                "графическая карта",
+                "server",
+                "virtual machine",
+                "виртуаль",
+                "сервер",
+            ]
+        )
+
+    if item_type == "cpu":
+        return True
+
+    return any(
+        marker in text
+        for marker in [
+            "vcpu",
+            "cpu",
+            "ecs",
+            "server",
+            "virtual machine",
+            "виртуаль",
+            "сервер",
+        ]
+    )
+
+
 def is_main_pricing_item_for_service(
     item: ServicePricingItem,
     service: Service,
@@ -226,8 +385,14 @@ def is_main_pricing_item_for_service(
     category = canonical(service.category)
     text = build_item_text(item)
 
+    if is_kubernetes_service(service):
+        return is_kubernetes_main_item(item)
+
     if category in {"database", "managed-database", "databases"}:
         return is_database_main_item(item, service)
+
+    if is_compute_service(service):
+            return is_compute_main_item(item)
 
     if category in {"backup", "cloud-backup"}:
         return is_backup_item(item)
@@ -238,15 +403,8 @@ def is_main_pricing_item_for_service(
     if category == "cdn":
         return "cdn" in text or "traffic" in text or "трафик" in text
 
-    if category in {"devops", "kubernetes", "containers"}:
-        return (
-            "kubernetes" in text
-            or "container" in text
-            or "registry" in text
-            or "gitlab" in text
-            or "master" in text
-            or "node" in text
-        )
+    if category in {"devops", "kubernetes", "containers", "containers-and-serverless"}:
+        return is_kubernetes_main_item(item)
 
     if category in {"ai-ml", "ai/ml", "ml", "machine-learning"}:
         return (
@@ -285,7 +443,12 @@ def is_item_allowed_for_display(
     if category in {"database", "managed-database", "databases"}:
         return is_database_main_item(item, service)
 
-    # Для остальных категорий можно использовать основную проверку.
+    if is_kubernetes_service(service):
+        return is_kubernetes_main_item(item)
+
+    if is_compute_service(service):
+        return is_compute_main_item(item)
+
     return is_main_pricing_item_for_service(
         item=item,
         service=service,

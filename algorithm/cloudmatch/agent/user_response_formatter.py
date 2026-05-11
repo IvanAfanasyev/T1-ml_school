@@ -19,15 +19,15 @@ def format_user_response(response: SearchResponse, data_repository: DataReposito
         lines.append("")
 
     lines.append("**Короткий вывод**")
-    lines.append(response.summary or _build_default_summary(response))
+    lines.append(_sanitize_user_text(response.summary or _build_default_summary(response)))
     lines.append("")
     if is_bundle:
-        lines.append("**Подобранные связки сервисов**")
+        lines.append("**Подобранные связки провайдеров**")
         lines.extend(_format_bundle_rank_groups(response, data_repository))
     else:
-        lines.append("**Top-3 сервиса**")
+        lines.append("**Top-3 провайдера**")
         for result in response.results:
-            lines.extend(_format_service_card(result, data_repository))
+            lines.extend(_format_provider_card(result, data_repository))
 
     return "\n".join(lines)
 
@@ -102,6 +102,15 @@ def _format_bundle_rank_groups(
             lines.extend(_format_service_card(result, data_repository))
 
     return lines
+
+def _bundle_group_count(response: SearchResponse) -> int:
+    return len(
+        {
+            result.solution_component_rank or result.rank
+            for result in response.results
+            if result.solution_component
+        }
+    )
 
 
 def _format_bundle_title(
@@ -185,8 +194,47 @@ def _format_service_card(result: RankingResult, data_repository: DataRepository)
         lines.append(f"- Что не подтверждено в данных: {missing_line}")
 
     lines.append("")
-    lines.append("Почему на этом месте:")
-    lines.append(result.explanation or _build_rank_explanation(result))
+    lines.append("Почему подходит:")
+    lines.append(_sanitize_user_text(result.explanation or _build_rank_explanation(result)))
+
+    lines.append("")
+    lines.append("Тарифы:")
+    if not result.selected_pricing_items:
+        lines.append("- Точные релевантные тарифные позиции для этого запроса не найдены.")
+        lines.append("- Проверьте актуальную цену по ссылке на сервис.")
+    else:
+        for item in result.selected_pricing_items:
+            lines.append(f"- {item.item_name}: {_format_pricing_item_price(item)}; период: {item.billing_period or 'не указан'}")
+    return lines
+
+
+def _format_provider_card(
+    result: RankingResult,
+    data_repository: DataRepository,
+) -> list[str]:
+    service = result.service
+    provider = data_repository.providers_by_id.get(service.provider_id)
+    provider_name = provider.name if provider else service.provider_id
+    service_url = _get_service_url(service)
+
+    lines = ["", f"### #{result.rank} {provider_name}"]
+    lines.append(f"- Релевантный сервис: {service.name}")
+    lines.append(f"- Категория: {service.category}")
+    if service_url:
+        lines.append(f"- Ссылка: {service_url}")
+    lines.append(f"- Цена: {_format_price(result)}")
+
+    matched_line = _format_matched_line(result)
+    if matched_line:
+        lines.append(f"- Что совпало: {matched_line}")
+
+    missing_line = _format_missing_line(result)
+    if missing_line:
+        lines.append(f"- Что проверить отдельно: {missing_line}")
+
+    lines.append("")
+    lines.append("Почему провайдер в выдаче:")
+    lines.append(_sanitize_user_text(result.explanation or _build_rank_explanation(result)))
 
     lines.append("")
     lines.append("Тарифы:")
@@ -213,12 +261,29 @@ def _component_title(component: str) -> str:
 
 def _build_default_summary(response: SearchResponse) -> str:
     if _is_bundle_response(response):
+        bundle_count = _bundle_group_count(response)
+        if bundle_count < 3:
+            return (
+                f"Запрос состоит из нескольких инфраструктурных частей. "
+                f"В текущих данных найдено {bundle_count} связк(и), которые закрывают "
+                "все обязательные роли вместе. Остальные провайдеры не попали в список, "
+                "потому что не закрывают полный набор компонентов, регион или обязательные требования."
+            )
         return (
             "Запрос состоит из нескольких инфраструктурных частей, поэтому система "
             "подобрала не один универсальный сервис, а набор сервисов под разные роли."
         )
 
-    return "Система построила top-3 рекомендаций."
+    if response.results and all(
+        result.matched_entities.budget_status in {"over_budget", "slightly_over_budget"}
+        for result in response.results
+    ):
+        return (
+            "Точных вариантов в указанном бюджете не найдено. Ниже показаны ближайшие "
+            "провайдеры из каталога, но цену по ним нужно проверять отдельно."
+        )
+
+    return "Я подобрал top-3 провайдера и показал сервис, который лучше всего представляет каждого из них для этой задачи."
 
 
 def _get_service_url(service) -> str | None:
@@ -263,7 +328,10 @@ def _format_matched_line(result: RankingResult) -> str:
         parts.append(f"регион {matched.matched_region}")
     if matched.budget_status == "within_budget":
         parts.append("укладывается в бюджет")
+    if matched.budget_status == "slightly_over_budget":
+        parts.append("близко к бюджету")
     return "; ".join(parts)
+
 
 
 def _format_missing_line(result: RankingResult) -> str:
@@ -281,6 +349,8 @@ def _format_missing_line(result: RankingResult) -> str:
         parts.append("цена не определена")
     if matched.budget_status == "over_budget":
         parts.append("выше бюджета")
+    if matched.budget_status == "slightly_over_budget":
+        parts.append("может немного превышать бюджет")
     return "; ".join(parts)
 
 
@@ -312,16 +382,14 @@ def _build_rank_explanation(result: RankingResult) -> str:
     service = result.service
     matched = result.matched_entities
     if result.solution_component:
-        component_rank = result.solution_component_rank or result.rank
         parts = [
-            f"{service.name} занял {component_rank}-е место в подзапросе "
-            f"«{_component_title(result.solution_component)}», потому что лучше других "
-            "кандидатов для этой роли совпал с запросом и структурированными требованиями."
+            f"{service.name} выбран для роли «{_component_title(result.solution_component)}», "
+            "потому что в данных сервиса есть совпадения с этой частью задачи."
         ]
     else:
         parts = [
-            f"{service.name} занял {result.rank}-е место в общем рейтинге, "
-            "потому что лучше других кандидатов сочетает поисковую близость и совпадение требований."
+             f"{service.name} представляет провайдера в выдаче, потому что в данных сервиса "
+            "есть совпадения с запросом пользователя."
         ]
     if matched.matched_tech_stack:
         parts.append(f"Совпавшие технологии: {', '.join(matched.matched_tech_stack)}.")
@@ -332,3 +400,18 @@ def _build_rank_explanation(result: RankingResult) -> str:
     if matched.missing_tech_stack or matched.missing_components or matched.missing_requirements:
         parts.append("Часть требований не подтверждена в нормализованных данных, поэтому сервис может требовать дополнительной проверки.")
     return " ".join(parts)
+
+
+def _sanitize_user_text(text: str) -> str:
+    result = str(text)
+    replacements = {
+        "final_score": "релевантность",
+        "retrieval_score": "релевантность",
+        "entity_match_score": "совпадение требований",
+        "embedding_score": "релевантность",
+        "bm25_score": "текстовое совпадение",
+        "score": "релевантность",
+    }
+    for source, target in replacements.items():
+        result = result.replace(source, target)
+    return result

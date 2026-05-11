@@ -215,6 +215,24 @@ def infer_use_case_and_components(query: StructuredQuery) -> None:
     if any(
         marker in raw_query
         for marker in [
+            "сервер",
+            "виртуальная машина",
+            "виртуальную машину",
+            "vps",
+            "vm",
+            "compute",
+        ]
+    ):
+        add_unique(query.use_case, "compute")
+        add_component_if_missing(
+            query=query,
+            component_name="compute",
+            reason="В запросе нужен сервер или виртуальная машина.",
+        )
+
+    if any(
+        marker in raw_query
+        for marker in [
             "база данных",
             "базу данных",
             "базы данных",
@@ -305,6 +323,8 @@ def infer_task_category_and_intent(query: StructuredQuery) -> None:
             query.task_category = "storage"
         elif "backup" in use_cases or "backup" in components:
             query.task_category = "backup"
+        elif "compute" in use_cases or "compute" in components:
+            query.task_category = "compute"
         elif "analytics" in use_cases or "analytics" in components:
             query.task_category = "analytics"
         elif "ml" in use_cases or "ai_ml" in components:
@@ -321,6 +341,8 @@ def infer_task_category_and_intent(query: StructuredQuery) -> None:
             query.intent = "store_files"
         elif query.task_category == "backup":
             query.intent = "backup_data"
+        elif query.task_category == "compute":
+            query.intent = "setup_infrastructure"
         elif query.task_category == "analytics":
             query.intent = "analyze_data"
         elif query.task_category == "ml":
@@ -396,8 +418,22 @@ def normalize_constraints(query: StructuredQuery) -> None:
 def extract_budget_max_from_text(text: str) -> float | None:
     normalized = " ".join(text.strip().lower().replace("ё", "е").split())
 
-    if any(marker in normalized for marker in ("без бюджета", "любой бюджет", "бюджет не важен")):
+    if any(
+        marker in normalized
+        for marker in (
+            "без бюджета",
+            "любой бюджет",
+            "бюджет любой",
+            "бюджет не важен",
+            "бюджет неважен",
+            "по бюджету все равно",
+            "по бюджету всё равно",
+        )
+    ):
         return None
+
+    if re.search(r"(?:за|на|бюджет)\s+один\s+руб", normalized):
+            return 1.0
 
     patterns = (
         r"(?:до|максимум|не больше|не дороже)\s+(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)?",

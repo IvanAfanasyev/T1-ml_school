@@ -15,7 +15,7 @@ from algorithm.cloudmatch.ranking.scoring import calculate_final_score
 from algorithm.cloudmatch.ranking.topk import select_top_k
 from algorithm.cloudmatch.retrieval.hybrid import HybridRetriever
 from algorithm.cloudmatch.schemas.query import RequiredComponent
-from algorithm.cloudmatch.schemas.ranking import SearchResponse
+from algorithm.cloudmatch.schemas.ranking import RankingCandidate, RankingResult, SearchResponse
 
 
 BUNDLE_COMPONENT_RESULTS_PER_ROLE = 10
@@ -71,6 +71,7 @@ class SearchPipeline:
                 results = self._rank_services(
                     structured_query=attempt_query,
                     services=all_services,
+                    group_by_provider=True,
                 )
 
                 if results:
@@ -108,6 +109,7 @@ class SearchPipeline:
         structured_query,
         services,
         top_k=3,
+        group_by_provider: bool = False,
     ):
         required_region = None
 
@@ -137,6 +139,7 @@ class SearchPipeline:
             price_summary = build_price_summary(
                 service=service,
                 pricing_items=pricing_items,
+                query=structured_query,
             )
 
             budget_status, budget_score = calculate_budget_status_and_score(
@@ -171,8 +174,68 @@ class SearchPipeline:
             candidate.score_breakdown.final_score = final_score
 
             scored_candidates.append(candidate)
+        
+        if group_by_provider:
+            return self._select_top_provider_results(
+                candidates=scored_candidates,
+                top_k=top_k,
+            )
 
         return select_top_k(scored_candidates, top_k=top_k)
+    
+    def _select_top_provider_results(
+        self,
+        candidates: list[RankingCandidate],
+        top_k: int,
+    ) -> list[RankingResult]:
+        """
+        Для простых запросов ранжируем провайдеров, а не отдельные сервисы.
+
+        От каждого провайдера в выдачу попадает лучший сервис под запрос.
+        Это сохраняет понятную карточку для пользователя, но места #1/#2/#3
+        означают именно провайдеров.
+        """
+
+        best_by_provider: dict[str, RankingCandidate] = {}
+
+        for candidate in candidates:
+            provider_id = candidate.service.provider_id
+            current_best = best_by_provider.get(provider_id)
+
+            if (
+                current_best is None
+                or candidate.score_breakdown.final_score
+                > current_best.score_breakdown.final_score
+            ):
+                best_by_provider[provider_id] = candidate
+
+        sorted_candidates = sorted(
+            best_by_provider.values(),
+            key=lambda candidate: (
+                candidate.score_breakdown.final_score,
+                candidate.score_breakdown.entity_match_score,
+                candidate.score_breakdown.retrieval_score,
+            ),
+            reverse=True,
+        )
+
+        results = []
+
+        for index, candidate in enumerate(sorted_candidates[:top_k], start=1):
+            results.append(
+                RankingResult(
+                    rank=index,
+                    service=candidate.service,
+                    selected_pricing_items=candidate.selected_pricing_items,
+                    price_summary=candidate.price_summary,
+                    score_breakdown=candidate.score_breakdown,
+                    matched_entities=candidate.matched_entities,
+                    explanation=None,
+                )
+            )
+
+        return results
+
 
     def _is_solution_bundle_query(self, structured_query) -> bool:
         if structured_query.request_type == "solution_bundle":

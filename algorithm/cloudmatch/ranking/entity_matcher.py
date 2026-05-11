@@ -23,6 +23,7 @@ COMPONENT_TO_CATEGORIES = {
         "virtual-servers",
         "iaas",
         "servers",
+        "dedicated-servers",
     },
     "managed-database": {
         "managed-database",
@@ -45,6 +46,7 @@ COMPONENT_TO_CATEGORIES = {
         "kubernetes",
         "managed-kubernetes",
         "containers",
+        "containers-and-serverless",
         "devops",
     },
     "network": {
@@ -67,6 +69,7 @@ COMPONENT_TO_CATEGORIES = {
         "analytics",
         "bi",
         "data-analytics",
+        "data-and-analytics",
         "big-data",
     },
     "ai-ml": {
@@ -224,12 +227,23 @@ def infer_use_cases_from_service(service: Service) -> list[str]:
         values.add("storage")
         values.add("object-storage")
 
+    if category in {"compute", "cloud-compute", "dedicated-servers"}:
+            values.add("compute")
+            values.add("backend")
+            values.add("web-hosting")
+
+    if category in {"network"}:
+        values.add("network")
+        if "load balancer" in service_text or "баланс" in service_text:
+            values.add("load-balancer")
+            values.add("scaling")
+
     if category in {"cdn"}:
         values.add("cdn")
         values.add("content-delivery")
         values.add("web-acceleration")
 
-    if category in {"devops", "kubernetes", "containers"}:
+    if category in {"devops", "kubernetes", "containers", "containers-and-serverless", "monitoring-and-devops"}:
         values.add("devops")
         values.add("container-orchestration")
 
@@ -237,9 +251,13 @@ def infer_use_cases_from_service(service: Service) -> list[str]:
         values.add("ml")
         values.add("data-science")
 
-    if category in {"analytics", "big-data"}:
+    if category in {"analytics", "big-data", "data-and-analytics"}:
         values.add("analytics")
         values.add("big-data")
+
+    if category in {"messaging-and-cache"}:
+        values.add("cache")
+        values.add("messaging")
 
     if {"postgresql", "mysql", "clickhouse", "redis", "opensearch", "kafka"}.intersection(tech_tags):
         values.add("database")

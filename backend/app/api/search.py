@@ -206,7 +206,7 @@ def build_search_api_response(
         answer=answer,
         structured_query=response.structured_query,
         results=[
-            build_search_result_view(result, data_repository)
+            build_search_result_view(result, data_repository, include_debug=include_debug)
             for result in response.results
         ],
         debug=response.model_dump() if include_debug else None,
@@ -216,6 +216,7 @@ def build_search_api_response(
 def build_search_result_view(
     result: RankingResult,
     data_repository: DataRepository,
+    include_debug: bool = False,
 ) -> SearchResultView:
     service = result.service
     provider = data_repository.providers_by_id.get(service.provider_id)
@@ -252,9 +253,9 @@ def build_search_result_view(
             for item in result.selected_pricing_items
         ],
         matched_entities=result.matched_entities.model_dump(),
-        score_breakdown=result.score_breakdown.model_dump(),
+        score_breakdown=result.score_breakdown.model_dump() if include_debug else {},
         explanation=result.explanation,
-        final_score=result.score_breakdown.final_score,
+        final_score=result.score_breakdown.final_score if include_debug else None,
     )
 
 

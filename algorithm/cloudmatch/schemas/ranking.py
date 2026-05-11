@@ -37,6 +37,7 @@ class MatchedEntities(BaseModel):
 class PriceSummary(BaseModel):
     price_from_rub: Optional[float] = None
     price_unit: Optional[str] = None
+    monthly_estimate_rub: Optional[float] = None
     source: str = "unknown"
 
 
