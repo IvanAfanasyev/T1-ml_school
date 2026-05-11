@@ -4,8 +4,8 @@ from backend.app.api.search import (
     EmptySearchQueryError,
     build_search_api_response,
     get_catalog_service_details,
+    list_catalog_services,
     normalize_search_query,
-    search_catalog_services,
 )
 from algorithm.cloudmatch.schemas.pricing import ServicePricingItem
 from algorithm.cloudmatch.schemas.provider import Provider
@@ -174,33 +174,54 @@ class ApiSearchTest(unittest.TestCase):
         self.assertIn("## Рекомендации", api_response.answer)
         self.assertIsNotNone(api_response.debug)
 
-    def test_search_catalog_services_returns_matching_cards_with_pricing(self) -> None:
-        response = search_catalog_services(
-            query="постгрес база",
+    def test_build_search_api_response_hides_internal_scores_without_debug(self) -> None:
+        service = FakeDataRepository().services[0]
+        response = SearchResponse(
+            query="нужен postgresql",
+            structured_query={"tech_stack": ["postgresql"]},
+            results=[
+                RankingResult(
+                    rank=1,
+                    service=service,
+                    selected_pricing_items=[],
+                    price_summary=PriceSummary(),
+                    score_breakdown=ScoreBreakdown(final_score=0.91),
+                    matched_entities=MatchedEntities(),
+                )
+            ],
+        )
+
+        api_response = build_search_api_response(
+            response=response,
+            data_repository=FakeDataRepository(),
+            include_debug=False,
+        )
+
+        self.assertEqual(api_response.results[0].score_breakdown, {})
+        self.assertIsNone(api_response.results[0].final_score)
+
+    def test_list_catalog_services_returns_cards_with_pricing(self) -> None:
+        response = list_catalog_services(
             limit=10,
             data_repository=FakeDataRepository(),
             pricing_repository=FakePricingRepository(),
         )
 
-        self.assertEqual(response.total, 1)
-        self.assertEqual(response.services[0].service_id, "managed-postgres")
+        self.assertEqual(response.total, 2)
         self.assertEqual(response.services[0].provider_name, "Selectel")
         self.assertEqual(response.services[0].pricing_items_count, 1)
-        self.assertEqual(response.services[0].pricing_items[0].item_name, "PostgreSQL Small")
-        self.assertIn("tech_stack_tags", response.services[0].matched_fields)
 
-    def test_search_catalog_services_supports_filters_and_empty_query(self) -> None:
-        response = search_catalog_services(
-            category="Storage",
-            region="Moscow",
-            limit=10,
+    def test_list_catalog_services_supports_pagination(self) -> None:
+        response = list_catalog_services(
+            limit=1,
+            offset=1,
             data_repository=FakeDataRepository(),
             pricing_repository=FakePricingRepository(),
         )
 
-        self.assertEqual(response.total, 1)
-        self.assertEqual(response.services[0].service_id, "object-storage")
-        self.assertIsNone(response.services[0].search_score)
+        self.assertEqual(response.total, 2)
+        self.assertEqual(len(response.services), 1)
+        self.assertEqual(response.services[0].provider_name, "Selectel")
 
     def test_get_catalog_service_details_returns_one_service_with_tariffs(self) -> None:
         card = get_catalog_service_details(

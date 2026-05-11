@@ -5,6 +5,7 @@ from algorithm.cloudmatch.agent.pipeline import SearchPipeline
 from algorithm.cloudmatch.schemas.ranking import (
     MatchedEntities,
     PriceSummary,
+    RankingCandidate,
     RankingResult,
     ScoreBreakdown,
 )
@@ -128,6 +129,25 @@ class SolutionBundleTest(unittest.TestCase):
             ["compute", "managed_database"],
         )
 
+    def test_simple_search_groups_results_by_provider(self) -> None:
+        pipeline = SearchPipeline.__new__(SearchPipeline)
+        candidates = [
+            build_candidate("t1-cloud", "PostgreSQL", 0.91),
+            build_candidate("t1-cloud", "MySQL", 0.89),
+            build_candidate("vk-cloud", "Databases", 0.82),
+            build_candidate("cloud-ru", "Relational Database", 0.79),
+            build_candidate("selectel", "Managed PostgreSQL", 0.77),
+        ]
+
+        results = pipeline._select_top_provider_results(candidates, top_k=3)
+
+        self.assertEqual(len(results), 3)
+        self.assertEqual(
+            [result.service.provider_id for result in results],
+            ["t1-cloud", "vk-cloud", "cloud-ru"],
+        )
+        self.assertEqual(results[0].service.name, "PostgreSQL")
+
 
 def build_result(
     provider_id: str,
@@ -151,6 +171,29 @@ def build_result(
         solution_component=component,
         solution_component_reason=component,
         selected_pricing_items=[],
+        price_summary=PriceSummary(),
+        score_breakdown=ScoreBreakdown(final_score=score),
+        matched_entities=MatchedEntities(),
+    )
+
+
+def build_candidate(
+    provider_id: str,
+    name: str,
+    score: float,
+) -> RankingCandidate:
+    service = Service(
+        service_id=f"{provider_id}-{name.lower().replace(' ', '-')}",
+        provider_id=provider_id,
+        name=name,
+        category="Database",
+        description="Test service",
+        service_url="https://example.com",
+        source_url="https://example.com",
+        parsed_at="2026-05-11T00:00:00+00:00",
+    )
+    return RankingCandidate(
+        service=service,
         price_summary=PriceSummary(),
         score_breakdown=ScoreBreakdown(final_score=score),
         matched_entities=MatchedEntities(),

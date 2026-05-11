@@ -1,5 +1,4 @@
 from functools import lru_cache
-import re
 from typing import Any
 
 from pydantic import BaseModel, Field
@@ -17,9 +16,6 @@ from algorithm.cloudmatch.schemas.service import Service
 
 class EmptySearchQueryError(ValueError):
     """Raised when the frontend sends an empty search query."""
-
-
-CATALOG_MIN_MATCH_SCORE = 3
 
 
 class SearchRequest(BaseModel):
@@ -120,12 +116,9 @@ class CatalogServiceCard(BaseModel):
     source_url: str
     pricing_items_count: int
     pricing_items: list[PricingItemView] = Field(default_factory=list)
-    search_score: float | None = None
-    matched_fields: list[str] = Field(default_factory=list)
 
 
-class CatalogSearchResponse(BaseModel):
-    query: str | None = None
+class CatalogServicesResponse(BaseModel):
     total: int
     limit: int
     offset: int
@@ -287,77 +280,32 @@ def get_catalog(data_repository: DataRepository | None = None) -> CatalogRespons
     )
 
 
-def search_catalog_services(
-    query: str | None = None,
-    provider_id: str | None = None,
-    category: str | None = None,
-    region: str | None = None,
+def list_catalog_services(
     limit: int = 30,
     offset: int = 0,
     pricing_limit: int = PRICING_ITEMS_PER_SERVICE_LIMIT,
     data_repository: DataRepository | None = None,
     pricing_repository: PricingRepository | None = None,
-) -> CatalogSearchResponse:
-    """
-    Fast catalog search for the storefront.
-
-    Unlike /api/search, this endpoint does not ask the agent/LLM to understand a
-    business task. It is a predictable storefront search: filter service cards,
-    attach tariff positions and return data that the frontend can render.
-    """
-
+) -> CatalogServicesResponse:
     active_data_repository = data_repository or get_data_repository()
     active_pricing_repository = pricing_repository or get_pricing_repository()
-    normalized_query = normalize_optional_text(query)
-    query_tokens = expand_catalog_query_tokens(tokenize_catalog_text(normalized_query))
-    normalized_provider_id = normalize_optional_text(provider_id)
-    normalized_category = normalize_optional_text(category)
-    normalized_region = normalize_optional_text(region)
     safe_limit = max(1, limit)
     safe_offset = max(0, offset)
     safe_pricing_limit = max(0, pricing_limit)
 
-    cards = []
-
-    for service in active_data_repository.services:
-        provider = active_data_repository.providers_by_id.get(service.provider_id)
-        pricing_items = active_pricing_repository.get_items_for_service(service.service_id)
-
-        if not catalog_service_matches_filters(
+    cards = [
+        build_catalog_service_card(
             service=service,
-            provider_id=normalized_provider_id,
-            category=normalized_category,
-            region=normalized_region,
-        ):
-            continue
-
-        score, matched_fields = score_catalog_service(
-            service=service,
-            provider=provider,
-            pricing_items=pricing_items,
-            query_tokens=query_tokens,
+            provider=active_data_repository.providers_by_id.get(service.provider_id),
+            pricing_items=active_pricing_repository.get_items_for_service(service.service_id),
+            pricing_limit=safe_pricing_limit,
         )
-
-        if query_tokens and score < CATALOG_MIN_MATCH_SCORE:
-            continue
-
-        cards.append(
-            build_catalog_service_card(
-                service=service,
-                provider=provider,
-                pricing_items=pricing_items,
-                query_tokens=query_tokens,
-                pricing_limit=safe_pricing_limit,
-                search_score=score if query_tokens else None,
-                matched_fields=matched_fields,
-            )
-        )
-
+        for service in active_data_repository.services
+    ]
     cards.sort(key=build_catalog_sort_key)
     paginated_cards = cards[safe_offset : safe_offset + safe_limit]
 
-    return CatalogSearchResponse(
-        query=normalized_query or None,
+    return CatalogServicesResponse(
         total=len(cards),
         limit=safe_limit,
         offset=safe_offset,
@@ -392,10 +340,7 @@ def get_catalog_service_details(
         service=service,
         provider=provider,
         pricing_items=pricing_items,
-        query_tokens=[],
         pricing_limit=max(0, pricing_limit),
-        search_score=None,
-        matched_fields=[],
     )
 
 
@@ -424,15 +369,11 @@ def build_catalog_service_card(
     service: Service,
     provider: Provider | None,
     pricing_items: list[ServicePricingItem],
-    query_tokens: list[str],
     pricing_limit: int,
-    search_score: float | None,
-    matched_fields: list[str],
 ) -> CatalogServiceCard:
     provider_name = provider.name if provider else service.provider_id
     selected_pricing_items = select_catalog_pricing_items(
         pricing_items=pricing_items,
-        query_tokens=query_tokens,
         limit=pricing_limit,
     )
 
@@ -466,179 +407,23 @@ def build_catalog_service_card(
             )
             for item in selected_pricing_items
         ],
-        search_score=search_score,
-        matched_fields=matched_fields,
     )
-
-
-def catalog_service_matches_filters(
-    service: Service,
-    provider_id: str,
-    category: str,
-    region: str,
-) -> bool:
-    if provider_id and normalize_catalog_text(service.provider_id) != provider_id:
-        return False
-
-    if category and normalize_catalog_text(service.category) != category:
-        return False
-
-    if region and region not in [normalize_catalog_text(item) for item in service.regions]:
-        return False
-
-    return True
-
-
-def score_catalog_service(
-    service: Service,
-    provider: Provider | None,
-    pricing_items: list[ServicePricingItem],
-    query_tokens: list[str],
-) -> tuple[float, list[str]]:
-    if not query_tokens:
-        return 0, []
-
-    provider_name = provider.name if provider else service.provider_id
-    field_weights = {
-        "name": 7,
-        "provider": 5,
-        "category": 5,
-        "tech_stack_tags": 6,
-        "use_case_tags": 5,
-        "regions": 4,
-        "compliance_tags": 3,
-        "description": 2,
-        "pricing_items": 2,
-    }
-    searchable_fields = {
-        "name": normalize_catalog_text(service.name),
-        "provider": normalize_catalog_text(provider_name),
-        "category": normalize_catalog_text(service.category),
-        "tech_stack_tags": normalize_catalog_list(service.tech_stack_tags),
-        "use_case_tags": normalize_catalog_list(service.use_case_tags),
-        "regions": normalize_catalog_list(service.regions),
-        "compliance_tags": normalize_catalog_list(service.compliance_tags),
-        "description": normalize_catalog_text(service.description),
-        "pricing_items": normalize_catalog_list(
-            build_pricing_item_search_text(item) for item in pricing_items
-        ),
-    }
-
-    score = 0.0
-    matched_fields = set()
-
-    for token in query_tokens:
-        for field_name, field_text in searchable_fields.items():
-            if token and token in field_text:
-                score += field_weights[field_name]
-                matched_fields.add(field_name)
-
-    return score, sorted(matched_fields)
 
 
 def select_catalog_pricing_items(
     pricing_items: list[ServicePricingItem],
-    query_tokens: list[str],
     limit: int,
 ) -> list[ServicePricingItem]:
     if limit <= 0:
         return []
 
-    if not query_tokens:
-        return sorted(pricing_items, key=pricing_sort_key)[:limit]
-
-    scored_items = [
-        (
-            score_pricing_item(item=item, query_tokens=query_tokens),
-            item,
-        )
-        for item in pricing_items
-    ]
-    matching_items = [
-        (score, item)
-        for score, item in scored_items
-        if score > 0
-    ]
-    fallback_items = [
-        (score, item)
-        for score, item in scored_items
-        if score <= 0
-    ]
-
-    matching_items.sort(key=lambda item: (-item[0], pricing_sort_key(item[1])))
-    fallback_items.sort(key=lambda item: pricing_sort_key(item[1]))
-
-    return [item for _, item in (matching_items + fallback_items)[:limit]]
+    return sorted(pricing_items, key=pricing_sort_key)[:limit]
 
 
-def score_pricing_item(
-    item: ServicePricingItem,
-    query_tokens: list[str],
-) -> float:
-    item_text = normalize_catalog_text(build_pricing_item_search_text(item))
-    return sum(1 for token in query_tokens if token in item_text)
-
-
-def build_pricing_item_search_text(item: ServicePricingItem) -> str:
-    return " ".join(
-        [
-            item.item_name,
-            item.item_type,
-            item.region or "",
-            item.price_unit or "",
-            " ".join(item.configuration_tags),
-        ]
-    )
-
-
-def build_catalog_sort_key(card: CatalogServiceCard) -> tuple[float, str, str]:
-    score = card.search_score or 0
-    return (-score, card.provider_name.lower(), card.name.lower())
+def build_catalog_sort_key(card: CatalogServiceCard) -> tuple[str, str, str]:
+    return (card.provider_name.lower(), card.category.lower(), card.name.lower())
 
 
 def pricing_sort_key(item: ServicePricingItem) -> tuple[float, str]:
     price = item.price_rub if item.price_rub is not None else float("inf")
     return (price, item.item_name.lower())
-
-
-def normalize_optional_text(value: str | None) -> str:
-    if value is None:
-        return ""
-
-    return normalize_catalog_text(value)
-
-
-def normalize_catalog_text(value: str) -> str:
-    return " ".join(value.strip().lower().replace("ё", "е").split())
-
-
-def normalize_catalog_list(values: Any) -> str:
-    return normalize_catalog_text(" ".join(str(value) for value in values))
-
-
-def tokenize_catalog_text(value: str) -> list[str]:
-    return re.findall(r"[0-9a-zа-я+#.-]+", normalize_catalog_text(value))
-
-
-def expand_catalog_query_tokens(tokens: list[str]) -> list[str]:
-    aliases = {
-        "база": ["database", "db", "sql"],
-        "бд": ["database", "db", "sql"],
-        "кубер": ["kubernetes", "k8s"],
-        "кубера": ["kubernetes", "k8s"],
-        "кубернетес": ["kubernetes", "k8s"],
-        "постгрес": ["postgresql", "postgres"],
-        "постгре": ["postgresql", "postgres"],
-        "хранилище": ["storage", "s3", "object"],
-        "объектное": ["object", "storage", "s3"],
-        "виртуальная": ["compute", "vm", "server"],
-        "машина": ["compute", "vm", "server"],
-        "сервер": ["compute", "vm", "server"],
-    }
-    expanded_tokens = []
-
-    for token in tokens:
-        expanded_tokens.append(token)
-        expanded_tokens.extend(aliases.get(token, []))
-
-    return list(dict.fromkeys(expanded_tokens))

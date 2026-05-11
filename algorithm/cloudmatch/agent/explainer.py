@@ -10,13 +10,13 @@ from algorithm.cloudmatch.llm.prompts.explanation import (
 
 class RankingExplainer:
     """
-    Генерирует человекочитаемое объяснение top-3.
+    Генерирует человекочитаемое объяснение рекомендаций.
 
     Важно:
     explanation — это дополнительный слой, а не часть ранжирования.
     Если внешний LLM API недоступен, отвечает медленно или вернул невалидный JSON,
     весь pipeline не должен падать. В таком случае строим fallback-объяснение
-    из уже рассчитанных score и matched/missing сущностей.
+    из совпавших и неподтверждённых сущностей.
     """
 
     def __init__(self, llm_client: LLMClient | None = None) -> None:
@@ -75,7 +75,7 @@ class RankingExplainer:
         summary = parsed_json.get("summary")
 
         if not summary:
-            summary = "Система построила top-3 рекомендаций по итоговой релевантности."
+            summary = "Я подобрал провайдеров, которые лучше всего закрывают запрос по имеющимся данным."
         else:
             summary = clean_user_facing_text(str(summary))
 
@@ -113,8 +113,8 @@ class RankingExplainer:
     ) -> tuple[str, dict[str, str]]:
         summary = (
             "Ранжирование выполнено успешно. Подробное объяснение временно "
-            "недоступно, поэтому ниже используется объяснение на основе релевантности "
-            "и совпавших требований."
+            "недоступно, поэтому ниже используется объяснение на основе совпавших "
+            "и неподтверждённых требований."
         )
 
         explanations_by_service_id: dict[str, str] = {}
@@ -143,7 +143,6 @@ class RankingExplainer:
         service_name = result.get("service_name")
         provider_name = result.get("provider_name")
 
-        scores = result.get("score_breakdown", {})
         matched = result.get("matched_entities", {})
 
         matched_tech = matched.get("matched_tech_stack", [])
@@ -161,8 +160,8 @@ class RankingExplainer:
         budget_status = matched.get("budget_status")
 
         parts = [
-            f"{rank}. {service_name} от {provider_name} попал в top-3 по итоговой релевантности.",
-            "Он хорошо сочетает поисковую близость к запросу и совпадение с требованиями пользователя.",
+            f"{rank}. {provider_name} представлен сервисом {service_name}.",
+            "Этот вариант полезен как кандидат, потому что в данных есть совпадения с задачей пользователя.",
         ]
 
         if matched_tech:
@@ -198,24 +197,32 @@ class RankingExplainer:
             )
 
         if budget_status:
-            parts.append(f"Статус бюджета: {budget_status}.")
+            parts.append(format_budget_status_for_user(budget_status))
 
         return " ".join(parts)
 
 
 def clean_user_facing_text(text: str) -> str:
-    replacements = {
-        "final_score": "итоговая релевантность",
-        "retrieval_score": "поисковая близость",
-        "entity_match_score": "совпадение требований",
-        "embedding_score": "семантическая близость",
-        "bm25_score": "текстовое совпадение",
-        "score": "оценка",
-    }
-
     result = text
-
-    for source, target in replacements.items():
-        result = result.replace(source, target)
-
+    forbidden_fragments = [
+        "final_score",
+        "retrieval_score",
+        "entity_match_score",
+        "embedding_score",
+        "bm25_score",
+        "score",
+    ]
+    for fragment in forbidden_fragments:
+        result = result.replace(fragment, "релевантность")
     return result
+
+
+def format_budget_status_for_user(budget_status: str) -> str:
+    messages = {
+        "within_budget": "По цене вариант выглядит совместимым с указанным бюджетом.",
+        "slightly_over_budget": "Цена близка к бюджету, но может немного его превышать.",
+        "over_budget": "По имеющимся тарифам вариант дороже указанного бюджета.",
+        "price_unknown": "Точная цена в нормализованных данных не определена.",
+        "budget_not_specified": "Бюджет не ограничивал подбор.",
+    }
+    return messages.get(budget_status, "Бюджет нужно проверить отдельно.")

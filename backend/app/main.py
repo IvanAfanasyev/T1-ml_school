@@ -4,14 +4,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.app.api.chat import ChatApiResponse, ChatRequest, chat_with_agent
 from backend.app.api.search import (
     CatalogResponse,
-    CatalogSearchResponse,
     CatalogServiceCard,
+    CatalogServicesResponse,
     EmptySearchQueryError,
     SearchApiResponse,
     SearchRequest,
     get_catalog_service_details,
     get_catalog,
-    search_catalog_services,
+    list_catalog_services,
     search_cloud_services,
 )
 
@@ -38,7 +38,7 @@ def root() -> dict[str, str]:
         "chat": "POST /api/chat",
         "search": "POST /api/search",
         "catalog": "GET /api/catalog",
-        "catalog_search": "GET /api/catalog/search",
+        "catalog_services": "GET /api/catalog/services",
         "health": "GET /health",
     }
 
@@ -77,21 +77,13 @@ def catalog() -> CatalogResponse:
     return get_catalog()
 
 
-@app.get("/api/catalog/search", response_model=CatalogSearchResponse)
-def catalog_search(
-    q: str | None = Query(default=None, description="Текст поиска по витрине"),
-    provider_id: str | None = Query(default=None, description="Фильтр по provider_id"),
-    category: str | None = Query(default=None, description="Фильтр по категории сервиса"),
-    region: str | None = Query(default=None, description="Фильтр по региону"),
+@app.get("/api/catalog/services", response_model=CatalogServicesResponse)
+def catalog_services(
     limit: int = Query(default=30, ge=1, le=100),
     offset: int = Query(default=0, ge=0),
     pricing_limit: int = Query(default=5, ge=0, le=50),
-) -> CatalogSearchResponse:
-    return search_catalog_services(
-        query=q,
-        provider_id=provider_id,
-        category=category,
-        region=region,
+) -> CatalogServicesResponse:
+    return list_catalog_services(
         limit=limit,
         offset=offset,
         pricing_limit=pricing_limit,

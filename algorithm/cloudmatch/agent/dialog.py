@@ -217,7 +217,7 @@ def build_dialog_slots_from_structured_query(
     elif "backup" in components:
         service_area = "backup"
     elif "compute" in components:
-        service_area = "backend"
+        service_area = "compute" if service_area == "compute" else "backend"
     elif service_area == "web-hosting":
         service_area = "backend"
 
@@ -376,18 +376,24 @@ def detect_service_area(
     ):
         return "backend"
 
+    if any(
+        marker in normalized_message
+        for marker in ("сервер", "виртуальная машина", "vm", "vps", "compute")
+    ):
+        return "compute"
+
     if any(marker in normalized_message for marker in ("backup", "бэкап", "резервн")):
         return "backup"
 
     if any(marker in normalized_message for marker in ("аналитик", "bi", "etl", "clickhouse")):
         return "analytics"
 
-    if any(marker in normalized_message for marker in ("ml", "machine learning", "ai", "ии")):
+    if any(marker in normalized_message for marker in ("ml", "machine learning", "ai")):
         return "ml"
 
     if any(
         marker in normalized_message
-        for marker in ("облако", "облач", "сервис", "инфраструктур", "сервер", "виртуальная машина")
+        for marker in ("облако", "облач", "сервис", "инфраструктур")
     ):
         return "unknown_cloud_task"
 
@@ -400,8 +406,12 @@ def extract_budget_max(normalized_message: str) -> float | None:
     if has_budget_indifference(normalized_message):
         return None
 
+    if re.search(r"(?:за|на|бюджет)\s+один\s+руб", normalized_message):
+        return 1.0
+
     patterns = (
         r"(?:до|максимум|не больше|не дороже)\s+(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)?",
+        r"(?:за|на|бюджет)\s+(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)?\s*(?:руб|рублей|р)?",
         r"(\d[\d\s]*(?:[.,]\d+)?)\s*(тысяч|тыс|к|k)\s*(?:руб|рублей|р)?",
         r"(\d[\d\s]{3,})\s*(?:руб|рублей|р)?",
     )
@@ -477,7 +487,9 @@ def get_missing_fields(memory: DialogMemory, original_message: str) -> list[str]
     if slots.service_area == "backend" and not slots.technologies and FIELD_TECH_STACK not in ignored:
         missing.append(FIELD_TECH_STACK)
 
-    should_ask_soft_fields = bool(missing) or short_query
+    should_ask_soft_fields = bool(missing) or (
+        short_query and slots.budget_max is None
+    )
 
     if should_ask_soft_fields and not slots.region and FIELD_REGION not in ignored:
         missing.append(FIELD_REGION)
@@ -537,6 +549,8 @@ def build_search_query(slots: DialogSlots, original_message: str | None = None) 
         parts.append("нужно объектное хранилище")
     elif slots.service_area == "backend":
         parts.append("нужен сервис для backend приложения")
+    elif slots.service_area == "compute":
+        parts.append("нужен облачный сервер или виртуальная машина")
     elif slots.service_area == "backup":
         parts.append("нужен backup сервис")
     elif slots.service_area == "analytics":
@@ -583,6 +597,9 @@ def should_preserve_original_query(
         "бекенд",
         "бэкенд",
         "сервер",
+        "виртуальная машина",
+        "vm",
+        "vps",
         "python",
         "postgresql",
         "postgres",
@@ -736,6 +753,12 @@ def is_off_topic(normalized_message: str, slots: DialogSlots | None = None) -> b
     if slots.service_area is not None:
         return False
 
+    if has_cloud_relevance(normalized_message):
+        return False
+
+    if has_prompt_injection_marker(normalized_message):
+        return True
+
     off_topic_markers = (
         "привет",
         "как дела",
@@ -750,7 +773,93 @@ def is_off_topic(normalized_message: str, slots: DialogSlots | None = None) -> b
         "расскажи историю",
     )
 
-    return any(marker in normalized_message for marker in off_topic_markers) or len(normalized_message.split()) <= 3
+    return (
+        any(marker in normalized_message for marker in off_topic_markers)
+        or len(normalized_message.split()) <= 3
+        or not has_cloud_relevance(normalized_message)
+    )
+
+
+def has_cloud_relevance(normalized_message: str) -> bool:
+    cloud_markers = (
+        "облак",
+        "сервис",
+        "провайдер",
+        "инфраструктур",
+        "сервер",
+        "виртуальная машина",
+        "vm",
+        "vps",
+        "compute",
+        "backend",
+        "бекенд",
+        "бэкенд",
+        "сайт",
+        "хостинг",
+        "kubernetes",
+        "k8s",
+        "кубер",
+        "docker",
+        "докер",
+        "база данных",
+        "базу данных",
+        "бд",
+        "субд",
+        "database",
+        "postgres",
+        "postgresql",
+        "постгрес",
+        "постгрис",
+        "mysql",
+        "майскл",
+        "clickhouse",
+        "redis",
+        "mongodb",
+        "s3",
+        "object storage",
+        "хранилище",
+        "файлы",
+        "изображен",
+        "backup",
+        "бэкап",
+        "резервн",
+        "load balancer",
+        "балансиров",
+        "cdn",
+        "аналитик",
+        "bi",
+        "ml",
+        "gpu",
+        "152-фз",
+        "152-fz",
+        "бюджет",
+        "руб",
+        "москва",
+        "росси",
+    )
+    return any(marker in normalized_message for marker in cloud_markers)
+
+
+def has_prompt_injection_marker(normalized_message: str) -> bool:
+    injection_markers = (
+        "ignore previous",
+        "ignore all previous",
+        "forget previous",
+        "system prompt",
+        "developer message",
+        "show your prompt",
+        "выведи системный",
+        "покажи системный",
+        "игнорируй инструкции",
+        "игнорируй все инструкции",
+        "забудь инструкции",
+        "забудь правила",
+        "раскрой промпт",
+        "системный промпт",
+        "developer prompt",
+        "jailbreak",
+    )
+    return any(marker in normalized_message for marker in injection_markers)
 
 
 def build_off_topic_message() -> str:

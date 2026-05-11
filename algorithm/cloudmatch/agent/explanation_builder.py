@@ -9,59 +9,54 @@ def build_difference_reason(
     current: RankingResult,
     previous: RankingResult | None,
 ) -> dict[str, Any]:
+    matched = current.matched_entities
+
     if previous is None:
         return {
             "why_this_rank": [
-                "У этой услуги лучшая итоговая оценка среди выбранных кандидатов.",
-                "Она лучше остальных сочетает поисковую близость к запросу и совпадение требований.",
+                "Провайдер хорошо закрывает ключевые требования запроса.",
+                "В данных есть прямые совпадения по задаче пользователя.",
             ],
             "why_lower_than_previous": None,
         }
 
     reasons = []
+    previous_matched = previous.matched_entities
 
-    current_scores = current.score_breakdown
-    previous_scores = previous.score_breakdown
-    current_matched = current.matched_entities
-
-    if current_scores.final_score < previous_scores.final_score:
+    if matched.missing_tech_stack:
         reasons.append(
-            "Итоговая оценка ниже, чем у предыдущей услуги."
+            f"В данных не подтверждены технологии: {matched.missing_tech_stack}."
         )
 
-    if current_scores.entity_match_score < previous_scores.entity_match_score:
+    if matched.missing_components:
         reasons.append(
-            "Услуга хуже совпала со структурированными требованиями пользователя."
+            f"В данных не подтверждены компоненты решения: {matched.missing_components}."
         )
 
-    if current_matched.missing_tech_stack:
+    if matched.missing_use_case:
         reasons.append(
-            f"Не совпали технологии: {current_matched.missing_tech_stack}."
+            f"В данных не подтверждены сценарии использования: {matched.missing_use_case}."
         )
 
-    if current_matched.missing_components:
+    if matched.missing_requirements:
         reasons.append(
-            f"Не закрыты компоненты решения: {current_matched.missing_components}."
+            f"В данных не подтверждены дополнительные требования: {matched.missing_requirements}."
         )
 
-    if current_matched.missing_use_case:
-        reasons.append(
-            f"Не совпали сценарии использования: {current_matched.missing_use_case}."
-        )
-
-    if current_matched.missing_requirements:
-        reasons.append(
-            f"Не выполнены дополнительные требования: {current_matched.missing_requirements}."
-        )
+    if (
+        matched.budget_status in {"over_budget", "slightly_over_budget"}
+        and previous_matched.budget_status == "within_budget"
+    ):
+        reasons.append("Цена выглядит выше указанного бюджета.")
 
     if not reasons:
         reasons.append(
-            "Услуга близка к предыдущей, но немного уступила по суммарной оценке."
+            "Провайдер тоже подходит под запрос, но требует такой же ручной проверки цены, региона или отдельных свойств сервиса."
         )
 
     return {
         "why_this_rank": [
-            "Услуга попала в top-3 после сортировки по итоговой оценке релевантности."
+            "Провайдер попал в список рекомендаций благодаря совпадениям с требованиями пользователя."
         ],
         "why_lower_than_previous": reasons,
     }
@@ -73,7 +68,6 @@ def build_result_payload(
     previous: RankingResult | None,
 ) -> dict[str, Any]:
     service = result.service
-    scores = result.score_breakdown
     matched = result.matched_entities
 
     return {
@@ -91,13 +85,6 @@ def build_result_payload(
             "support_level": service.support_level,
         },
         "price_summary": result.price_summary.model_dump(),
-        "score_breakdown": {
-            "embedding_score": round(scores.embedding_score, 4),
-            "bm25_score": round(scores.bm25_score, 4),
-            "retrieval_score": round(scores.retrieval_score, 4),
-            "entity_match_score": round(scores.entity_match_score, 4),
-            "final_score": round(scores.final_score, 4),
-        },
         "matched_entities": {
             "matched_tech_stack": matched.matched_tech_stack,
             "missing_tech_stack": matched.missing_tech_stack,
@@ -107,10 +94,8 @@ def build_result_payload(
             "missing_components": matched.missing_components,
             "matched_requirements": matched.matched_requirements,
             "missing_requirements": matched.missing_requirements,
-            "requirements_score": matched.requirements_score,
             "matched_region": matched.matched_region,
             "budget_status": matched.budget_status,
-            "budget_score": matched.budget_score,
         },
         "selected_pricing_items": [
             {
@@ -158,10 +143,14 @@ def build_explanation_payload(
         "user_query": user_query,
         "structured_query": structured_query.model_dump(),
         "ranking_policy": {
-            "important": "LLM does not choose services. The algorithm already selected top-3.",
+            "important": "LLM does not choose providers or services. The algorithm already selected the recommendations.",
+            "ranking_mode": "simple requests return top providers; each provider is represented by its strongest matching service.",
             "compliance_rule": "152-FZ is mandatory. Services without confirmed 152-FZ are filtered out before ranking.",
-            "retrieval_score_formula": "0.7 * embedding_score + 0.3 * bm25_score",
-            "final_score_formula": "0.7 * retrieval_score + 0.3 * entity_match_score",
+            "forbidden_user_facing_wording": [
+                "Do not mention score, final_score, retrieval_score, entity_match_score, embedding_score, bm25_score.",
+                "Do not explain that an item is second or third because its score is lower.",
+                "Explain only concrete matched and missing requirements, price availability, region and role fit.",
+            ],
             "entity_match_includes": [
                 "component_match",
                 "tech_stack_match",

@@ -126,7 +126,7 @@ async function fetchAllCatalogServices() {
 
   do {
     const response = await fetch(
-      apiUrl(`/api/catalog/search?limit=${CATALOG_PAGE_SIZE}&offset=${offset}&pricing_limit=3`),
+      apiUrl(`/api/catalog/services?limit=${CATALOG_PAGE_SIZE}&offset=${offset}&pricing_limit=3`),
     );
 
     if (!response.ok) {

@@ -1,6 +1,6 @@
 # CloudMatch
 
-CloudMatch - MVP-сервис для подбора российских облачных сервисов по пользовательскому запросу. Пользователь пишет задачу обычным языком, система уточняет недостающие параметры, ищет подходящие сервисы в нормализованном каталоге и возвращает либо top-3 отдельных сервиса, либо несколько инфраструктурных связок.
+CloudMatch - MVP-сервис для подбора российских облачных провайдеров по пользовательскому запросу. Пользователь пишет задачу обычным языком, система уточняет недостающие параметры, ищет подходящие варианты в нормализованном каталоге и возвращает либо top-3 провайдера, либо несколько инфраструктурных связок.
 
 Пример обычного запроса:
 
@@ -115,6 +115,7 @@ backup базы данных и балансировщик для масштаб
 │   └── evaluation/
 │       └── golden_dataset.json
 ├── docs/
+│   ├── BEYOND_TZ.md
 │   ├── DATA.md
 │   ├── DEPLOYMENT.md
 │   └── TESTING.md
@@ -125,6 +126,7 @@ backup базы данных и балансировщик для масштаб
     ├── test_normalized_data_structure.py
     ├── test_query_extractor.py
     ├── test_query_validator.py
+    ├── test_pricing_budget.py
     ├── test_region_resolver.py
     ├── test_scoring.py
     └── test_solution_bundle.py
@@ -164,7 +166,7 @@ backup базы данных и балансировщик для масштаб
   -> frontend rendering
 ```
 
-В обычном запросе система возвращает top-3 отдельных сервиса. В комплексном запросе система сначала выделяет роли, например backend, database, storage, backup и balancer, затем подбирает связки сервисов. Каждая связка собирается от одного провайдера, чтобы компоненты было проще использовать вместе.
+В обычном запросе система возвращает top-3 провайдера. Каждый провайдер показывается через самый подходящий сервис из его каталога. В комплексном запросе система сначала выделяет роли, например backend, database, storage, backup и balancer, затем подбирает связки сервисов. Каждая связка собирается от одного провайдера, чтобы компоненты было проще использовать вместе.
 
 ## Быстрый запуск локально
 
@@ -216,7 +218,7 @@ uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 - `GET /health` - проверка состояния backend.
 - `POST /api/chat` - диалоговый агент.
 - `POST /api/search` - прямой поиск по запросу.
-- `GET /api/catalog/search` - список сервисов для витрины.
+- `GET /api/catalog/services` - список сервисов для витрины без поиска и фильтров.
 - `GET /api/catalog/services/{service_id}` - подробная карточка сервиса.
 
 Пример запроса в чат:
@@ -272,6 +274,7 @@ node --check frontend/app.js
 - [backend/README.md](backend/README.md)
 - [frontend/README.md](frontend/README.md)
 - [algorithm/README.md](algorithm/README.md)
+- [docs/BEYOND_TZ.md](docs/BEYOND_TZ.md)
 - [docs/DATA.md](docs/DATA.md)
 - [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
 - [docs/TESTING.md](docs/TESTING.md)
