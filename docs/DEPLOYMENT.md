@@ -1,92 +1,97 @@
-# Деплой
+# Deployment
 
-Production-схема:
-
-```text
-Пользователь
-  -> Nginx
-  -> frontend статикой
-  -> /api проксируется в FastAPI backend
-  -> Docker-контейнер backend
-  -> data/normalized JSON
-```
-
-## Backend
-
-Backend запускается через Docker Compose:
-
-```bash
-docker compose up -d --build
-docker compose logs -f backend
-```
-
-Контейнер слушает порт `8000` внутри VM. Наружу его обычно не показывают напрямую: Nginx проксирует `/api`, `/health`, `/docs`, `/openapi.json`.
-
-## Frontend
-
-Frontend - это статические файлы:
+## Production-схема
 
 ```text
-frontend/index.html
-frontend/styles.css
-frontend/app.js
+Browser
+  -> Nginx static frontend
+  -> /api proxy
+  -> FastAPI backend in Docker
 ```
 
-На сервере их можно положить в `/var/www/cloud-marketplace/`:
+Frontend лежит в:
 
-```bash
-sudo mkdir -p /var/www/cloud-marketplace
-sudo rsync -a --delete frontend/ /var/www/cloud-marketplace/
+```text
+/var/www/cloud-marketplace/
 ```
 
-## Nginx
+Backend слушает:
 
-Пример server block:
-
-```nginx
-server {
-    listen 80;
-    server_name _;
-
-    root /var/www/cloud-marketplace;
-    index index.html;
-
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
-
-    location /api/ {
-        proxy_pass http://127.0.0.1:8000/api/;
-    }
-
-    location /health {
-        proxy_pass http://127.0.0.1:8000/health;
-    }
-
-    location /docs {
-        proxy_pass http://127.0.0.1:8000/docs;
-    }
-
-    location /openapi.json {
-        proxy_pass http://127.0.0.1:8000/openapi.json;
-    }
-}
-```
-
-После изменения:
-
-```bash
-sudo nginx -t
-sudo systemctl reload nginx
+```text
+127.0.0.1:8000
 ```
 
 ## Обновление сервера
 
 ```bash
-git checkout main
+ssh -i ~/.ssh/cloud-marketplace-yc yc-user@51.250.18.102
+
+cd /home/yc-user/t1_ml_school
+git switch main
 git pull origin main
-docker compose up -d --build
-sudo rsync -a --delete frontend/ /var/www/cloudmatch/
+
+sudo docker compose up -d --build
+
+sudo rsync -a --delete frontend/ /var/www/cloud-marketplace/
+
 sudo nginx -t
 sudo systemctl reload nginx
+
+sudo docker compose ps
+curl -i http://127.0.0.1:8000/health
+curl -I http://127.0.0.1
+```
+
+## Nginx
+
+Проверить конфиг:
+
+```bash
+sudo nginx -t
+```
+
+Найти root/proxy:
+
+```bash
+sudo nginx -T 2>/dev/null | grep -E "root |proxy_pass|server_name|listen"
+```
+
+## Troubleshooting
+
+### Docker permission denied
+
+```bash
+sudo docker compose up -d --build
+```
+
+Или:
+
+```bash
+sudo usermod -aG docker yc-user
+```
+
+Затем выйти и зайти заново.
+
+### SSH publickey
+
+```bash
+ssh -i ~/.ssh/cloud-marketplace-yc yc-user@51.250.18.102
+```
+
+### Frontend не обновился
+
+```bash
+sudo nginx -T 2>/dev/null | grep root
+sudo rsync -a --delete frontend/ /var/www/cloud-marketplace/
+sudo systemctl reload nginx
+```
+
+В браузере: `Cmd + Shift + R`.
+
+### Backend не отвечает
+
+```bash
+sudo docker compose ps
+sudo docker compose logs -f backend
+curl -i http://127.0.0.1:8000/health
 ```
