@@ -54,7 +54,7 @@ flowchart TD
 
 ## C4 Level 4 — Code / Modules
 
-```text
+```mermaid
 backend/app/
   main.py
   api/chat.py
